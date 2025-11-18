@@ -1140,7 +1140,7 @@ display: block;
 
 @media (min-width: 1025px) {
     .card2 .card-btn {
-        width: 97%;
+        width: 97% !important;
         margin-top: 16px;
     }
 }
