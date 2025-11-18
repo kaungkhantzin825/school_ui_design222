@@ -1090,13 +1090,13 @@ display: block;
 
 
 
-@media (max-width: 1025px) {
+/* @media (max-width: 1025px) {
  .card36 {
-   /* margin-top: -34px !important; */
-        width: 49% !important;
-        margin-left: 47px !important;
+    margin-top: -34px !important; 
+        width: 49% ;
+        margin-left: 47px ;
 }
-}
+} */
 
 
 
@@ -1192,25 +1192,117 @@ display: block;
     }
 }
 
-
+/* 
 @media (min-width: 390px)  {
   .card36 {
    margin-top: -15px !important;
         margin-left: 19px !important;
         width: 147px !important;
   }
-}
+} */
 
 
 
 
-@media (min-width: 1025px)  {
+@media (min-width: 1024px)  {
   .card36 {
    /* margin-top: -20px !important; */
         width: 49% !important;
         margin-left: 47px !important;
   }
 }
+
+
+
+@media (min-width: 390px)  {
+  .card36 {
+   /* margin-top: -20px !important; */
+      width: 56% !important;
+        margin-left: 22px !important;
+  }
+}
+
+@media (min-width: 1024px)  {
+  .card38 {
+   /* margin-top: -20px !important; */
+        width: 49% !important;
+        margin-left: 47px !important;
+  }
+}
+
+
+
+@media (min-width: 390px)  {
+  .card38 {
+   /* margin-top: -20px !important; */
+      width: 56% !important;
+        margin-left: 22px !important;
+  }
+}
+
+
+
+
+@media (min-width: 1024px)  {
+  .card39 {
+   /* margin-top: -20px !important; */
+        width: 49% !important;
+        margin-left: 47px !important;
+  }
+}
+
+
+
+@media (min-width: 390px)  {
+  .card39 {
+   /* margin-top: -20px !important; */
+      width: 56% !important;
+        margin-left: 22px !important;
+  }
+}
+
+@media (min-width: 1024px)  {
+  .card40 {
+   /* margin-top: -20px !important; */
+        width: 49% !important;
+        margin-left: 47px !important;
+  }
+}
+
+
+
+@media (min-width: 390px)  {
+  .card40 {
+      margin-top: -20px !important;
+      width: 56% !important;
+      margin-left: 22px !important;
+  }
+}
+
+
+
+@media (min-width: 1024px)  {
+  .card50 {
+   /* margin-top: -20px !important; */
+        width: 49% !important;
+        margin-left: 47px !important;
+  }
+}
+
+
+
+@media (min-width: 390px)  {
+  .card50 {
+   /* margin-top: -20px !important; */
+      width: 56% !important;
+        margin-left: 22px !important;
+  }
+}
+
+
+
+
+
 
 
 /* /////////////////// */
