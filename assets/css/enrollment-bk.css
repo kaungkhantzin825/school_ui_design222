@@ -1,0 +1,720 @@
+body{
+  background-color: var(--grey);
+}
+
+.card-text{
+  font-family:   "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+  font-weight: 500;
+    color: var(--black);
+    font-size: 14px;
+}
+.card2 .card-title{
+    border: none;
+    gap: 0;
+}
+.card2 .card-title h2{
+    background-color: transparent;
+    color: var(--blue);
+    font-size: 33.5px;
+    padding: 0;
+    height: 37px;
+    /* display: block!important; */
+    justify-content: left!important;
+}
+.card2 .card-title h3{
+    font-size: 16.9px;
+    font-weight: 500;
+   display: flex!important;
+   justify-content: left!important;
+}
+
+.card2 .card-title2{
+    background-color: transparent;
+    color: var(--blue);
+    font-size: 33.5px;
+    padding: 0;
+    height: 37px;
+}
+
+/* Mobile styles for mixed title */
+@media (max-width: 768px) {
+  .mixed-title h2, 
+  .mixed-title h3, 
+  .mixed-title h4 {
+    font-size: 15px !important;
+    margin: 0 2px;
+    display: inline-block;
+  }
+  
+  .mixed-title h2.mobile4 {
+    font-size: 47px !important; /* Slightly larger for the number */
+  }
+}
+
+@media (max-width: 768px) {
+  .mixed-title {
+    display: inline;
+    align-items: flex-end;
+    gap: 5px;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .margin-top-up {
+   
+    margin-top: -47px;
+
+  }
+}
+
+
+
+
+/* News section styling to match demo image */
+.news-title {
+font-size: 4rem !important;
+font-weight: bold !important;
+color: #4CAF50 !important;
+margin-bottom: 20px !important;
+letter-spacing: 2px !important;
+}
+
+.news-subtitle {
+color: #2c5aa0 !important;
+font-size: 1.2rem !important;
+font-weight: 500 !important;
+}
+
+.news-container {
+background: white;
+/* border-radius: 12px; */
+padding: 0px;
+/* box-shadow: 0 4px 20px rgba(0,0,0,0.1); */
+margin-top: 30px;
+}
+
+.news-item {
+display: flex !important;
+align-items: flex-start !important;
+padding: 20px 0 !important;
+border-bottom: 1px solid #e0e0e0 !important;
+flex-direction: row !important;
+}
+
+.news-item:last-child {
+border-bottom: none !important;
+}
+
+.news-image {
+width: 200px !important;
+height: 120px !important;
+margin-right: 25px !important;
+flex-shrink: 0 !important;
+}
+
+.news-image img {
+width: 100% !important;
+height: 100% !important;
+object-fit: cover !important;
+border-radius: 8px !important;
+}
+
+.news-content {
+flex: 1 !important;
+display: flex !important;
+flex-direction: column !important;
+justify-content: flex-start !important;
+}
+
+.news-date {
+  color: var(--turquoise) !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  margin-bottom: 10px !important;
+}
+
+.news-title-text {
+color: #333 !important;
+font-size: 11px !important;
+line-height: 1.5 !important;
+font-weight: 500 !important;
+}
+
+/* Mobile responsive - keep horizontal layout */
+@media (max-width: 768px) {
+.news-title {
+  font-size: 3rem !important;
+}
+
+.news-item {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+}
+
+.news-image {
+  width: 150px !important;
+  height: 100px !important;
+  margin-right: 6px !important;
+  margin-bottom: 0 !important;
+}
+
+.news-content {
+  flex: 1 !important;
+}
+}
+
+/* Tab Images Row */
+.tab-imgs {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Adjust based on your design needs */
+  margin: 0 auto;
+}
+
+.tab-imgs .img {
+  flex: 0 0 auto;
+  width: 70%;
+}
+
+.tab-imgs .img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tab-imgs .gif {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  width: 30%;
+}
+
+.tab-imgs .gif img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile horizontal scrolling for the specific section with 留, 社, 編 cards */
+@media (max-width: 768px) {
+/* Target the section that comes after .devide-line */
+.devide-line + section .card-section {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  gap: 15px !important;
+  padding: 10px !important;
+  -webkit-overflow-scrolling: touch !important;
+  flex-wrap: nowrap !important;
+  position: relative !important;
+}
+
+/* Cards in this section - match demo image size */
+.devide-line + section .card-section .card {
+  min-width: 220px !important;
+  max-width: 220px !important;
+  flex-shrink: 0 !important;
+}
+
+/* SCROLL indicator */
+.devide-line + section .card-section::before {
+  content: "SCROLL →";
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  font-size: 12px;
+  color: #007bff;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Custom scrollbar */
+.devide-line + section .card-section::-webkit-scrollbar {
+  height: 4px;
+}
+
+.devide-line + section .card-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.devide-line + section .card-section::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+}
+}
+
+
+@media (max-width: 1024px) {
+.tab-img {
+  display: none;
+}
+}
+
+@media (max-width: 1024px) {
+.tab-section {
+  width: 100%;
+}
+}
+
+@media (max-width: 1024px) {
+.tab-section {
+  width: 100%;
+}
+}
+
+@media (max-width: 1024px) {
+.tab {
+    text-align: center;
+    border: 1px solid var(--blue);
+    padding: 0 20px;
+    font-family: var(--japanese_font);
+    color: var(--blue);
+    font-size: 8.5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
+
+/* Hide tab-imgs by default */
+.tab-imgs {
+  display: none;
+}
+
+/* Show tab-imgs only on mobile */
+@media (max-width: 1024px) {
+.tab-imgs {
+  display: flex;
+  width: 193px;
+  margin-left: 178px;
+}
+}
+
+
+@media (max-width: 1024px) {
+.one-card {
+  display: none;
+}
+}
+
+
+/* .one-card-view {
+  display: none;
+}
+
+
+@media (max-width: 1024px) {
+.one-card-view {
+  display: block;
+}
+} */
+
+
+/* Hide card-view by default */
+.card-view {
+  display: none!important;
+}
+
+/* Show card-view only on mobile */
+@media (max-width: 1024px) {
+.card-view {
+  display: block;
+  display: flex;
+  align-items: flex-end;
+}
+}
+
+
+/* Web Image Styles */
+.web-img {
+  width: 174px; /* Default width for web */
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+  .web-img {
+      width: 100% !important; /* Full width on mobile */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+.card2 {
+  display: block;
+  gap: 0px;
+}
+}
+
+/* Default: Hide web text on mobile */
+.card-text.web {
+display: none;
+}
+
+/* Show mobile text on mobile */
+.card-text.mobile {
+display: block;
+}
+
+/* For web/desktop view */
+@media (min-width: 768px) {
+.card-text.web {
+    display: block;
+}
+
+.card-text.mobile {
+    display: none;
+}
+}
+
+
+@media (max-width: 1024px) {
+.card2-content {
+    padding: 0 !important;
+    text-align: left !important;
+    margin-left: 82px !important;
+    margin-top: -7px !important;
+}
+}
+
+
+@media (max-width: 1024px) {
+.m-b-60-mb {
+  margin-bottom: 26px !important;
+}
+}
+
+
+
+
+
+/* Mobile view specific styles */
+.mobile-view .contents-card-container {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+.mobile-view .contents-card {
+width: 100%;
+}
+
+.mobile-view .contents-title {
+font-size: 1.5rem;
+}
+
+.mobile-view .contents-subtitle {
+font-size: 1rem;
+line-height: 1.4;
+}
+
+.mobile-view .contents-img img {
+max-width: 100%;
+height: auto;
+}
+
+/* For the card text visibility within mobile view */
+.mobile-view .card-text.web {
+display: none;
+}
+
+.mobile-view .card-text.mobile {
+display: block;
+}
+
+
+
+/* Default: Show web-view, hide mobile-view */
+.mobile-view {
+display: none;
+}
+
+.web-view {
+display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+  .mobile-view {
+    display: block;
+  }
+
+  .web-view {
+    display: none;
+  }
+  
+  .qna-img7 {
+    width: 118px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .qna-img7 {
+    width: 181px;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .table-session {
+   display: none;
+  }
+  }
+  
+  
+ /* Console Slider Styles */
+ .console-slider {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-slide {
+  min-width: 100%;
+  text-align: center;
+}
+
+.slider-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.slider-prev,
+.slider-next {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 15px;
+  background: #2d4a95;
+  color: white;
+  border-radius: 4px;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider-dot.active {
+  background: #2d4a95;
+}
+
+
+
+@media (max-width: 934px) {
+    .card-title h3 {
+        font-size: 10.3px;
+        margin-bottom: -8px;
+    }
+    
+    .card-title h2, .watermark {
+        font-size: 12.4px;
+    }
+}
+
+@media (max-width: 400px) {
+  .card-section {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px !important;
+  }
+  
+  .card {
+      height: 221px;
+  }
+  
+  .first-div {
+      padding: 9px;
+      height: 100%;
+  }
+  
+  .second-div {
+      height: 100%;
+  }
+  
+  .card-title h2, .watermark {
+      font-size: 12.4px;
+      height: 16px;
+      line-height: 16px;
+  }
+}
+
+
+
+
+.devide-line .line {
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #2d4a95, #0b9dd5 90%);
+  margin: 60px auto;
+}
+
+.check-container {
+  padding: 90px;
+  border: 40px solid var(--white);
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+
+.check-item {
+  color: #2D4A95;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid var(--blue);
+}
+
+/* Hide by default on all devices */
+.etc {
+  display: none;
+}
+
+/* Show only on web (desktop) */
+@media (min-width: 769px) {
+  .etc {
+    display: block;
+    position: absolute;
+    right: 11%;
+    top: 40%;
+    color: #2D4A95;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .courses-container {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 300px;
+      margin: 0 auto;
+  }
+  
+  .mobile-course {
+    display: none;
+  }
+}
+
+
+/* Web only styles */
+@media (min-width: 769px) {
+  .qna-img4 {
+    width: 171px;
+  }
+}
+
+
+.qna {
+  background-color: #E4ECF3;
+  padding: 20px;
+}
+
+
+/* Hide etc2 by default */
+.etc2 {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .etc2 {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .web-view-tap {
+    display: none;
+  }
+}
+
+
+
+
+/* Mobile font size - mobile only */
+@media (max-width: 768px) {
+  .mobile-font-size {
+    font-size: 47px !important;
+    line-height: 52px !important;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .mobile-body-text{
+
+    font-size: 24px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+
+
+
+
+
+.section-title {
+  font-weight: 300 !important;
+  font-size: 76px !important;
+  color: var(--turquoise) !important;
+  font-family: 'Saira Condensed', sans-serif !important;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .section-title {
+    font-weight: 300 !important;
+    font-size: 41px !important;
+    color: var(--turquoise) !important;
+    font-family: 'Saira Condensed', sans-serif !important;
+  }
+  
+  
+}
+

@@ -1,0 +1,82 @@
+h1,h2,h3{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    width: 95vw;
+    margin: 0 auto;
+    padding: 6vw 0;
+}
+
+.hero-header{
+    width: 85%;
+    display: flex;
+    justify-content: end;
+}
+
+.hero-number-boxes{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+}
+
+.hero-number-box h1{
+    color: var(--turquoise);
+    font-family: var(--english_font);
+    font-size: clamp(12px,10vw,123px);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.hero-number-box p{
+    color: var(--blue);
+    font-size: clamp(15px,1vw,30px);
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-top: -1vw;
+    margin-bottom: 1vw;
+}
+
+.hero-body{
+    width: 100%;
+
+    position: relative;
+}
+
+.hero-body .hero-title{
+    color: var(--blue);
+    font-size: clamp(12px,15.7vw,126px);
+    line-height: 1;
+    letter-spacing: 1.2px;
+    /* text-align: center; */
+}
+
+.hero-body .hero-subtitle-box{
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 1vw 2vw;
+
+    position: absolute;
+    left: 0;
+    bottom: 110%;
+}
+
+
+.hero-subtitle-box h3{
+    font-size: clamp(15px,2.5vw,39px);
+    line-height: 1;
+}
+
+
+
+
+@media (min-width: 768px){
+    .hero {
+        width: 60vw;
+    }
+
+    .hero-header{
+        width: 90%;
+    }
+}

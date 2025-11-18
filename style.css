@@ -1,0 +1,263 @@
+/* 全体的なリセットとbox-sizingの適用 */
+  html {
+      box-sizing: border-box;
+  }
+  *, *::before, *::after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+  }
+
+  .container {
+      max-width: 1200px; /* 全体の最大幅を設定 */
+      margin: 20px auto; /* 中央寄せと上下の余白 */
+      padding: 0 15px; /* 左右の余白 */
+  }
+
+  /* カードを横並びにするコンテナ（PC向け） */
+  .row {
+      display: flex;         /* Flexboxを有効にする */
+      flex-wrap: wrap;       /* 画面幅が足りなくなったらカードを折り返す */
+      justify-content: center; /* カードを中央寄せにする */
+      gap: 30px;             /* カード間の余白（行間・列間） */
+      margin-bottom: 30px;   /* 各行の下の余白 */
+  }
+
+  /* 各カードのスタイル */
+  .card-text {
+      width: 300px; /* PCでのカードの基本幅 */
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden; /* 子要素がはみ出さないように */
+      display: flex; /* card-bodyとsearch-button-containerを縦並びにするため */
+      flex-direction: column;
+      justify-content: space-between; /* コンテンツとボタンを両端に配置 */
+  }
+
+  .card-body {
+      padding: 15px;
+      flex-grow: 1; /* card-bodyが残りのスペースを埋める */
+  }
+
+  /* カード内の画像がはみ出さないように */
+  .card-img img,
+  .card-img-text img {
+      max-width: 100%;       /* 親要素の幅を超えないようにする */
+      height: auto;          /* アスペクト比を維持して高さを自動調整 */
+      display: block;        /* 画像の下にできる余分なスペースをなくす */
+  }
+
+  /* カードタイトル部分のスタイル */
+  .card-title-text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+  }
+  .card-img-text { /* H1, H3の前のアイコン画像を囲むDIV */
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+  }
+  .card-title-text h1, .card-title-text h3 {
+      margin: 0; /* デフォルトマージンをリセット */
+      line-height: 1; /* 行間を詰める */
+      color: #333;
+  }
+  .card-title-text h1 {
+      font-size: 2.8em; /* PCでの学部名の最初の文字のサイズ */
+      margin-right: 5px;
+  }
+  .card-title-text h3 {
+      font-size: 1.3em; /* PCでの学部名の残りの文字のサイズ */
+      font-weight: normal;
+  }
+  .stylesize { /* h1にstylesizeクラスが指定されている場合 */
+      font-size: 2.8em;
+  }
+  .stylesecond { /* h3にstylesecondクラスが指定されている場合 */
+      font-size: 1.3em;
+      font-weight: normal;
+  }
+
+
+  /* カードコンテンツのフォントサイズと行間 */
+  .card-content {
+      font-size: 15px; /* PCでの基準フォントサイズ */
+      line-height: 1.6;
+      margin-top: 10px;
+      display: block; /* spanなのでblockにしてmarginを適用しやすく */
+  }
+  .spacing-size { /* 既存のクラスがあれば適用 */
+      /* 特に何もしないか、必要に応じて調整 */
+  }
+
+  /* ボタンのスタイル */
+  .card-button {
+      display: block;        /* ボタンをブロック要素にして幅100%に */
+      width: 100%;           /* 幅を親要素の100%に */
+      padding: 12px 15px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #007bff; /* メインボタンの色 */
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+  }
+  .card-button:hover {
+      background-color: #0056b3;
+  }
+
+  /* 下部の検索ボタンコンテナ */
+  .search-button-container {
+      padding: 0 15px 15px; /* 下部ボタンのパディング調整 */
+      margin-top: 0; /* HTMLで指定されていたmargin-topを打ち消す */
+      text-align: center; /* ボタンを中央寄せ */
+  }
+  .search-button {
+      display: inline-block; /* ボタンを中央寄せしやすくする */
+      width: 182px; /* PCでのボタンの固定幅 */
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #6c757d; /* 検索ボタンの色 */
+      color: #fff;
+      border-radius: 5px;
+      font-size: 12px;
+      transition: background-color 0.3s ease;
+  }
+  .search-button:hover {
+      background-color: #5a6268;
+  }
+  .search-button span {
+      font-size: 12px;
+  }
+
+
+  /* 画像キャプションのスタイル */
+  .card-img {
+      position: relative; /* 子要素 (image-caption) の absolute 配置の基準になる */
+      /* その他、既存の .card-img のスタイル */
+  }
+  .image-caption {
+      position: absolute;
+      bottom: 5px; /* 画像の下端から5px上（内側）に配置 */
+      left: 50%; /* 左端から50%の位置 */
+      transform: translateX(-50%); /* 中央寄せ */
+      background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 3px;
+      white-space: nowrap; /* テキストが途中で改行されないように */
+      font-size: 14px;
+      text-align: center;
+      writing-mode: horizontal-tb; /* 横書きにする */
+      -webkit-writing-mode: horizontal-tb;
+      text-orientation: mixed;
+      z-index: 2; /* 他の要素より手前に表示 */
+  }
+
+
+  /* --- レスポンシブデザイン (スマートフォン向け) --- */
+  @media (max-width: 768px) { /* 画面幅が768px以下の場合に適用 */
+      .container {
+          padding: 0 10px; /* スマホでは左右のパディングを減らす */
+      }
+
+      .row {
+          flex-direction: column; /* カードを縦に積み重ねる */
+          align-items: center;   /* カードを中央寄せにする */
+          gap: 0;                /* スマホでは縦方向のgapは不要になることが多い */
+          margin-bottom: 20px;   /* 各カードグループの下の余白 */
+      }
+
+      .card-text {
+          width: 100%;           /* カードの幅を親要素の100%にする */
+          max-width: 400px;      /* スマホでもカードが広がりすぎないように最大幅を設定 */
+          margin-bottom: 20px;   /* 各カードの下の余白 */
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* スマホではシャドウを少し控えめに */
+      }
+
+      /* 各要素のフォントサイズ調整（スマホ向け） */
+      .card-title-text h1 {
+          font-size: 2.2em;
+      }
+      .card-title-text h3 {
+          font-size: 1.1em;
+      }
+      .stylesize {
+          font-size: 2.2em;
+      }
+      .stylesecond {
+          font-size: 1.1em;
+      }
+
+      .card-content {
+          font-size: 14px;
+          line-height: 1.5;
+      }
+
+      .card-button {
+          padding: 10px 12px;
+          font-size: 13px;
+      }
+
+      .image-caption {
+          font-size: 12px; /* スマホではキャプションのフォントを小さく */
+          padding: 3px 8px;
+          bottom: 3px; /* 下からの位置も調整 */
+      }
+
+      /* 検索ボタンのコンテナとボタン */
+      .search-button-container {
+          width: 100%;
+          max-width: 400px; /* card-textと幅を合わせる */
+          padding: 0 0 15px; /* 左右のパディングを調整 */
+          margin-top: -15px; /* card-textと一体感を出すため少し上に寄せる */
+          background-color: #fff; /* card-textの背景色と合わせる */
+          border-radius: 0 0 10px 10px; /* 角丸を合わせる */
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* card-textと同じシャドウ */
+          position: relative;
+          z-index: 1; /* card-textより手前に来ないように */
+      }
+      .search-button {
+          width: calc(100% - 30px); /* 親のpadding分を引く */
+          margin: 0 auto; /* 中央寄せ */
+          font-size: 12px;
+      }
+      .search-button span {
+          font-size: 12px;
+      }
+  }
+
+  /* さらに小さなデバイス（例: iPhone SEなど）向けの調整も可能 */
+  @media (max-width: 480px) {
+      .card-title-text h1 {
+          font-size: 2em;
+      }
+      .card-title-text h3 {
+          font-size: 1em;
+      }
+      .stylesize {
+          font-size: 2em;
+      }
+      .stylesecond {
+          font-size: 1em;
+      }
+      .card-content {
+          font-size: 13px;
+      }
+      .image-caption {
+          font-size: 11px;
+          padding: 2px 6px;
+      }
+  }

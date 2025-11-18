@@ -1,0 +1,631 @@
+@import url(https://db.onlinewebfonts.com/c/7c7b079cf59c70d55d0b33eae89f1f38?family=Tazugane+Gothic+HondaMKTA+Med);
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/2bde541412c22560cc00e877296db4ac?family=Saira+Condensed);
+
+:root{
+    --white : #ffffff;
+    --black : #000000;
+    --blue : #2d4a95;
+    --grey : #d7deeb;
+    --turquoise : #4cdbac;
+    --vidvid_azure : #18cde5;
+    --vidvid_red : #f62723;
+    --peach : #ffbd59;
+    --japanese_font : 'Tazugane Gothic HondaMKTA Med', sans-serif;
+    --english_font : 'Saira Condensed', sans-serif;
+}
+
+*{
+    font-family: "Tazugane Gothic HondaMKTA Med";
+}
+
+.m-b-10{
+    margin-bottom: 10px !important;
+}
+
+.m-b-60{
+    margin-bottom: 60px !important;
+}
+
+.m-b-30{
+    margin-bottom: 30px !important;
+}
+
+.m-b-88{
+    margin-bottom: 88px !important;
+}
+
+.p-b-80{
+    padding-bottom: 80px !important;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section{
+    display: none;
+}
+
+.section.active{
+    display: block;
+}
+
+.section-title{
+    font-family: var(--english_font);
+    font-weight: 500;
+    font-size: 65.4px;
+    color: var(--turquoise);
+}
+
+.section-subtitle{
+    font-family: var(--japanese_font);
+    font-weight: regular;
+    font-size: 21.8px;
+    color: var(--blue);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.card-section{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 90px;
+   row-gap: 60px;
+}
+
+.card {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.first-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 55px;
+}
+
+.second-div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-img{
+    width: 40%;
+    margin: auto;
+}
+
+.card-title{
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, #2d4a95, #0b9dd5) 1;
+    gap: 3px;
+}
+
+.card-title h3{
+    font-family: var(--japanese_font);
+    font-weight: bold;
+    color: var(--blue);
+    font-size: 17px;
+    height: 20px;
+}
+
+.card-title h2 , .watermark{
+    font-family: var(--japanese_font);
+    color: var(--white);
+    font-size: 18.5px;
+    background-color: var(--blue);
+    height: 23px;
+    padding: 0 5px;
+}
+
+.card-text{
+    font-family: var(--japanese_font);
+    color: var(--black);
+    font-size: 16px;
+}
+
+.card-btn{
+    padding: 10px 0px;
+    background: var(--turquoise);
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    color: var(--white);
+}
+
+.card-btn span{
+    text-decoration: underline;
+}
+
+.devide-line .line{
+    width: 50%;
+    height: 5px;
+    background: linear-gradient(to right, #2d4a95, #0b9dd5 90%);
+    margin: 60px auto;
+}
+
+.tab-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, #2d4a95, #0b9dd5) 1;
+}
+
+.tab-section{
+    width: 60%;
+}
+
+.tab-img{
+    display: flex;
+    width: 40%;
+    position: relative;
+}
+
+.tab-img .img{
+    width: 70%;
+    height: auto;
+}
+
+.tab-img .gif{
+    width: 24%;
+    rotate: 20deg;
+    position: absolute;
+    right: 18px;
+    bottom: -9px;
+}
+
+.tabs{
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+}
+
+.tab{
+    text-align: center;
+    border: 1px solid var(--blue);
+    padding: 0 20px;
+    font-family: var(--japanese_font);
+    color: var(--blue);
+    font-size: 16.8px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab.active{
+    background-color: var(--blue);
+    color: var(--white);
+    height: 40px;
+}
+
+#section1.active{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#section1 .left, #section1 .right{
+    width: 50%;
+}
+
+.card2{
+    display: flex;
+    gap: 20px;
+}
+
+.watermark{
+    width: 3%;
+    background-color: transparent;
+    text-align: center;
+    height: auto;
+}
+
+.card2 .img{
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+}
+
+.img::after {
+  content: '';
+  position: absolute;
+  top: 10%; /* just below the element */
+  left: 20px;
+  width: 100%;
+  height: 120px; /* shadow thickness */
+  background: linear-gradient(to right, #2d4a95, #0b9dd5);
+  z-index: -1;
+}
+
+.card2 .card-title h2{
+    background-color: transparent;
+    color: var(--blue);
+    font-size: 33.5px;
+    padding: 0;
+    height: 37px;
+}
+
+.card2 .card-title h3{
+    font-size: 16.9px;
+    font-weight: 500;
+}
+
+
+.card2 .card-title{
+    border: none;
+    gap: 0;
+}
+
+.card2-content{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card2 .card-btn{
+    width: 70%;
+    margin-top: 16px;
+}
+
+.list .left, .list .right{
+    width: auto !important;
+}
+
+.list li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list .left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list .icons{
+    width: 11px;
+}
+
+.list .card-text{
+    color: var(--blue);
+}
+
+.city.card-text{
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0 20px;
+}
+
+.list-content .department{
+    color: rgba(0, 0, 0, 0.17);
+}
+
+.list .contain-line{
+    padding: 0 26px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);;
+
+}
+
+.check-container{
+    padding: 90px;
+    border: 40px solid var(--white);
+    background-color: rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.check-container .card-btn{
+    background-color: var(--blue);
+    padding: 10px 40px;
+}
+
+.check-list{
+    width: 100%;
+}
+
+.check-list .card-text{
+    color: var(--blue);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 1px solid var(--blue);
+}
+
+.check-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.check-item{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--blue);
+}
+
+.mixed-title{
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    justify-content: center;
+}
+
+.mixed-title h2, .mixed-title h3, .mixed-title h4{
+    font-family: var(--japanese_font);
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.mixed-title h2{
+    font-size: 93.3px;
+    height: 107px;
+}
+
+.mixed-title h3{
+    font-size: 25.9px;
+}
+
+.mixed-title h4{
+    font-size: 20.3px;
+}
+
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding : 0 180px;
+    position: relative;
+}
+
+.courses-container .card-text{
+    text-align: center;
+}
+
+.contents-card-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contents-title{
+    font-family: var(--japanese_font);
+    font-weight: bold;
+    font-size: 52px;
+    color: var(--blue);
+    text-align: center;
+}
+
+.contents-subtitle{
+    font-family: var(--japanese_font);
+    font-weight: bold;
+    font-size: 13.1px;
+    color: var(--blue);
+    text-align: center;
+}
+
+.new{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue);
+    padding-bottom: 10px;
+    margin-bottom:10px ;
+}
+
+.new-status{
+    padding: 0 20px;
+    border: 1px solid var(--blue);
+}
+
+.news .card-btn{
+    width: 16%;
+    margin: auto;
+}
+
+.qna-lists{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.qna{
+    background-color: var(--white);
+    padding: 20px;
+}
+
+.qna .top, .qna .bottom{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.qna-card-txt{
+    font-weight: bold;
+    font-size: 23px;
+    color: var(--white);
+    padding: 2px 10px;
+    background-color: var(--blue);
+}
+
+.qna a{
+    text-decoration: underline;
+}
+
+
+@media(max-width: 1173px)
+{
+    .first-div{
+        padding: 20px 30px;
+    }
+}
+
+@media(max-width: 1023px)
+{
+    .first-div{
+        padding: 15px;
+    }
+}
+
+@media(max-width: 934px)
+{
+    .section-title{
+        font-size: 54.3px;
+    }
+
+    .section-subtitle{
+        font-size: 18.1px;
+    }
+
+    .card-section{
+        gap: 30px;
+    }
+
+    .card-title h3{
+        font-size: 12.3px;
+    }
+
+    .card-title h2, .watermark{
+        font-size: 16.4px;
+    }
+
+    .card-text{
+        font-size: 10.1px;
+    }
+}
+
+@media(max-width: 700px)
+{
+    .card-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .card2-content {
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .card2 .card-text {
+        font-size: 14px;
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+}
+
+@media(max-width: 500px)
+{
+    .card{
+        height: 260px;
+    }
+}
+
+@media(max-width: 443px)
+{
+    .first-div {
+        padding: 10px;
+        padding-left:0px;
+    }
+
+    .card-section{
+        gap: 20px;
+    }
+
+    .card {
+        height: 220px;
+    }
+}
+
+@media(max-width: 400px){
+    .card-section{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    .first-div {
+        padding: 30px;
+    }
+}
+
+/* Responsive styles for two-column layout */
+@media (max-width: 1024px) {
+    #section1.active {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    #section1 .left, #section1 .right {
+        width: 100%;
+    }
+    
+    .courses-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 10px;
+        gap: 10px;
+    }
+    
+    .qna-lists {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-container {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .card2 {
+        flex-direction: column;
+    }
+    
+    .watermark {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .card2 .img::after {
+        height: 100px;
+    }
+}
+

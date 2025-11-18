@@ -1,0 +1,1315 @@
+/* Japanese font stack classes */
+.japanese-text,
+.vertical-text,
+.vertical-text-2,
+.vertical-text-3,
+.vertical-text-4,
+.vertical-text-5,
+.vertical-text-7,
+.vertical-text-8,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.search-button,
+.card-button,
+.search-button-container a[href="#"] span {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+  display: inline-block;
+}
+
+/* Slide in animation for VIEW MORE links */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Roll-in animation */
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%) rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Fade in animation for card30.png */
+.card-img-rotate {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+/* VIEW MORE button styles */
+.btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  animation: slideInFromLeft 0.8s ease-out forwards;
+  opacity: 0; /* Start invisible, will be animated in */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add a smooth hover effect */
+.btn:hover {
+  color: #1a3a7e !important;
+  text-decoration: none !important;
+  transform: translateX(5px) !important;
+}
+
+body {
+  background-color: var(--white);
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* Apply animation to numbers with staggered delays */
+.section1 .row .column:nth-child(2) .section1-font {
+  animation: rollIn 0.4s cubic-bezier(0.4, 0, 0.2, 1.2) forwards;
+  display: inline-block;
+}
+
+.section1 .row .column:nth-child(3) .section1-font {
+  animation: rollIn 0.4s cubic-bezier(0.4, 0, 0.2, 1.2) 0.1s forwards;
+  opacity: 0;
+  display: inline-block;
+}
+
+.section1 .row .column:nth-child(4) .section1-font {
+  animation: rollIn 0.4s cubic-bezier(0.4, 0, 0.2, 1.2) 0.2s forwards;
+  opacity: 0;
+  display: inline-block;
+}
+
+/* Search Button Styles */
+.search-button-container {
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+.search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Fixed width */
+  background-color: #4FE2B2;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+.search-button:hover {
+  background-color: #3dd1a2;
+  text-decoration: underline;
+}
+
+.search-button span {
+  margin-right: 8px;
+  text-decoration: underline;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+/* Web Data Section */
+.web-data {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Ensure all text in web-data uses the Japanese font stack */
+.web-data * {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+/* Mobile Slider Styles */
+.mobile-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+  margin: 20px 0 40px;
+  display: none;
+  /* Hide by default */
+}
+
+/* Show only on mobile */
+@media (max-width: 1025px) {
+  .mobile-slider-container {
+    display: block;
+  }
+}
+
+.mobile-slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.mobile-slide {
+  min-width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.mobile-slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mobile-slider-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-slider-dots .dot.active {
+  background-color: #4FE2B2;
+}
+
+/* Arrow navigation has been removed as per request */
+
+/* Mobile styles */
+@media (max-width: 1025px) {
+  .web-data {
+    display: none;
+  }
+
+  .section1 .column .section1-font {
+    font-family: var(--english_font);
+    font-size: 44px !important;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .card-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    text-align: center;
+    padding: 5px 12px !important;
+    line-height: 1.2;
+  }
+
+  /* Hide sections on mobile */
+  .section3,
+  .section4 {
+    display: none !important;
+  }
+
+  /* Show mobileview section on mobile */
+  .mobileview {
+    display: block !important;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1026px) {
+
+  /* Hide mobileview section on larger desktops */
+  .mobileview {
+    display: none !important;
+  }
+}
+
+.header-img {
+  width: 100%;
+}
+
+.number,
+.faculty {
+  color: var(--turquoise);
+  text-align: center;
+}
+
+.section1-department {
+  font-family: var(--japanese_font);
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--blue);
+}
+
+.section1 {
+  justify-content: center;
+  align-items: center;
+  /* height: 350px; */
+  text-align: center;
+  padding: 30px 0;
+}
+
+.section5 {
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  text-align: center;
+  padding: 20px;
+}
+
+.section3 {
+  justify-content: center;
+  align-items: center;
+  height: 1400px;
+  text-align: center;
+}
+
+.right-text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  font-size: 17px;
+  height: 200px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: 70px;
+}
+
+/* Mobile styles for text at image footer */
+@media (max-width: 1025px) {
+  .card-text {
+    position: relative;
+  }
+
+  
+  .card-body {
+    position: relative;
+    padding: 0;
+  }
+
+  .card-img {
+    position: relative;
+    display: block;
+    width: 300px;
+  }
+
+  .card-img img {
+    width: 100%;
+    display: block;
+    z-index: 100;
+  }
+
+  
+  
+
+  .vertical-text {
+    position: absolute;
+    bottom: 69px;
+    left: 0;
+    right: 0;
+    background: rgba(45, 74, 149, 0.7);
+    color: white;
+    text-align: start;
+    padding: 6px 7px;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1000;
+    line-height: 1.4;
+    writing-mode: horizontal-tb;
+    height: auto;
+    opacity: 0.7;
+  }
+
+  
+  @media (max-width: 1025px) {
+    .vertical-text-3 {
+      bottom: 119px;
+    }
+  }
+
+  @media (max-width: 1025px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+
+  @media (max-width: 1025px) {
+    .frame-size {
+         display: none;
+    }
+  }
+
+
+
+
+  @media (max-width: 1025px) {
+    .vertical-text-4 {
+      bottom: 83px;
+    }
+  }
+@media (max-width: 1025px) {
+    .vertical-text-11 {
+      bottom: 73px;
+    }
+  }
+  
+  /* iPhone specific adjustments */
+  @media (max-width: 414px) {
+    .vertical-text-11 {
+      bottom: 95px !important;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .vertical-text-22 {
+      bottom: 76px;
+    }
+  }
+  
+  /* iPhone specific adjustments */
+  @media (max-width: 414px) {
+    .vertical-text-22 {
+      bottom: 96px !important;
+    }
+  }
+
+
+
+  @media (max-width: 1025px) {
+    .vertical-text-8 {
+      bottom: 74px; /* For larger screens */
+    }
+  }
+  
+  /* iPhone specific adjustments */
+  @media (max-width: 414px) {
+    .vertical-text-8 {
+      bottom: 95px !important;
+    }
+  }
+
+  
+  .vertical-text-2 {
+    position: absolute;
+    bottom: 73px;
+    left: 0;
+    right: 0;
+    background: rgba(45, 74, 149, 0.7);
+    color: white;
+    text-align: center;
+    padding: 17px 7px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+    line-height: 1.4;
+    writing-mode: horizontal-tb;
+    height: auto;
+    opacity: 0.7;
+  }
+
+  .vertical-text-7 {
+    bottom: 68px;
+ 
+  }
+
+  .vertical-text-111 {
+    /* bottom: 65px; */
+            bottom: 71px;
+  }
+vertical-text-111
+
+  .vertical-text-1 {
+    /* bottom: 65px; */
+            bottom: 59px;
+  }
+   
+  .vertical-text-5 {
+    /* bottom: 65px; */
+            bottom: 74px;
+  }
+  .card-body>*:not(.card-img):not(.vertical-text) {
+    /* padding: 15px; */
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  margin: 0;
+  padding: 30px 0;
+  gap: 0;
+  padding: 0px;
+}
+
+.card-title-text {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #2d4a95, #0b9dd5) 1;
+  color: var(--blue);
+  font-weight: 700;
+  gap: 4px;
+}
+
+.check-input {
+  accent-color: transparent;
+  background-color: transparent;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.card-text {
+  width: 450px;
+  display: flex;
+  column-gap: 20px;
+  padding: 10px;
+  position: relative;
+  padding: 0;
+}
+
+
+.card-button {
+  color: var(--white);
+  position: absolute;
+  top: 32px;
+  right: 5px;
+  font-size: 10px;
+  padding: 5px 12px;
+  border-radius: 30px;
+  background-color: var(--turquoise);
+  text-decoration: underline;
+  z-index: 1101;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.card-img {
+  width: 100%;
+  margin-top: 6px;
+  position: relative;
+  z-index: 100;
+}
+.card-img .line-orange{
+  position: absolute;
+  left: 30%;
+  top: 25%;
+}
+
+.card-img .line-green{
+  position: absolute;
+  left: 40%;
+  bottom: 25%;
+}
+
+.card-img .bubble1 {
+    position: absolute;
+    left: 46%;
+    bottom: 42%;
+    width: 100px;
+    z-index: -1;
+}
+.card-img .bubble2 {
+    position: absolute;
+    left: -29px;
+    bottom: -41px;
+    width: 96px;
+    z-index: -1;
+}
+.center-text {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* height: 200px; */
+  align-items: center;
+}
+
+.column-text {
+  margin: 0;
+  padding: 0;
+}
+
+.highlight-text {
+  font-size: 25px;
+  color: var(--white);
+  background-color: var(--blue);
+  display: inline-block;
+  border-radius: 0;
+  padding: 6px;
+}
+
+.gif-container {
+  width: 100%;
+  /* position: relative; */
+  z-index: 10;
+}
+
+.gif-left {
+  position: absolute;
+  width: 1058px;
+  top: 0px;
+  right: -619px;
+  margin-left: 115px;
+}
+
+.gif-right {
+  position: absolute;
+  width: 612px;
+  bottom: 206px;
+  left: -233px;
+  transform: scaleX(-1); /* This will flip the GIF horizontally */
+}
+
+.small-figure {
+  transform: scale(0.1);
+  float: left;
+  margin-right: 1em;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 0px;
+  /* background-color: rgb(177, 198, 226); */
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.images .cell {
+  height: 390px;
+}
+
+.row-table {
+  display: table-row;
+}
+
+.cell {
+  padding: 10px;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  border: 0.1px ridge #878787;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.cell img {
+  width: 78%;
+  height: auto;
+  display: block;
+  
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.cell-department {
+  padding-top: 11px;
+  display: block;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+.row:nth-child(4) .cell:nth-child(6) {
+  background-color: var(--yellow);
+  font-weight: bold;
+}
+
+.card-content {
+  /* font-size: 12.5px; */
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+/* Mobile styles for .learn */
+.learn {
+  margin-top: 4px;
+  font-size: 55px;
+  margin-left: 17px;
+  color: var(--blue);
+}
+
+.section-title{
+  font-weight: 300 !important;
+  font-size: 76px !important;
+  color: var(--turquoise) !important;
+  font-family: 'Saira Condensed', sans-serif !important;
+}
+
+/* Mobile styles for section titles */
+@media (max-width: 1025px) {
+  .section-title {
+    font-size: 33px !important;
+  }
+
+
+  .section-title-2 {
+    font-size: 73px !important;
+    font-weight: 300;
+    color: var(--turquoise);
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.section-title-3 {
+  font-size: 47px !important;
+  font-weight: 300;
+  color: var(--turquoise);
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+  .section-subtitle {
+    font-size: 24px;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+  }
+
+  .search-button-container {
+    display: block;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .learn {
+   margin-top: 0;
+   font-size: 51px;
+   margin-left: 16px;
+  }
+
+  .search-button-container {
+    display: none;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.section1-font {
+  font-family: var(--english_font);
+  font-size: 85px;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(76, 219, 172);
+  line-height: 0.8;
+}
+
+.figures {
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+  font-family: sans-serif;
+}
+
+.figure {
+  text-align: center;
+  max-width: 180px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 0.4em;
+  white-space: nowrap;
+}
+
+.paragraph1 {
+  position: absolute;
+  bottom: 0;
+  /* ← This puts it at the bottom */
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  font-kerning: none;
+  text-decoration: none;
+}
+
+
+.paragraph2 {
+  position: absolute;
+  bottom: 0;
+  /* ← This puts it at the bottom */
+  width: 100%;
+  text-align: center;
+  font-size: 10;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  font-kerning: none;
+  text-decoration: none;
+}
+
+/* Apply Japanese font to section4 content */
+.section4 .paragraph3,
+.section4 .cell-department,
+.section4 .card-figure,
+.section4 .first-div-text,
+.section4 .first-div-text span {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+/* Set blue color for paragraph3 text */
+.section4 .paragraph3 {
+  color: #2d4a95 !important;
+      margin: 11px 0 -11px;
+}
+
+.title {
+  font-size: 1em;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(76, 219, 172);
+  font-kerning: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.card-figure {
+  width: 100%;
+  position: relative;
+  margin-left: 9px !important;
+}
+
+.first-div-text {
+  width: 90%;
+  height: 90px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 2px;
+
+}
+
+.second-div-text {
+  width: 90%;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.figure-container {
+  width: 300px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.figure-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-left-text {
+  position: absolute;
+  top: -20px;
+  left: -15px;
+  right: 20px;
+  width: 150px;
+  height: 100px;
+  color: white;
+  background-color: rgba(29, 8, 224, 0.6);
+  border-radius: 1px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.overlay-right-text {
+  position: absolute;
+  bottom: 3px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  width: 300px;
+  height: 120px;
+  background-color: rgba(29, 8, 224, 0.6);
+  border-radius: 1px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.gif-container-text {
+  display: flex;
+}
+
+.gif {
+  opacity: 0.1;
+}
+
+.figure-size {
+  opacity: 1;
+  width: 300px;
+  height: 500px;
+  background-color: #e0e0e0;
+  margin: 10px;
+  text-align: center;
+}
+
+.figure-size img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.section06-color {
+  color: turquoise;
+  font-weight: bold;
+}
+
+.section07-color {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section07-rectangle {
+  background-color: black;
+}
+
+.card-img-text {
+  width: 10%;
+}
+
+.view-more {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--blue);
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.view-more-link::after {
+
+  /* content: "→"; */
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.card-section06 {
+  width: 100px;
+  height: 100px;
+
+}
+
+.card30-container {
+  position: relative;
+
+}
+
+.card-img-rotate {
+  position: absolute;
+  top: -41px;
+  left: -34px;
+  width: 75px;
+  /* height: 50px; */
+  /* transform: rotate(-35deg); */
+  transform: rotate(-34deg);
+}
+
+.card-img-rotate-2 {
+    position: absolute;
+    top: -11px;
+    left: -16px;
+    width: 75px;
+    /* height: 50px; */
+    /* transform: rotate(-35deg); */
+    transform: rotate(3deg);
+}
+
+.card-img-rotate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card23-section05 {
+  height: 360px;
+  background-image: url("/assets/img/department/card23.webp");
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.card24-section05 {
+  height: 360px;
+  background-image: url("/assets/img/department/card24.webp");
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.card25-section05 {
+  height: 360px;
+  background-image: url("/assets/img/department/card25.webp");
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.card-descending,
+.card-ascending {
+  background-color: #5d5dcf66;
+}
+
+.card-ascending {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+  width: 180%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.check-label {
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: var(--blue);
+    margin-top: 10px;
+    margin-left: 1px;
+}
+
+.check-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 10px;
+}
+
+.check-item {
+  border-radius: 4px;
+}
+
+.cell {
+  background-color: rgb(177, 198, 226);
+}
+
+.academic-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+.academic-card-frame {
+  width: 300px;
+  position: relative;
+  margin: 20px 0;
+  flex: 0 0 auto;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+.mobile-slide .academic-card-frame{
+  margin: 20px auto;
+}
+
+.program-header-badge {
+  opacity: 0.6;
+  left: 10px;
+  top: 63px;
+  width: 241px;
+  height: auto;
+  min-height: 100px;
+  background-color: #2c7dc3;
+  color: white;
+  text-align: center;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  margin-left: -15px;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.program-description-panel {
+  opacity: 0.8;
+  width: 299px;
+  height: 116px;
+  background-color: #2c7dc3;
+  color: black;
+  text-align: left;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  margin-top: 150px;
+  margin-left: 10px;
+  backdrop-filter: blur(2px);
+  overflow: visible;
+  font-size: 16px;
+  padding: 10px;
+  font-family: 'Noto Sans JP', 'Noto Serif JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+.program-description-panel h2 {
+  margin: 0 0 5px 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+.program-description-panel h2 {
+  color: #00ffab;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.program-description-panel p {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.program-visual-showcase {
+  width: 298px;
+  height: 286px;
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.program-visual-showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.program-header-badge p {
+  padding-left: 23px;
+  padding-top: 38px;
+  font-size: 22px;
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
+
+.program-header-badge .card2-text {
+  padding-left: 22px !important;
+  font-weight: bold;
+  padding-top: 38px;
+  font-size: 22px;
+  text-align: left;
+}
+
+.program-header-badge .card3-text {
+  padding-left: 36px !important;
+  font-weight: bold;
+  padding-top: 33px;
+  font-size: 25px;
+  text-align: left;
+}
+
+
+
+.program-header-badge.card-2 p {
+  padding-left: 9px;
+}
+
+.program-description-panel h2 {
+  color: #00ffab;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.program-description-panel p {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.stylesize {
+  margin-bottom: -2px;
+}
+
+.stylesecond {
+  margin-bottom: 0px;
+  font-size: 23px !important;
+}
+
+.spacing-size {
+  display: inline-block;
+  margin-top: 2px;
+  padding-top: 10px;
+}
+
+.program-visual-showcase img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header image responsive visibility */
+.header-web {
+  display: block;
+}
+
+.header-mobile {
+  display: none;
+}
+
+.section2{
+  position: relative;
+}
+
+@media (max-width: 1025px) {
+  .header-web {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 1025px) {
+  .highlight-text {
+    margin-left: -22px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .section1-font {
+    font-size: 60px !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .section1 .row {
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .section-subtitle.learn {
+    margin-left: 9px;
+    margin-top: 8px;
+    font-size: 55px !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .section2.container {
+    margin-top: -19px !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .card-left-title {
+    display: none !important;
+  }
+}
+
+
+
+/* Mobile portrait design: centered with max 400px width below 1025px */
+@media (max-width: 1025px) {
+  html {
+    background-color: #f5f5f5;
+    /* Light gray background for side spaces */
+  }
+
+  body {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+}
