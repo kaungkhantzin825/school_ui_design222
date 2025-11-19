@@ -1355,3 +1355,9 @@ display: block;
     background: linear-gradient(to right, #2d4a95, #0b9dd5);
     z-index: -1;
 }
+
+.card-btn:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 1px;
+}
