@@ -1361,3 +1361,11 @@ display: block;
     text-decoration-color: white;
     text-decoration-thickness: 1px;
 }
+
+
+/* Web view only (desktop) */
+@media (min-width: 1025px) {
+    .siceppdine {
+      margin-top: 26px;
+    }
+}
