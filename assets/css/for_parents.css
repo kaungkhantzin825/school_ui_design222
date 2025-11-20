@@ -1,5 +1,5 @@
-body,
-html {
+/* body, html への指定を親IDに変更し、影響範囲を限定 */
+#thu-f-content {
   overflow-x: hidden;
   /* ★横方向のスクロールを完全に禁止 */
   width: 100%;
@@ -58,49 +58,31 @@ html {
 }
 
 /* 2. 作成したアニメーションを .left クラスに適用します */
-.left {
+#thu-f-content .left {
   /* animation: (アニメーション名) (再生時間) (動き方) (終了後の状態); */
   animation: fadeInFromTop 1s ease-out forwards;
 }
 
-/* 1. 点滅アニメーションの動きを定義します */
-/* @keyframes blink {
-  0% { opacity: 1; }    開始時：完全に表示
-  50% { opacity: 0; }   中間：完全に透明
-  100% { opacity: 1; } /* 終了時：完全に表示
-} */
-
-/* 2. 定義したアニメーションを .image-light クラスに適用します */
-/* .image-light {
-  animation: blink 1.5s linear infinite; 
-  transform: translateX(-8px); 
-  min-width: 71px; 
-  width: 71px;   
-  height: auto;
-  flex-shrink: 0; 
-} */
-
-
 /* Animation Classes */
-.animate-burst {
+#thu-f-content .animate-burst {
   animation: burstIn 1s ease-out forwards;
   opacity: 0;
 }
 
-.animate-slide {
+#thu-f-content .animate-slide {
   animation: slideInFromLeft 3s ease-out forwards;
   opacity: 0;
 }
 
 /* Typing animation styles */
-.scholarship,
-.text-node {
+#thu-f-content .scholarship,
+#thu-f-content .text-node {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.text-node span {
+#thu-f-content .text-node span {
   display: inline-block;
   opacity: 0;
   transform: translateY(10px);
@@ -108,35 +90,28 @@ html {
   will-change: opacity, transform;
 }
 
-.scholarship.animate-typing,
-.text-node {
+#thu-f-content .scholarship.animate-typing,
+#thu-f-content .text-node {
   white-space: normal;
 }
 
 /* Specific styles for Japanese text */
-.card2-content h2,
-.card2-content h3 {
+#thu-f-content .card2-content h2,
+#thu-f-content .card2-content h3 {
   overflow: hidden;
   text-align: left;
   font-size: 22px;
 }
 
-.card2-content h2 span,
-.card2-content h3 span {
+#thu-f-content .card2-content h2 span,
+#thu-f-content .card2-content h3 span {
   display: inline-block;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.2s ease;
 }
 
-/* Animation for the specific elements */
-/* .card2-content h2.animated span,
-.card2-content h3.animated span {
-  opacity: 1;
-  transform: translateY(0);
-} */
-
-.card2-content {
+#thu-f-content .card2-content {
   margin-left: 20px;
   /* margin-top: -20px; */
   display: center;
@@ -146,11 +121,11 @@ html {
   /* ★子要素を左端に揃える */
 }
 
-.container {
+#thu-f-content .container {
   width: 100%;
 }
 
-.hero-title {
+#thu-f-content .hero-title {
   font-size: 50px;
   /* font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important; */
   color: var(--blue);
@@ -160,7 +135,7 @@ html {
   line-height: 1.5;
 }
 
-.section-subtitle {
+#thu-f-content .section-subtitle {
   /* 0.3秒遅れてアニメーションを開始-yuguchi */
   animation: fadeInFromTop 4s ease-out forwards;
   margin-top: 20px;
@@ -169,16 +144,16 @@ html {
   white-space: nowrap;
 }
 
-.parent_hero {
+#thu-f-content .parent_hero {
   display: flex;
   justify-content: space-between;
 }
 
-.parent_hero .right {
+#thu-f-content .parent_hero .right {
   max-width: 40%;
 }
 
-.parent_hero .right img {
+#thu-f-content .parent_hero .right img {
   width: 100%;
   /* 親要素の幅いっぱいに広げる */
   height: auto;
@@ -189,7 +164,7 @@ html {
   margin-top: 112px;
 }
 
-.button {
+#thu-f-content .button {
   display: flex;
   justify-content: center;
   /* flex-wrap: wrap; */
@@ -204,15 +179,15 @@ html {
   /* Windowsでの細くなりすぎるのを防ぎ、読みやすくします */
 }
 
-.button .card-btn {
+#thu-f-content .button .card-btn {
   padding: 12px 15px;
 }
 
-.button .card-btn:hover {
+#thu-f-content .button .card-btn:hover {
   text-decoration: underline;
 }
 
-.section-title-wrap {
+#thu-f-content .section-title-wrap {
   /* margin: auto; */
   padding: 0;
   justify-content: center;
@@ -221,12 +196,12 @@ html {
   /* この行を追加 */
 }
 
-.section-title-wrap img {
+#thu-f-content .section-title-wrap img {
   width: 74%;
   margin: auto;
 }
 
-.title {
+#thu-f-content .title {
   /* font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
    */
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
@@ -244,7 +219,7 @@ html {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.title2 {
+#thu-f-content .title2 {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
   font-weight: bold;
   font-size: 50px;
@@ -255,11 +230,11 @@ html {
   letter-spacing: 0.05em;
 }
 
-.title2:hover{
+#thu-f-content .title2:hover{
   text-decoration: underline;
 }
 
-.info-box {
+#thu-f-content .info-box {
   position: relative;
   background-color: #fef8e6;
   border: 2px solid transparent;
@@ -283,12 +258,12 @@ html {
   align-self: center;
 }
 
-.info-box h3 {
+#thu-f-content .info-box h3 {
   flex: 1;
   /* この行を追加 */
 }
 
-.info-box::after {
+#thu-f-content .info-box::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -298,7 +273,7 @@ html {
   background: linear-gradient(to bottom, var(--white) 35%, var(--blue) 19%);
 }
 
-.info-box::before {
+#thu-f-content .info-box::before {
   content: '';
   position: absolute;
   top: 0;
@@ -308,11 +283,11 @@ html {
   background: linear-gradient(to right, var(--white) 6%, var(--blue) -6%);
 }
 
-.title span {
+#thu-f-content .title span {
   color: var(--turquoise);
 }
 
-.info-box img {
+#thu-f-content .info-box img {
   width: 80px;
   position: absolute;
   top: -10px;
@@ -321,7 +296,7 @@ html {
   z-index: 10; */
 }
 
-.main-title {
+#thu-f-content .main-title {
   font-size: 111px;
   font-family: 'Saira Condensed', sans-serif !important;
   color: var(--turquoise);
@@ -331,7 +306,7 @@ html {
   /* ★行の高さをフォントサイズと等しくする */
 }
 
-.section02 .left {
+#thu-f-content .section02 .left {
   width: 23%;
   display: flex;
   align-items: center;
@@ -340,15 +315,15 @@ html {
   /* 左右の要素を両端に配置 */
 }
 
-.mobile-section02 .left {
+#thu-f-content .mobile-section02 .left {
   width: 100%;
 }
 
-.section02 .left img {
+#thu-f-content .section02 .left img {
   width: 90%;
 }
 
-.section02-wrap {
+#thu-f-content .section02-wrap {
   display: flex;
   display: flex;
   align-items: center;
@@ -357,18 +332,18 @@ html {
   gap: 50px;
 }
 
-.border-line-about {
+#thu-f-content .border-line-about {
   width: 2px;
   height: 890px;
   background-color: var(--blue);
 }
 
-.section02 .right {
+#thu-f-content .section02 .right {
   flex: 1;
   align-items: flex-start;
 }
 
-.about-image {
+#thu-f-content .about-image {
   width: 100%;
   width: clamp(250px, 40vw, 500px);
   height: auto;
@@ -377,7 +352,7 @@ html {
   height: auto;
 }
 
-.about-card {
+#thu-f-content .about-card {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -393,7 +368,7 @@ html {
 }
 
 /* 以下は変更なし */
-.about-card .left {
+#thu-f-content .about-card .left {
   display: flex;
   flex-direction: column;
   /* 子要素を縦に並べる */
@@ -411,7 +386,7 @@ html {
   /* padding: 31px 0; */
 }
 
-.about-card .left::after {
+#thu-f-content .about-card .left::after {
   content: "";
   position: absolute;
   bottom: -29px;
@@ -424,7 +399,7 @@ html {
   border-top: 30px solid #2d4a95;
 }
 
-.about-card .title {
+#thu-f-content .about-card .title {
   font-family: var(--english_font);
   font-size: 20.0px;
   font-weight: bold;
@@ -439,7 +414,7 @@ html {
 
 }
 
-.about-card .num {
+#thu-f-content .about-card .num {
   font-family: var(--english_font);
   font-size: 50.2px;
   font-weight: bold;
@@ -453,7 +428,7 @@ html {
   /* 親要素の幅いっぱいに広げる */
 }
 
-.content-wrapper {
+#thu-f-content .content-wrapper {
   /* width: 90%;            コンテンツ全体の幅を画面の90%にする */
   max-width: 1025px;
   /* max-width: 1170px;  */
@@ -464,7 +439,7 @@ html {
   /* padding: 0 20px; */
 }
 
-.about-card .right {
+#thu-f-content .about-card .right {
   width: 70%;
   border: 2px solid var(--blue);
   padding: 20px;
@@ -473,13 +448,13 @@ html {
   /* 子要素を縦に並べる */
   justify-content: flex-start;
   /* これで上揃えになります */
-  gap: 15px;
+  gap: 13px;
   /* h2, p, a の各要素の間隔を調整します */
   height: 194.08px;
   /* 高さを固定 */
 }
 
-.about-card .right .title {
+#thu-f-content .about-card .right .title {
   font-family: 'Saira Condensed', sans-serif;
   font-weight: bold;
   font-size: 30px;
@@ -489,7 +464,7 @@ html {
   word-break: break-all;
 }
 
-.about-card .right .text {
+#thu-f-content .about-card .right .text {
   /* font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important; */
   font-size: 16px !important;
   color: var(--black);
@@ -502,7 +477,7 @@ html {
 
 
 @media (max-width: 1025px) {
-  .about-card .right {
+  #thu-f-content .about-card .right {
     width: 70%;
     border: 2px solid var(--blue);
     padding: 20px;
@@ -519,7 +494,7 @@ html {
 }
 
 @media (max-width: 1025px) {
-  .about-card .right .title {
+  #thu-f-content .about-card .right .title {
     font-family: 'Saira Condensed', sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -531,7 +506,7 @@ html {
 }
 
 @media (max-width: 1025px) {
-  .about-card .right .text {
+  #thu-f-content .about-card .right .text {
     /* font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important; */
     font-size: 14px !important;
     color: var(--black);
@@ -543,26 +518,26 @@ html {
 }
 
 
-.about-card .right a {
+#thu-f-content .about-card .right a {
   color: var(--blue) !important;
   font-size: clamp(13px, 1.5vw, 15px);
   word-break: break-all;
 }
 
-.about-card .right .text span {
+#thu-f-content .about-card .right .text span {
   text-decoration: underline;
   font-size: 15px;
   word-break: break-all;
 }
 
-.about-card .right .text span:hover {
+#thu-f-content .about-card .right .text span:hover {
   color: #004097;
   text-decoration-color: #004097;
   cursor: pointer;
 }
 
 @media (max-width: 1025px) {
-  .about-card .right a {
+  #thu-f-content .about-card .right a {
     color: var(--blue) !important;
     font-size: clamp(15px, 1.5vw, 15px);
     word-break: break-all;
@@ -570,27 +545,36 @@ html {
 }
 
 @media (max-width: 1025px) {
-  .about-card .right .text span {
-    text-decoration: underline;
-    font-size: clamp(15px, 1.5vw, 15px);
-    word-break: break-all;
-  }
+#thu-f-content .about-card .right .text span:hover {
+  color: #004097;
+  text-decoration-color: #004097;
+  cursor: pointer;
+}
 }
 
+/* @media (max-width: 1025px) {
+#thu-f-content .about-card .right .text span:hover {
+  color: #004097;
+  text-decoration-color: #004097;
+  cursor: pointer;
+} */
 
-.section03-warp {
+
+
+
+#thu-f-content .section03-warp {
   padding: 22px 70px;
   border: 2px solid var(--blue);
 }
 
-.section03-warp .wrap {
+#thu-f-content .section03-warp .wrap {
   display: flex;
   align-items: center;
   width: 90%;
   margin: auto;
 }
 
-.section03 .wrap p {
+#thu-f-content .section03 .wrap p {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
   font-weight: 500;
   /* Windowsでの細くなりすぎるのを防ぎ、読みやすくします */
@@ -598,7 +582,7 @@ html {
   color: var(--black);
 }
 
-.click-link {
+#thu-f-content .click-link {
   font-size: 32px;
   color: #2d4a95;
   font-weight: bold;
@@ -615,11 +599,11 @@ html {
   text-decoration: none;
 }
 
-.click-link:hover {
+#thu-f-content .click-link:hover {
   text-decoration: none;
 }
 
-.click-link .arrow {
+#thu-f-content .click-link .arrow {
   content: "";
   position: absolute;
   bottom: 0;
@@ -634,13 +618,13 @@ html {
   margin-right: 10px
 }
 
-.click-link:hover .arrow {
+#thu-f-content .click-link:hover .arrow {
   transform: translateX(20px);
   /* 右に20px移動させる */
   text-decoration: none;
 }
 
-.click-link .arrow::after {
+#thu-f-content .click-link .arrow::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -659,7 +643,7 @@ html {
   /* 垂直方向中央揃えの微調整 */
 }
 
-.click-text {
+#thu-f-content .click-text {
   display: inline-block;
   /* transformを適用するため */
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -670,21 +654,21 @@ html {
   text-decoration: none;
 }
 
-.moving-card {
+#thu-f-content .moving-card {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
 }
 
-.moving-card .left,
-.moving-card .right {
+#thu-f-content .moving-card .left,
+#thu-f-content .moving-card .right {
   width: 50%;
 }
 
 /*
  * 右側のボックスの基本設定
  */
-.moving-card .right {
+#thu-f-content .moving-card .right {
   position: relative;
   /* 線の基準位置にする */
   overflow: hidden;
@@ -693,7 +677,7 @@ html {
 }
 
 /* 1. 左の線 (上から下へ) */
-.moving-card .right .border-line.line-left {
+#thu-f-content .moving-card .right .border-line.line-left {
   top: 0;
   left: 0;
   width: 1px;
@@ -703,7 +687,7 @@ html {
 }
 
 /* 2. 下の線 (左下から右へ) */
-.moving-card .right .border-line.line-bottom {
+#thu-f-content .moving-card .right .border-line.line-bottom {
   bottom: 0;
   left: 0;
   width: 100%;
@@ -713,7 +697,7 @@ html {
 }
 
 /* 3. 右の線 (右下から上へ) */
-.moving-card .right .border-line.line-right {
+#thu-f-content .moving-card .right .border-line.line-right {
   bottom: 0;
   right: 0;
   width: 1px;
@@ -723,7 +707,7 @@ html {
 }
 
 /* 4. 上の線 (右上から左へ) */
-.moving-card .right .border-line.line-top {
+#thu-f-content .moving-card .right .border-line.line-top {
   top: 0;
   right: 0;
   width: 100%;
@@ -732,7 +716,7 @@ html {
   transform-origin: right;
 }
 
-.moving-card .left {
+#thu-f-content .moving-card .left {
   /* border: 1px solid var(--blue); ← ★この行を削除！ */
   position: relative;
   /* 線の基準位置にする */
@@ -742,7 +726,7 @@ html {
 }
 
 /* 4つの線に共通のスタイル */
-.border-line {
+#thu-f-content .border-line {
   position: absolute;
   background-color: var(--blue);
   z-index: 2;
@@ -751,7 +735,7 @@ html {
 /* ★★★ 各線の位置と初期状態を以下のように修正 ★★★ */
 
 /* 1. 下の線 (右下から左へ) */
-.border-line.line-bottom {
+#thu-f-content .border-line.line-bottom {
   bottom: 0;
   right: 0;
   width: 100%;
@@ -761,7 +745,7 @@ html {
 }
 
 /* 2. 左の線 (左下から上へ) */
-.border-line.line-left {
+#thu-f-content .border-line.line-left {
   bottom: 0;
   left: 0;
   width: 1px;
@@ -771,7 +755,7 @@ html {
 }
 
 /* 3. 上の線 (左上から右へ) */
-.border-line.line-top {
+#thu-f-content .border-line.line-top {
   top: 0;
   left: 0;
   width: 100%;
@@ -781,7 +765,7 @@ html {
 }
 
 /* 4. 右の線 (右上から下へ) */
-.border-line.line-right {
+#thu-f-content .border-line.line-right {
   top: 0;
   right: 0;
   width: 1px;
@@ -790,18 +774,18 @@ html {
   transform-origin: top;
 }
 
-.moving-card img {
+#thu-f-content .moving-card img {
   width: 50%;
   margin: auto;
 }
 
-.moving-card .title {
+#thu-f-content .moving-card .title {
   font-size: 30.8px;
   font-weight: regular;
   text-shadow: none;
 }
 
-.moving-card .click-link {
+#thu-f-content .moving-card .click-link {
   margin-right: 20px;
   position: relative;
   /* 位置調整の基準にする */
@@ -809,32 +793,32 @@ html {
   /* ★本来の位置より10px上に移動 */
 }
 
-.reverce {
+#thu-f-content .reverce {
   flex-direction: row-reverse;
 }
 
-.img {
+#thu-f-content .img {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px 0;
 }
 
-.img img[alt="arrowleft"],
-.img img[alt="arrowright"] {
+#thu-f-content .img img[alt="arrowleft"],
+#thu-f-content .img img[alt="arrowright"] {
   width: 40px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.img img[alt="arrowleft"]:hover,
-.img img[alt="arrowright"]:hover {
+#thu-f-content .img img[alt="arrowleft"]:hover,
+#thu-f-content .img img[alt="arrowright"]:hover {
   transform: scale(1.2);
 }
 
 @media (min-width: 1026px) {
-  .img {
+  #thu-f-content .img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -867,7 +851,7 @@ html {
   }
 }
 
-.moving-card .text {
+#thu-f-content .moving-card .text {
   display: inline-block;
   white-space: nowrap;
   animation-duration: 150s;
@@ -880,7 +864,7 @@ html {
 
 }
 
-.moving-card:not(.reverce) .text {
+#thu-f-content .moving-card:not(.reverce) .text {
   animation-name: move-left;
   /* ↓ 待ち時間を0にする */
   animation-delay: -18s !important;
@@ -890,7 +874,7 @@ html {
   /* テキストの繋ぎ目に少し余白を入れる */
 }
 
-.moving-card.reverce .text {
+#thu-f-content .moving-card.reverce .text {
   animation-name: move-right;
   display: inline-block;
   /* spanをブロック要素として扱う */
@@ -899,14 +883,14 @@ html {
 
 }
 
-.moving-card .right {
+#thu-f-content .moving-card .right {
   /* padding-bottom: 50px; */
   overflow: hidden;
   position: relative;
 }
 
 
-.carousel {
+#thu-f-content .carousel {
   display: flex;
   justify-content: center;
   justify-content: space-between;
@@ -920,7 +904,7 @@ html {
   gap: 20px
 }
 
-.center-container {
+#thu-f-content .center-container {
   display: flex;
   flex-direction: column;
   /* 要素を縦に並べる */
@@ -928,12 +912,12 @@ html {
   /* ★水平方向の中央揃え */
 }
 
-.align-left {
+#thu-f-content .align-left {
   margin-right: auto;
   /* ★これを指定すると、要素は左端に配置されます */
 }
 
-.card {
+#thu-f-content .card {
   flex: 1;
   /* すべてのカードが利用可能なスペースを均等に占める */
   margin: 0 10px;
@@ -951,7 +935,7 @@ html {
   cursor: pointer;
 }
 
-.mobile-card {
+#thu-f-content .mobile-card {
   flex: 0 0 auto;
   margin: 0 10px;
   border: 1px solid #004097;
@@ -966,54 +950,54 @@ html {
 
 
 /* ★ orderプロパティで表示順を制御 */
-.card[data-id="A"] {
+#thu-f-content .card[data-id="A"] {
   order: 1;
 }
 
-.card[data-id="B"] {
+#thu-f-content .card[data-id="B"] {
   order: 2;
 }
 
-.card[data-id="C"] {
+#thu-f-content .card[data-id="C"] {
   order: 3;
 }
 
 /* Hover effect - Desktop only */
 @media (min-width: 1026px) {
-  .card,
-  .mobile-card {
+  #thu-f-content .card,
+  #thu-f-content .mobile-card {
     transition: all 0.3s ease;
     cursor: pointer;
   }
 
-  .card:hover:not(.active),
-  .mobile-card:hover {
+  #thu-f-content .card:hover:not(.active),
+  #thu-f-content .mobile-card:hover {
     transform: scale(1.03);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     z-index: 1;
   }
 
   /* Hover should visually match the active emphasis, but NOT affect an active card */
-  .card:not(.active):hover,
-  .mobile-card:hover {
+  #thu-f-content .card:not(.active):hover,
+  #thu-f-content .mobile-card:hover {
     transform: scale(1.05);
     opacity: 1;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
 
   /* Keep text colors on hover consistent with theme (non-active only) */
-  .card:not(.active):hover h2,
-  .mobile-card:hover h2 {
+  #thu-f-content .card:not(.active):hover h2,
+  #thu-f-content .mobile-card:hover h2 {
     color: var(--blue);
   }
 
-  .card:not(.active):hover p,
-  .mobile-card:hover p {
+  #thu-f-content .card:not(.active):hover p,
+  #thu-f-content .mobile-card:hover p {
     color: var(--black);
   }
 
-  .card:not(.active):hover a,
-  .mobile-card:hover a {
+  #thu-f-content .card:not(.active):hover a,
+  #thu-f-content .mobile-card:hover a {
     color: #004097;
     border-color: #004097;
   }
@@ -1021,20 +1005,20 @@ html {
 
 /* Mobile - No hover effects */
 @media (max-width: 1025px) {
-  .card,
-  .mobile-card {
+  #thu-f-content .card,
+  #thu-f-content .mobile-card {
     cursor: default !important;
     transition: none !important;
     transform: none !important;
     pointer-events: auto;
   }
   
-  .card:hover,
-  .mobile-card:hover,
-  .card:active,
-  .mobile-card:active,
-  .card:focus,
-  .mobile-card:focus {
+  #thu-f-content .card:hover,
+  #thu-f-content .mobile-card:hover,
+  #thu-f-content .card:active,
+  #thu-f-content .mobile-card:active,
+  #thu-f-content .card:focus,
+  #thu-f-content .mobile-card:focus {
     transform: none !important;
     box-shadow: none !important;
     scale: 1 !important;
@@ -1043,8 +1027,8 @@ html {
 
 /* Active state - Desktop only */
 @media (min-width: 1026px) {
-  .card.active,
-  .mobile-card.active {
+  #thu-f-content .card.active,
+  #thu-f-content .mobile-card.active {
     transform: scale(1.05);
     opacity: 1;
     z-index: 2;
@@ -1054,8 +1038,8 @@ html {
 
 /* Mobile - No active state effects */
 @media (max-width: 1025px) {
-  .card.active,
-  .mobile-card.active {
+  #thu-f-content .card.active,
+  #thu-f-content .mobile-card.active {
     transform: none !important;
     opacity: 1 !important;
     z-index: 0 !important;
@@ -1064,7 +1048,7 @@ html {
   }
 }
 
-.card h2 {
+#thu-f-content .card h2 {
   color: var(--blue);
   font-size: 35px;
   font-weight: bold;
@@ -1072,7 +1056,7 @@ html {
   line-height: 1.4;
 }
 
-.card p {
+#thu-f-content .card p {
   font-size: 19px;
   text-align: left;
   margin-bottom: 20px;
@@ -1082,7 +1066,7 @@ html {
 
 }
 
-.card q {
+#thu-f-content .card q {
   font-size: 19px;
   text-align: left;
   margin-bottom: 30px;
@@ -1092,8 +1076,8 @@ html {
 
 }
 
-.card a,
-.mobile-card a {
+#thu-f-content .card a,
+#thu-f-content .mobile-card a {
   display: inline-block;
   padding: 10px 20px;
   border: 2px solid #004097;
@@ -1101,42 +1085,42 @@ html {
   color: #004097;
   /* font-weight: bold; */
   /* font-size: 15px; */
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 
 /* Mobile - No link hover effects */
 @media (max-width: 1025px) {
-  .card a,
-  .mobile-card a {
+  #thu-f-content .card a,
+  #thu-f-content .mobile-card a {
     transition: none !important;
   }
   
-  .card a:hover,
-  .mobile-card a:hover,
-  .card a:active,
-  .mobile-card a:active {
+  #thu-f-content .card a:hover,
+  #thu-f-content .mobile-card:hover,
+  #thu-f-content .card a:active,
+  #thu-f-content .mobile-card:active {
     transform: none !important;
     background-color: transparent !important;
     color: #004097 !important;
     scale: 1 !important;
   }
   
-  .card a:hover span,
-  .mobile-card a:hover span,
-  .card a:active span,
-  .mobile-card a:active span {
+  #thu-f-content .card a:hover span,
+  #thu-f-content .mobile-card:hover span,
+  #thu-f-content .card a:active span,
+  #thu-f-content .mobile-card a:active span {
     transform: none !important;
     scale: 1 !important;
   }
 }
 
-.dots {
+#thu-f-content .dots {
   text-align: center;
   margin-top: 20px;
 }
 
-.dot {
+#thu-f-content .dot {
   height: 10px;
   width: 10px;
   margin: 0 5px;
@@ -1146,28 +1130,28 @@ html {
   cursor: pointer;
 }
 
-.dot.active {
+#thu-f-content .dot.active {
   background-color: #004097;
 }
 
-.box-container {
+#thu-f-content .box-container {
   display: flex;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
 }
 
-.box-group {
+#thu-f-content .box-group {
   position: absolute;
   width: 200px;
   height: 300px;
 }
 
-.box-group.right {
+#thu-f-content .box-group.right {
   right: -80px;
 }
 
-.box {
+#thu-f-content .box {
   position: absolute;
   width: 120px;
   height: 120px;
@@ -1177,25 +1161,25 @@ html {
   animation: fadeSlide 1.5s ease-in-out forwards;
 }
 
-.left .box1 {
+#thu-f-content .left .box1 {
   top: 0px;
   left: 10px;
   animation-delay: 0s;
 }
 
-.left .box2 {
+#thu-f-content .left .box2 {
   top: 50px;
   left: 50px;
   animation-delay: 0.2s;
 }
 
-.right .box1 {
+#thu-f-content .right .box1 {
   top: 0;
   right: 0;
   animation-delay: 0s;
 }
 
-.right .box2 {
+#thu-f-content .right .box2 {
   top: 70px;
   right: 50px;
   animation-delay: 0.2s;
@@ -1208,37 +1192,37 @@ html {
   }
 }
 
-.campus-wrap {
+#thu-f-content .campus-wrap {
   display: flex;
   justify-content: space-between;
 }
 
-.campus-dec .main-title {
+#thu-f-content .campus-dec .main-title {
   font-size: 70px;
   text-align: center;
 }
 
-.campus-wrap .section-subtitle {
+#thu-f-content .campus-wrap .section-subtitle {
   text-align: center;
 }
 
-.campus-wrap .img-wrap {
+#thu-f-content .campus-wrap .img-wrap {
   width: 45%;
   /* border: 1px solid; */
   padding: 10px;
 }
 
-.campus-wrap .img-wrap img {
+#thu-f-content .campus-wrap .img-wrap img {
   /* 動きを滑らかにするための設定 */
   transition: transform 0.3s ease-in-out;
 }
 
-.campus-wrap .img-wrap:hover img {
+#thu-f-content .campus-wrap .img-wrap:hover img {
   /* ホバー時に画像を1.05倍に拡大 */
   transform: scale(1.1);
 }
 
-.campus-dec {
+#thu-f-content .campus-dec {
   width: 45%;
   text-align: center;
   /* ↓↓↓↓ ここから追加/修正 ↓↓↓↓ */
@@ -1253,13 +1237,13 @@ html {
   /* ↑↑↑↑ ここまで追加/修正 ↑↑↑↑ */
 }
 
-.campus-dec p {
+#thu-f-content .campus-dec p {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
   font-size: 19px;
   text-align: left;
 }
 
-.campus-dec .card-btn {
+#thu-f-content .campus-dec .card-btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1270,13 +1254,13 @@ html {
 }
 
 
-.info-box-2 {
+#thu-f-content .info-box-2 {
   text-align: center;
   padding: 20px;
   border: 2px solid #0066CC;
 }
 
-.life-support-title {
+#thu-f-content .life-support-title {
   text-align: center;
   font-size: 90px;
   color: var(--turquoise);
@@ -1289,7 +1273,7 @@ html {
 }
 
 
-.life-support-title-2 {
+#thu-f-content .life-support-title-2 {
   text-align: center;
   font-size: 70px;
   color: #4CDBAC;
@@ -1299,7 +1283,7 @@ html {
   font-family: 'Saira Condensed', sans-serif !important;
 }
 
-.life-support-subtitle {
+#thu-f-content .life-support-subtitle {
   text-align: center;
   font-size: 27px;
   color: #2E4A99;
@@ -1308,7 +1292,7 @@ html {
   margin-top: 10px;
 }
 
-.life-support-subtitle-mobile {
+#thu-f-content .life-support-subtitle-mobile {
   text-align: center;
   font-size: 20px;
   color: #2E4A99;
@@ -1318,7 +1302,7 @@ html {
   white-space: nowrap;
 }
 
-.gif-container {
+#thu-f-content .gif-container {
   width: 100%;
   /* position: relative; */
   /* z-index: 10; */
@@ -1329,7 +1313,7 @@ html {
   /* min-width: 200px; /* GIFの最小幅を設定（任意） */
 }
 
-.gif-left {
+#thu-f-content .gif-left {
   position: absolute;
   /* width: 1058px; */
   width: 250px;
@@ -1337,7 +1321,7 @@ html {
   transform: scaleX(-1);
 }
 
-.gif-right {
+#thu-f-content .gif-right {
   position: absolute;
   width: 250px;
   /* bottom: 206px; */
@@ -1346,7 +1330,7 @@ html {
     /* transform: scaleX(-1); */
 }
 
-.gif-container-text {
+#thu-f-content .gif-container-text {
   display: flex;
   /* Flexboxコンテナにする */
   flex-wrap: wrap;
@@ -1357,20 +1341,20 @@ html {
   /* 垂直方向の中央揃え */
 }
 
-.gif {
+#thu-f-content .gif {
   opacity: 0.7;
   z-index: -1;
 }
 
 
-.support-item {
+#thu-f-content .support-item {
   margin-bottom: 20px;
   /* max-width: 900px; */
   margin-left: auto;
   margin-right: auto;
 }
 
-.support-content {
+#thu-f-content .support-content {
   display: flex;
   align-items: center;
   /* gap: 40px; */
@@ -1378,7 +1362,7 @@ html {
   font-weight: bold;
 }
 
-.support-image {
+#thu-f-content .support-image {
   width: 300px;
   /* 丸の幅を固定 (画像サイズに合わせて調整) */
   height: 300px;
@@ -1412,29 +1396,7 @@ html {
   z-index: 6;
 }
 
-/* @media (max-width: 995px) {
-.support-image {
-  width: 200px;
-  height: 200px; 
-  border-radius: 50%;     
-  overflow: hidden;
-  border: none; 
-  padding: 3px; 
-  background: linear-gradient(to right, #2d4a95, #0b9dd5);
-  box-sizing: border-box; 
-  background-clip: padding-box, border-box; 
-  background-origin: border-box; 
-  box-sizing: border-box; 
-  flex-shrink: 0;   
-  margin-right: 20px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-}
-} */
-
-.support-image img {
+#thu-f-content .support-image img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -1446,18 +1408,18 @@ html {
 }
 
 /* フレームを常に表示し、画像のみを拡大 */
-.support-image:hover img {
+#thu-f-content .support-image:hover img {
   transform: scale(1.1);
 }
 
 /* フレームが隠れないようにする */
-.support-image {
+#thu-f-content .support-image {
   position: relative;
   z-index: 1;
 }
 
 /* フレームのスタイルを明示的に指定 */
-.support-image::before {
+#thu-f-content .support-image::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1478,11 +1440,11 @@ html {
 }
 
 
-.support-text {
+#thu-f-content .support-text {
   flex: 1;
 }
 
-.support-header {
+#thu-f-content .support-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1490,7 +1452,7 @@ html {
   width: 100%;
 }
 
-.support-heading {
+#thu-f-content .support-heading {
   font-size: 80px;
   color: #2E4A99;
   font-weight: bold;
@@ -1499,7 +1461,7 @@ html {
   /* テキストの折り返しを禁止 */
 }
 
-.support-description {
+#thu-f-content .support-description {
   font-size: 19px;
   line-height: 1.8;
   color: #333;
@@ -1510,7 +1472,7 @@ html {
   /* margin-bottom: 25px; */
 }
 
-.support-button {
+#thu-f-content .support-button {
   display: inline-block;
   background: linear-gradient(to right, #5be9b9, #5ee7c6);
   ;
@@ -1525,28 +1487,9 @@ html {
   /* transition: background 0.3s ease; */
 }
 
-/* .support-button-2 {
-  text-align: center;
-  width: 272px;
-  display: inline-block;
-  background: linear-gradient(to right, #5be9b9, #5ee7c6);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-} */
-
-/* .support-button:hover {
-  background: #3BB5AD;
-} */
-
-
 /* Responsive Design */
 @media (max-width: 1025px) {
-  .carousel {
+  #thu-f-content .carousel {
     display: flex;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -1557,7 +1500,7 @@ html {
 
   }
 
-  .carousel .card {
+  #thu-f-content .carousel .card {
     flex-shrink: 0;
     width: 80%;
     scroll-snap-align: center;
@@ -1568,36 +1511,36 @@ html {
 
 
 
-  .support-content {
+  #thu-f-content .support-content {
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
 
-  .life-support-title {
+  #thu-f-content .life-support-title {
     font-weight: 450 !important;
     font-size: 40px;
 
   }
 
-  .support-heading {
+  #thu-f-content .support-heading {
     font-size: 28px;
     justify-content: center;
   }
 
-  .support-image img {
+  #thu-f-content .support-image img {
     width: 120px;
     height: 120px;
   }
 }
 
-.main-title.center {
+#thu-f-content .main-title.center {
   text-align: center;
   width: 100%;
   display: block;
 }
 
-.access-section {
+#thu-f-content .access-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1605,16 +1548,16 @@ html {
   /* padding: 20px; */
 }
 
-.train-icon {
+#thu-f-content .train-icon {
   height: 54px;
   /* width: 382px; */
 }
 
-.access-title {
+#thu-f-content .access-title {
   text-align: center;
 }
 
-.main-title {
+#thu-f-content .main-title {
   font-size: 100px !important;
   color: linear-gradient(to right, #5be9b9, #5ee7c6);
   ;
@@ -1627,7 +1570,7 @@ html {
 }
 
 @media (max-width: 1025px) {
-  .main-title {
+  #thu-f-content .main-title {
     font-size: 50px !important;
     color: linear-gradient(to right, #5be9b9, #5ee7c6);
     ;
@@ -1640,13 +1583,13 @@ html {
   }
 }
 
-.sub-title {
+#thu-f-content .sub-title {
   font-size: 14px;
   color: #0077cc;
   margin: 0;
 }
 
-.img::after {
+#thu-f-content .img::after {
   content: "";
   position: absolute;
   top: 10%;
@@ -1658,33 +1601,33 @@ html {
   border: 1px solid #4cdbac;
 }
 
-.career-section {
+#thu-f-content .career-section {
   text-align: center;
   font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "MS Pゴシック", "MS PGothic", sans-serif, !important;
   padding: 40px 0;
 }
 
-.career-title {
+#thu-f-content .career-title {
   font-size: 48px;
   color: #4ecdc4;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
-.career-subtitle {
+#thu-f-content .career-subtitle {
   font-size: 18px;
   color: #2e4a99;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.image-container {
+#thu-f-content .image-container {
   max-width: 100%;
   overflow: hidden;
   margin: 0 auto;
 }
 
-.image-container img {
+#thu-f-content .image-container img {
   width: 100%;
   height: auto;
   max-height: 300px;
@@ -1692,45 +1635,45 @@ html {
   display: block;
 }
 
-.career-content {
+#thu-f-content .career-content {
   max-width: 800px;
   margin: 20px auto;
   text-align: left;
   padding: 0 20px;
 }
 
-.career-content p {
+#thu-f-content .career-content p {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
 }
 
-.image-placeholder {
+#thu-f-content .image-placeholder {
   display: none;
 }
 
 /* ACB Sec
 tion Styles */
 
-.acb-container {
+#thu-f-content .acb-container {
   max-width: 1006px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.acb-content {
+#thu-f-content .acb-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
 
-.acb-left {
+#thu-f-content .acb-left {
   flex: 1;
   max-width: 600px;
 }
 
-.acb-main-title {
+#thu-f-content .acb-main-title {
   font-size: 60px;
   font-weight: bold;
   color: #2d4a95;
@@ -1746,11 +1689,11 @@ tion Styles */
 
 
 
-.acb-right {
+#thu-f-content .acb-right {
   flex: 0 0 400px;
 }
 
-.acb-image {
+#thu-f-content .acb-image {
   width: 100%;
   height: auto;
   border-radius: 15px;
@@ -1760,29 +1703,29 @@ tion Styles */
 
 /* Responsive Design */
 @media (max-width: 1025px) {
-  .acb-content {
+  #thu-f-content .acb-content {
     flex-direction: column;
     text-align: center;
     gap: 40px;
   }
 
-  .acb-main-title {
+  #thu-f-content .acb-main-title {
     font-size: 36px;
   }
 
-  .acb-right {
+  #thu-f-content .acb-right {
     flex: none;
     max-width: 100%;
   }
 
-  .acb-subtitle::after {
+  #thu-f-content .acb-subtitle::after {
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
   }
 
 
-  .life-support-section {
+  #thu-f-content .life-support-section {
     text-align: center;
     padding: 40px 0;
     position: relative;
@@ -1790,8 +1733,8 @@ tion Styles */
     /* overflow: hidden; */
   }
 
-  .life-support-section::before,
-  .life-support-section::after {
+  #thu-f-content .life-support-section::before,
+  #thu-f-content .life-support-section::after {
     content: '';
     position: absolute;
     width: 550px;
@@ -1804,14 +1747,14 @@ tion Styles */
     /* opacity: 0.8; */
   }
 
-  .life-support-section::before {
+  #thu-f-content .life-support-section::before {
     top: 30%;
     left: -235px;
     background-image: url('../../image/for_parents/width_1288.webp');
     z-index: 1;
   }
 
-  .life-support-section::after {
+  #thu-f-content .life-support-section::after {
     bottom: 50%;
     right: -287px;
     /* left: 50%; transform: translateX(50%); */
@@ -1821,12 +1764,12 @@ tion Styles */
 
 
 
-  .life-support-section>* {
+  #thu-f-content .life-support-section>* {
     position: relative;
     z-index: 2;
   }
 
-  .life-support-section-2 {
+  #thu-f-content .life-support-section-2 {
     text-align: center;
     /* padding: 40px 0; */
   }
@@ -1839,36 +1782,36 @@ tion Styles */
 
 /* Hide desktop elements below 1025px */
 @media (max-width: 1025px) {
-  .mobile-hide {
+  #thu-f-content .mobile-hide {
     display: none !important;
   }
 }
 
 
 
-.mobile-view {
+#thu-f-content .mobile-view {
   display: none;
 }
 
 /* Show mobile elements below 1025px */
 @media screen and (max-width: 1025px) {
-  .mobile-view {
+  #thu-f-content .mobile-view {
     display: block;
   }
 }
 
 /* Mobile Hero Section Styles */
-.mobile-hero-section {
+#thu-f-content .mobile-hero-section {
   text-align: center;
   padding: 40px 20px;
   /* background-color: #f8f9fa; */
 }
 
-.mobile-image-container {
+#thu-f-content .mobile-image-container {
   margin-bottom: 40px;
 }
 
-.mobile-hero-image {
+#thu-f-content .mobile-hero-image {
   width: 100%;
   /* max-width: 400px; */
   height: auto;
@@ -1877,11 +1820,11 @@ tion Styles */
   object-fit: cover;
 }
 
-.mobile-content {
+#thu-f-content .mobile-content {
   padding: 0 10px;
 }
 
-.mobile-main-title {
+#thu-f-content .mobile-main-title {
   font-size: 28px;
   font-weight: bold;
   color: #2d4a95;
@@ -1891,7 +1834,7 @@ tion Styles */
   text-align: center;
 }
 
-.mobile-subtitle {
+#thu-f-content .mobile-subtitle {
   font-size: 16px;
   color: #666;
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
@@ -1901,8 +1844,8 @@ tion Styles */
   padding: 0 20px;
 }
 
-.mobile-subtitle::before,
-.mobile-subtitle::after {
+#thu-f-content .mobile-subtitle::before,
+#thu-f-content .mobile-subtitle::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1911,21 +1854,21 @@ tion Styles */
   background-color: #666;
 }
 
-.mobile-subtitle::before {
+#thu-f-content .mobile-subtitle::before {
   left: 0;
 }
 
-.mobile-subtitle::after {
+#thu-f-content .mobile-subtitle::after {
   right: 0;
 }
 
 /* Responsive adjustments for mobile */
 @media screen and (max-width: 1025px) {
-  .mobile-main-title {
+  #thu-f-content .mobile-main-title {
     font-size: 24px;
   }
 
-  .mobile-main-title-mobile {
+  #thu-f-content .mobile-main-title-mobile {
     font-size: 25px;
     font-weight: bold;
     color: #2d4a95;
@@ -1939,11 +1882,11 @@ tion Styles */
     white-space: nowrap;
   }
 
-  .mobile-subtitle {
+  #thu-f-content .mobile-subtitle {
     font-size: 14px;
   }
 
-  .mobile-hero-section {
+  #thu-f-content .mobile-hero-section {
     padding: 30px 15px;
   }
 }
@@ -1952,7 +1895,7 @@ tion Styles */
 
 /* Mobile container styles */
 @media screen and (max-width: 1025px) {
-  .container {
+  #thu-f-content .container {
     width: 100% !important;
     max-width: 1025px;
     margin: 0 auto;
@@ -1962,25 +1905,27 @@ tion Styles */
 
 
 @media screen and (max-width: 1025px) {
-  .title {
+  #thu-f-content .title {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     /* margin: auto; */
     color: var(--blue);
-  }
-}
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 
-@media screen and (max-width: 1025px) {
-  .main-title {
+  }
+
+  #thu-f-content .main-title {
     text-align: center;
   }
 }
 
 
 @media (max-width: 1025px) {
-  .section-subtitle {
+  #thu-f-content .section-subtitle {
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
@@ -1989,7 +1934,7 @@ tion Styles */
 
 
 @media (max-width: 1025px) {
-  .section02 .left img {
+  #thu-f-content .section02 .left img {
     width: 100%;
   }
 }
@@ -1998,8 +1943,8 @@ tion Styles */
 
 @media (max-width: 1025px) {
 
-  .section03 .info-box img,
-  .section04 .info-box img {
+  #thu-f-content .section03 .info-box img,
+  #thu-f-content .section04 .info-box img {
     width: 47px;
     top: -10px;
     left: -20px;
@@ -2009,21 +1954,21 @@ tion Styles */
 }
 
 
-.about-card .left-2 {
+#thu-f-content .about-card .left-2 {
   width: 20%;
   background-color: var(--blue);
   padding: 31px 0;
   position: relative;
 }
 
-.about-card .right-2 {
+#thu-f-content .about-card .right-2 {
   width: 60%;
   border: 2px solid var(--blue);
   padding: 20px;
 }
 
 @media (max-width: 1025px) {
-  .about-card .right {
+  #thu-f-content .about-card .right {
     width: 77%;
     border: 2px solid var(--blue);
     padding: 10px;
@@ -2031,14 +1976,14 @@ tion Styles */
     /* gap: 3px;  */
   }
 
-  .about-card {
+  #thu-f-content .about-card {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: normal;
   }
 
-  .about-card .title {
+  #thu-f-content .about-card .title {
     font-family: var(--english_font);
     font-size: 13.0px;
     font-weight: bold;
@@ -2053,7 +1998,7 @@ tion Styles */
     text-wrap: wrap;
   }
 
-  .about-card .num {
+  #thu-f-content .about-card .num {
     margin-top: 0px;
     font-family: var(--english_font);
     font-size: 60px;
@@ -2063,7 +2008,7 @@ tion Styles */
   }
 
 
-  .card-btn-mobile {
+  #thu-f-content .card-btn-mobile {
     padding: 17px 14px;
     background: var(--turquoise);
     border-radius: 50px;
@@ -2076,7 +2021,7 @@ tion Styles */
     white-space: nowrap;
   }
 
-  .main-title-scholar {
+  #thu-f-content .main-title-scholar {
     text-align: center;
     font-size: 50px;
     font-weight: 300;
@@ -2090,7 +2035,7 @@ tion Styles */
 
 
 @media screen and (max-width: 1025px) {
-  .container-gif {
+  #thu-f-content .container-gif {
     width: 100% !important;
     max-width: 1025px;
     margin: 0 auto;
@@ -2098,7 +2043,7 @@ tion Styles */
     position: relative;
   }
 
-  .gif-move {
+  #thu-f-content .gif-move {
     position: absolute;
     top: 28%;
     /* ↓ この値を50%より大きくすると、その分だけ右にずれます */
@@ -2115,7 +2060,7 @@ tion Styles */
     white-space: nowrap;
   }
 
-  .image-gif {
+  #thu-f-content .image-gif {
     width: 130px;
     position: absolute;
     top: 60%;
@@ -2126,27 +2071,26 @@ tion Styles */
 
 
 
-/* 
-@media (max-width: 934px) {
+/* @media (max-width: 934px) {
   .mobile-show-2 {
    
 }
  */
 /* Mobile-hide-3: Hide on desktop, show only on mobile */
-.mobile-hide-3 {
+#thu-f-content .mobile-hide-3 {
   display: none;
 }
 
 @media screen and (max-width: 1025px) {
-  .mobile-hide-3 {
+  #thu-f-content .mobile-hide-3 {
     display: block;
   }
 }
 
 
 @media screen and (max-width: 1025px) {
-  .info-box {
-    width: 90%;
+  #thu-f-content .info-box {
+    width: 100%;
     height: auto !important;
     position: relative;
     background-color: #fef8e6;
@@ -2179,10 +2123,10 @@ tion Styles */
 
 
 @media screen and (max-width: 1025px) {
-  .title {
+  #thu-f-content .title {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 21px;
     text-align: center;
     /* margin: auto; */
     color: var(--blue);
@@ -2192,14 +2136,14 @@ tion Styles */
 
   }
 
-  .main-title-access {
+  #thu-f-content .main-title-access {
     font-size: 36px;
     color: #32d3c4;
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  .train-icon {
+  #thu-f-content .train-icon {
     height: 17px;
     width: 382px;
   }
@@ -2207,7 +2151,7 @@ tion Styles */
 }
 
 @media screen and (max-width: 1025px) {
-  .title-30 {
+  #thu-f-content .title-30 {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
     font-weight: bold;
     font-size: 18px;
@@ -2219,37 +2163,37 @@ tion Styles */
 
   }
 
-  .fualification-font {
+  #thu-f-content .fualification-font {
     font-weight: 300 !important;
     font-size: 50px;
   }
 
-  .moving-card {
+  #thu-f-content .moving-card {
     display: block;
     align-items: flex-end;
     overflow: hidden;
   }
 
-  .moving-card .left,
-  .moving-card .right {
+  #thu-f-content .moving-card .left,
+  #thu-f-content .moving-card .right {
     width: 100%;
   }
 
-  .up-spaing {
+  #thu-f-content .up-spaing {
     padding-top: 15px;
   }
 
-  .life-hide {
+  #thu-f-content .life-hide {
     display: none;
   }
 
-  .box-group {
+  #thu-f-content .box-group {
     display: none;
   }
 }
 
 
-.left-image {
+#thu-f-content .left-image {
   padding-top: 20px;
   width: 153px !important;
 }
@@ -2257,7 +2201,7 @@ tion Styles */
 
 
 /* Housing Card Design */
-.housing-card {
+#thu-f-content .housing-card {
   background-color: #ffffff;
   border: 2px solid #2d4a95;
   /* border-radius: 8px; */
@@ -2266,7 +2210,7 @@ tion Styles */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.housing-title {
+#thu-f-content .housing-title {
   color: #2d4a95;
   font-size: 28px;
   font-weight: bold;
@@ -2276,7 +2220,7 @@ tion Styles */
   text-align: left;
 }
 
-.housing-description {
+#thu-f-content .housing-description {
   color: #333;
   font-size: 16px;
   line-height: 1.6;
@@ -2287,24 +2231,24 @@ tion Styles */
 
 /* Mobile responsive for housing card */
 @media screen and (max-width: 1025px) {
-  .housing-card {
+  #thu-f-content .housing-card {
     padding: 20px;
     margin: 15px 0;
   }
 
-  .housing-title {
+  #thu-f-content .housing-title {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 12px;
   }
 
-  .housing-description {
+  #thu-f-content .housing-description {
     font-size: 17px;
     line-height: 1.5;
     font-weight: bold;
   }
 
-  .card-btn-mobile-2 {
+  #thu-f-content .card-btn-mobile-2 {
     padding: 17px 14px;
     background: var(--turquoise);
     border-radius: 50px;
@@ -2315,11 +2259,11 @@ tion Styles */
     font-size: 17px !important;
   }
 
-  .image-spacing {
+  #thu-f-content .image-spacing {
     padding-top: 137px;
   }
 
-  .third-background-image {
+  #thu-f-content .third-background-image {
     position: absolute;
     width: 500px;
     height: 500px;
@@ -2341,9 +2285,8 @@ hird background image for life-support-section */
 /* Three background images for life-support-section */
 
 
-/* 
-Campus Facility Section */
-.campus-facility-section {
+/* Campus Facility Section */
+#thu-f-content .campus-facility-section {
   max-width: 800px;
   margin: 40px auto;
   border: 1px solid #2d4a95;
@@ -2352,7 +2295,7 @@ Campus Facility Section */
   overflow: hidden;
 }
 
-.facility-title-full-width {
+#thu-f-content .facility-title-full-width {
   background-color: #2d4a95;
   width: 100vw;
   position: relative;
@@ -2364,8 +2307,8 @@ Campus Facility Section */
   /* margin-top: 22px; */
 }
 
-.facility-main-title {
-  display: flex;
+#thu-f-content .facility-main-title {
+  /* display: flex; */
   /* justify-content: center;
   align-items: center; */
   /* font-weight: bold; */
@@ -2378,11 +2321,11 @@ Campus Facility Section */
   letter-spacing: 0.15em;
 }
 
-.facility-content {
+#thu-f-content .facility-content {
   padding: 0;
 }
 
-.facility-subtitle {
+#thu-f-content .facility-subtitle {
   font-size: 18px;
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
   margin: 0;
@@ -2394,7 +2337,7 @@ Campus Facility Section */
   text-align: left;
 }
 
-.facility-image-container {
+#thu-f-content .facility-image-container {
   display: flex;
   flex-wrap: nowrap;
   grid-template-areas:
@@ -2407,21 +2350,8 @@ Campus Facility Section */
   gap: 20px;
 }
 
-/* 左側の画像コンテナ */
-/* .facility-image-container .img {
-    flex: 0 0 60%;
-    flex: 1 1 60%;
-    max-width: 60%;
-} */
-
-/* 右側のコンテンツコンテナ */
-/* .facility-image-container .campus-content {
-    flex: 1 1 40%;
-    max-width: 40%;
-} */
-
 @media (min-width: 768px) {
-  .facility-image-container {
+  #thu-f-content .facility-image-container {
     /* display: flex; */
     grid-template-areas:
       "image contents"
@@ -2437,51 +2367,47 @@ Campus Facility Section */
   }
 }
 
-
-
-.facility-image-wrapper {
+#thu-f-content .facility-image-wrapper {
   flex: 1;
   text-align: center;
   /* margin: 0 -17px; */
 }
 
-.facility-image {
+#thu-f-content .facility-image {
+  display:inline;
   width: 83%;
   max-width: 500px;
   height: auto;
   /* border-radius: 8px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-left: 29px;
+  margin-right: 29px;
   z-index: -1;
 }
 
-/* .nav-arrow {
-  background: none;
-  border: 2px solid #2d4a95;
-  color: #2d4a95;
-  font-size: 24px;
-  font-weight: bold;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-} */
+#thu-f-content img{
+display: block;
+    width: 100%;
+    /* max-width: 724px; */
+    height: auto;
+}
 
-.nav-arrow:hover {
+#thu-for-parents-content .img-cancel-reset {
+    display: inline; /* 'display: block' を 'inline' で上書き */
+    width: auto;     /* 'width: 100%' を 'auto' (デフォルト) で上書き */
+}
+
+#thu-f-content .nav-arrow:hover {
   /* background-color: #2d4a95; */
   color: white;
 }
 
-.facility-description {
+#thu-f-content .facility-description {
   padding: 20px 30px;
   background-color: #f8f9fa;
 }
 
-.facility-text {
+#thu-f-content .facility-text {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
@@ -2490,13 +2416,13 @@ Campus Facility Section */
   text-align: left;
 }
 
-.facility-footer {
+#thu-f-content .facility-footer {
   padding: 20px;
   text-align: center;
   border-top: 1px solid #e0e0e0;
 }
 
-.facility-link {
+#thu-f-content .facility-link {
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -2505,56 +2431,56 @@ Campus Facility Section */
   transition: color 0.3s ease;
 }
 
-.facility-link:hover {
+#thu-f-content .facility-link:hover {
   color: #1a2d5a;
   text-decoration: underline;
 }
 
 /* Mobile responsive */
 @media screen and (max-width: 1025px) {
-  .campus-facility-section {
+  #thu-f-content .campus-facility-section {
     margin: 20px 10px;
   }
 
-  .facility-header {
+  #thu-f-content .facility-header {
     padding: 15px;
   }
 
-  .facility-main-title {
+  #thu-f-content .facility-main-title {
     font-size: 24px;
   }
 
-  .facility-subtitle {
+  #thu-f-content .facility-subtitle {
     font-size: 16px;
     font-weight: bold;
   }
 
-  .facility-image-container {
+  #thu-f-content .facility-image-container {
     padding: 0px;
   }
 
-  .nav-arrow {
+  #thu-f-content .nav-arrow {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
 
-  .facility-description {
+  #thu-f-content .facility-description {
     padding: 15px 20px;
   }
 
-  .facility-text {
+  #thu-f-content .facility-text {
     font-size: 13px;
   }
 
-  .spacing-20 {
+  #thu-f-content .spacing-20 {
     display: flex;
     justify-content: center;
     margin: 20px 0;
     /* padding-bottom: 443px; */
   }
 
-  .body-copy-lg2 {
+  #thu-f-content .body-copy-lg2 {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -2568,21 +2494,21 @@ Campus Facility Section */
 
 /* Arrow ima
 ge styling */
-.arrow-image {
+#thu-f-content .arrow-image {
   width: 24px;
   height: 24px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.nav-arrow:hover .arrow-image {
+#thu-f-content .nav-arrow:hover .arrow-image {
   transform: scale(1.1);
 }
 
 
 
 
-.news-container {
+#thu-f-content .news-container {
   background: white;
   /* border-radius: 12px; */
   padding: 0px;
@@ -2591,7 +2517,7 @@ ge styling */
 }
 
 @media (max-width: 1025px) {
-  .news-item {
+  #thu-f-content .news-item {
     flex-direction: row !important;
     align-items: flex-start !important;
   }
@@ -2600,7 +2526,7 @@ ge styling */
 
 
 
-.news-item {
+#thu-f-content .news-item {
   display: flex !important;
   align-items: flex-start !important;
   padding: 20px 0 !important;
@@ -2611,7 +2537,7 @@ ge styling */
 
 
 @media (max-width: 1025px) {
-  .news-image {
+  #thu-f-content .news-image {
     width: 150px !important;
     height: 100px !important;
     margin-right: 6px !important;
@@ -2620,13 +2546,13 @@ ge styling */
 }
 
 @media (max-width: 1025px) {
-  .news-content {
+  #thu-f-content .news-content {
     flex: 1 !important;
   }
 }
 
 
-.news-date {
+#thu-f-content .news-date {
   color: var(--turquoise) !important;
   font-size: 1rem !important;
   font-weight: bold !important;
@@ -2634,7 +2560,7 @@ ge styling */
 }
 
 
-.news-title-text {
+#thu-f-content .news-title-text {
   color: #333 !important;
   font-size: 11px !important;
   line-height: 1.5 !important;
@@ -2642,7 +2568,7 @@ ge styling */
 }
 
 
-.news-image img {
+#thu-f-content .news-image img {
   /* width: 100% !important; */
   height: 100% !important;
   object-fit: cover !important;
@@ -2651,7 +2577,7 @@ ge styling */
 
 
 @media screen and (max-width: 1025px) {
-  .gif-move-2 {
+  #thu-f-content .gif-move-2 {
     position: absolute;
     top: 49%;
     left: 50%;
@@ -2667,7 +2593,7 @@ ge styling */
     white-space: nowrap;
   }
 
-  .gif-move-3 {
+  #thu-f-content .gif-move-3 {
     position: absolute;
     top: 83%;
     left: 50%;
@@ -2687,7 +2613,7 @@ ge styling */
 
 
 @media screen and (max-width: 1025px) {
-  .container-gif-2 {
+  #thu-f-content .container-gif-2 {
     width: 100% !important;
     /* max-width: 1025px; */
     /* margin: 0 auto; */
@@ -2697,7 +2623,7 @@ ge styling */
 
 }
 
-.hover-color {
+#thu-f-content .hover-color {
   width: 100%;
   height: 100%;
   background-color: white;
@@ -2707,7 +2633,7 @@ ge styling */
 
 
 @media (max-width: 1025px) {
-  .card-btn-mobile-5 {
+  #thu-f-content .card-btn-mobile-5 {
     padding: 10px 0px;
     background: var(--turquoise);
     border-radius: 50px;
@@ -2720,7 +2646,7 @@ ge styling */
   }
 }
 
-.card-btn {
+#thu-f-content .card-btn {
   display: block;
   padding: 11px 15px;
   border-radius: 50px;
@@ -2734,7 +2660,7 @@ ge styling */
   font-weight: bold;
 }
 
-.card-1 {
+#thu-f-content .card-1 {
   background: linear-gradient(to right, #5be9b9, #5ee7c6);
   border-radius: 50px;
   display: flex;
@@ -2752,12 +2678,12 @@ ge styling */
   /* Windowsでの細くなりすぎるのを防ぎ、読みやすくします */
 }
 
-.card-1:hover {
+#thu-f-content .card-1:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 1025px) {
-  .card-1 {
+  #thu-f-content .card-1 {
     background: linear-gradient(to right, #5be9b9, #5ee7c6);
     border-radius: 50px;
     display: flex;
@@ -2776,13 +2702,13 @@ ge styling */
   }
 }
 
-.hero-title {
+#thu-f-content .hero-title {
   font-family: 'Saira Condensed', sans-serif !important;
   /* font-family: 'Noto Serif JP', sans-serif; */
 }
 
 @media (max-width: 1025px) {
-  .head-image-size {
+  #thu-f-content .head-image-size {
     width: 47px !important;
     position: absolute;
     top: -23px;
@@ -2790,7 +2716,7 @@ ge styling */
   }
 }
 
-.scholarship {
+#thu-f-content .scholarship {
   font-weight: 300 !important;
   font-size: 76px !important;
   color: var(--turquoise) !important;
@@ -2798,25 +2724,25 @@ ge styling */
 }
 
 /* Default style for mobile (below 934px) */
-.fontsize-33 {
+#thu-f-content .fontsize-33 {
   font-size: 40px;
 }
 
 /* Style for web (desktop, 935px and above) */
 @media (min-width: 768px) {
-  .fontsize-33 {
+  #thu-f-content .fontsize-33 {
     font-size: 30px;
   }
 }
 
-.image-same img {
+#thu-f-content .image-same img {
   width: 80px;
   position: absolute;
   top: -23px;
   left: -5px;
 }
 
-.box-container-box {
+#thu-f-content .box-container-box {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -2826,7 +2752,7 @@ ge styling */
 
 /* これをCSSの一番下に追加して、他のスタイルを上書きします */
 
-.about-card .left {
+#thu-f-content .about-card .left {
   /* Flexboxによる中央揃えを最優先で適用 */
   display: flex !important;
   flex-direction: column !important;
@@ -2841,7 +2767,7 @@ ge styling */
 /* h3タグが持つ可能性のある上下のmarginをすべてリセットします。
   「About」の上、「01」の下に余白があれば、それが原因です。
 */
-.about-card .left>h3 {
+#thu-f-content .about-card .left>h3 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -2864,14 +2790,14 @@ ge styling */
  * ★【重要】画面内に入ったときに付与されるクラス
  * アニメーションのトリガーとなる
  */
-.about-card.is-visible {
+#thu-f-content .about-card.is-visible {
   opacity: 1;
   /* 不透明にする */
   transform: translateX(0);
   /* 元の位置に戻す */
 }
 
-.button-box {
+#thu-f-content .button-box {
   display: flex;
   justify-content: center;
   /* 中央に寄せたい場合 */
@@ -2879,7 +2805,7 @@ ge styling */
   /* ボタン間の隙間を調整したい場合 */
 }
 
-.campus-carousel-container {
+#thu-f-content .campus-carousel-container {
   /* max-width: 600px; */
   position: relative;
   /* 矢印ボタンの配置基準にする */
@@ -2889,12 +2815,12 @@ ge styling */
 }
 
 /* 各キャンパスのコンテンツをデフォルトで非表示にする */
-.campus-content {
+#thu-f-content .campus-content {
   display: none;
 }
 
 /* 最初に表示するキャンパスだけを表示状態にする */
-.campus-content.active {
+#thu-f-content .campus-content.active {
   display: flex;
   flex-direction: column;
   /* 縦に並んだ子要素全体を上端に寄せる */
@@ -2904,7 +2830,7 @@ ge styling */
 }
 
 /* 矢印ボタンのスタイル */
-.nav-arrow {
+#thu-f-content .nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -2916,15 +2842,15 @@ ge styling */
   z-index: 10;
 }
 
-.nav-arrow-left {
+#thu-f-content .nav-arrow-left {
   left: -10px;
 }
 
-.nav-arrow-right {
+#thu-f-content .nav-arrow-right {
   right: 0px;
 }
 
-.arrow-image {
+#thu-f-content .arrow-image {
   width: 30px;
   height: 30px;
   display: block;
@@ -2932,7 +2858,7 @@ ge styling */
 }
 
 /* Text styles */
-.body-copy-lg {
+#thu-f-content .body-copy-lg {
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
@@ -2944,26 +2870,26 @@ ge styling */
   /* Add small margin for better spacing */
 }
 
-.card2 {
+#thu-f-content .card2 {
   display: flex;
   gap: 20px;
 }
 
-.watermark {
+#thu-f-content .watermark {
   width: 3%;
   background-color: transparent;
   text-align: center;
   height: auto;
 }
 
-.card2 .img {
+#thu-f-content .card2 .img {
   position: relative;
   z-index: 1;
   max-width: 100%;
   height: auto;
 }
 
-.card2 .card-title h2 {
+#thu-f-content .card2 .card-title h2 {
   background-color: transparent;
   color: var(--blue);
   font-size: 33.5px;
@@ -2971,13 +2897,13 @@ ge styling */
   height: 45px;
 }
 
-.card2 .card-title h3 {
+#thu-f-content .card2 .card-title h3 {
   font-size: 16.9px;
   font-weight: 500;
 }
 
 
-.card2 .card-title {
+#thu-f-content .card2 .card-title {
   border: none;
   gap: 0;
   width: 100%;
@@ -2986,7 +2912,7 @@ ge styling */
 
 }
 
-.card2-content {
+#thu-f-content .card2-content {
   margin-left: 20px;
   margin-top: 20px;
   display: center;
@@ -2994,24 +2920,24 @@ ge styling */
   align-items: flex-start;
 }
 
-.card2 .card-btn {
+#thu-f-content .card2 .card-btn {
   width: 70%;
   margin-top: 16px;
 }
 
-.-mt-9 {
+#thu-f-content .-mt-9 {
   margin-top: -9px;
 }
 
 
 /* Mobile portrait design: centered with max 400px width below 1025px */
 @media (max-width: 1025px) {
-  html {
+  #thu-f-content html {
     background-color: #f5f5f5;
     /* Light gray background for side spaces */
   }
 
-  body {
+  #thu-f-content body {
     max-width: 450px;
     width: 100%;
     margin: 0 auto;
@@ -3026,25 +2952,25 @@ ge styling */
    ======================================== */
 
 /* Carousel card links - prepare spans for transform */
-.carousel .card a span,
-.mobile-card a span {
+#thu-f-content .carousel .card a span,
+#thu-f-content .mobile-card a span {
   display: inline-block;
   transition: all 0.3s ease;
 }
 
 /* Hover effect - make text bigger and blue */
-.carousel .card a:hover span,
-.mobile-card a:hover span {
+#thu-f-content .carousel .card a:hover span,
+#thu-f-content .mobile-card a:hover span {
   transform: scale(1.1);
   color: #004097;
 }
 
 /* Specific for underlined spans in carousel */
-.carousel .card a:hover span[style*="text-decoration"],
-.mobile-card a:hover span[style*="text-decoration"] {
+#thu-f-content .carousel .card a:hover span[style*="text-decoration"],
+#thu-f-content .mobile-card a:hover span[style*="text-decoration"] {
   transform: scale(1.1);
-  color: #004097;
-  text-decoration-color: #004097;
+  color: #ff6600;
+  text-decoration-color: #ff6600 !important;
 }
 
 
@@ -3053,18 +2979,18 @@ ge styling */
    ======================================== */
 
 /* Remove default underline from link */
-a.text {
+#thu-f-content a.text {
   text-decoration: none;
 }
 
 /* On hover - change to ORANGE color */
-a.text:hover {
+#thu-f-content a.text:hover {
   color: #ff6600 !important;
   text-decoration: underline !important;
   text-decoration-color: #ff6600 !important;
 }
 
-.about-card .right a.text:hover {
+#thu-f-content .about-card .right a.text:hover {
   color: #ff6600 !important;
   text-decoration: underline !important;
   text-decoration-color: #ff6600 !important;
@@ -3072,7 +2998,7 @@ a.text:hover {
 }
 
 /* Keep span underline in normal state */
-a.text span[style*="underline"] {
+#thu-f-content a.text span[style*="underline"] {
   text-decoration: underline;
   text-decoration-color: inherit;
 }
@@ -3081,9 +3007,9 @@ a.text span[style*="underline"] {
 /* ========================================
    .text links font styling
    ======================================== */
-a.text,
-.about-card .right a.text {
+/* #thu-f-content a.text,
+#thu-f-content .about-card .right a.text {
   font-size: 14px !important;
   font-style: normal !important;
   font-weight: 600 !important;
-}
+} */

@@ -1,3 +1,61 @@
+/* Add parent selector-specific ID wrapper to avoid CSS conflicts */
+#thu-f-content {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Parent-specific styles for enrollment page */
+#thu-f-content .section-title {
+  font-family: 'Saira Condensed', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 76px !important;
+  color: var(--turquoise) !important;
+}
+
+#thu-f-content .section-subtitle {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
+  font-weight: normal;
+  font-size: 14.8px !important;
+  color: var(--blue);
+  margin-bottom: 0;
+}
+
+#thu-f-content .card-title h2,
+#thu-f-content .card-title h3 {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
+}
+
+#thu-f-content .card-text {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Parent-specific link button styles for text consistency */
+#thu-f-content .card-btn,
+#thu-f-content .card-btn-mobile,
+#thu-f-content .card-btn-mobile-2 {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1025px) {
+  #thu-f-content .section-title {
+    font-size: 41px !important;
+  }
+  
+  #thu-f-content .section-subtitle {
+    font-size: 18.1px !important;
+  }
+  
+  #thu-f-content .card-text {
+    font-size: 10.1px !important;
+  }
+}
+
 body{
   background-color: var(--grey);
 }
