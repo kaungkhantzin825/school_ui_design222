@@ -1421,11 +1421,7 @@ display: block;
 
 
 /* Web view only (desktop) */
-@media (min-width: 1025px) {
-    .siceppdine {
-      margin-top: 26px;
-    }
-}
+
 
 .tabs {
     display: flex;
@@ -1438,6 +1434,11 @@ display: block;
 
 /* //////////////////////11,21,2025 */
 
+@media (min-width: 1025px) {
+    .siceppdine {
+      margin-top: 1px;
+    }
+}
 
 
 @media (min-width: 1024px)  {
@@ -1458,6 +1459,29 @@ display: block;
     padding: 12px 0; /* Add some vertical padding */
   }
 }
+
+
+
+
+@media (min-width: 390px)  {
+ 
+  .center-button {
+    margin: 20px auto 0;
+    width: 242px; /* Increased from 213px */
+    display: flex;
+    justify-content: center;
+  }
+  .center-button .web-button {
+    display: inline-block;
+    margin: 0;
+    width: 100%; /* Make button take full width of container */
+    text-align: center;
+    padding: 12px 0; /* Add some vertical padding */
+  }
+}
+
+
+
 
 
 
