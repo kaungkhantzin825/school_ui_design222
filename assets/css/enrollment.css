@@ -1507,6 +1507,18 @@ display: block;
     } 
 }
 
+@media (max-width: 1026px) {
+ .card35{
+  width: 178px !important;
+ }
+}
+
+@media (min-width: 1025px) {
+    .card2 .card-btn {
+        width: 54% !important;
+        margin-top: 16px;
+        margin-left: 44px !important;
+    }
  
 @media (max-width: 1025px) {
     .tab {
