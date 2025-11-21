@@ -375,12 +375,7 @@ font-weight: 500 !important;
   display: block;
 }
 
-.tab-imgs .gif {
-  position: absolute;
-  right: 0;
-  bottom: -15px;
-  width: 30%;
-}
+
 
 .tab-imgs .gif img {
   width: 100%;
@@ -456,20 +451,7 @@ font-weight: 500 !important;
 }
 }
 
-@media (max-width: 1025px) {
-.tab {
-    text-align: center;
-    border: 1px solid var(--blue);
-    padding: 0 20px;
-    font-family: var(--japanese_font);
-    color: var(--blue);
-    font-size: 8.5px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-}
+
 
 /* Hide tab-imgs by default */
 .tab-imgs {
@@ -1375,7 +1357,7 @@ display: block;
 /* Desktop only (1025px and above) */
 @media (min-width: 1025px) {
     .websie-2 {
-        padding-top: 63px;
+        padding-top: px;
     }
 }
 
@@ -1442,5 +1424,94 @@ display: block;
 @media (min-width: 1025px) {
     .siceppdine {
       margin-top: 26px;
+    }
+}
+
+.tabs {
+    display: flex;
+    gap: 0px;
+    align-items: flex-end;
+}
+
+
+
+
+/* //////////////////////11,21,2025 */
+
+
+@media (max-width: 1025px) {
+    .web-button {
+        display: inline-block;
+        width: 242px;
+    }
+}
+
+@media (max-width: 390px) {
+    .web-button {
+    display: inline-block;
+    width: 182px !important;
+    } 
+}
+
+ 
+@media (max-width: 1025px) {
+    .tab {
+        text-align: center;
+        border: 1px solid var(--blue);
+        padding: 0px 27px;
+        font-family: var(--japanese_font);
+        color: var(--blue);
+        font-size: 9.5px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.tab-imgs .gif {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    width: 30%;
+}
+ 
+
+@media (max-width: 390px) {
+    .tab {
+        text-align: center;
+        border: 1px solid var(--blue);
+        padding: 0px 30px;
+        font-family: var(--japanese_font);
+        color: var(--blue);
+        font-size: 6.5px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media only screen 
+  and (min-device-width: 390px) 
+  and (max-device-width: 428px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .mixed-title h2, 
+    .mixed-title h3, 
+    .mixed-title h4 {
+        font-size: 12px !important;
+        margin: 0 2px;
+        display: inline-block;
+        line-height: 1.2;
+    }
+
+ 
+    
+    /* Additional iPhone 12 Pro specific styles */
+    body {
+        -webkit-text-size-adjust: 100%;
     }
 }
