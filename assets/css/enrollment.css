@@ -1375,7 +1375,7 @@ display: block;
 /* Desktop only (1025px and above) */
 @media (min-width: 1025px) {
     .websie-2 {
-        padding-top: 73px;
+        padding-top: 63px;
     }
 }
 
