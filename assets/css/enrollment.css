@@ -1203,7 +1203,7 @@ display: block;
 
 
 
-@media (max-width: 1025px) {
+@media (max-width: 1027px) {
   html {
     background-color: var(--grey);
   }
@@ -1513,12 +1513,14 @@ display: block;
  }
 }
 
-@media (min-width: 1025px) {
+/* @media screen and (min-width: 1025px) and (min-device-width: 1025px) {
     .card2 .card-btn {
-        width: 54% !important;
+        width: 55% !important;
         margin-top: 16px;
-        margin-left: 44px !important;
+        margin-left: 36px !important;
     }
+} */
+
  
 @media (max-width: 1025px) {
     .tab {
@@ -1689,10 +1691,23 @@ display: block;
     }
 }
 
- 
-    
-    /* Additional iPhone 12 Pro specific styles */
-    body {
-        -webkit-text-size-adjust: 100%;
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .card2 .card-btn {
+        width: 55% !important;
+        margin-top: 16px;
+        margin-left: 36px !important;
     }
 }
+
+
+@media screen and (min-width: 1280px) {
+    .siceppdine {
+        margin-top: 25px;
+    }
+}
+    
+    /* Additional iPhone 12 Pro specific styles */
+    /* body {
+        -webkit-text-size-adjust: 100%;
+    } */
+
