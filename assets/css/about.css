@@ -184,7 +184,7 @@ header img {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .header-pc-img {
         display: none;
     }
@@ -298,7 +298,7 @@ header img {
 }
 
 /* Hero responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
 
     .hero{
         background-position: -36rem -10rem;
@@ -368,7 +368,7 @@ header img {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .ranks-body {
         width: 90vw;
     }
@@ -508,7 +508,7 @@ header img {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .pratical-points-animation {
         display: none;
     }
@@ -687,7 +687,7 @@ header img {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .career-support-header {
         width: 90vw;
         flex-direction: row;
@@ -962,7 +962,7 @@ header img {
 
 
 /* Mobile responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
 
     /* Reset absolute positioning for mobile */
     .campus-intro-body .slider .slick-track {
@@ -1108,7 +1108,7 @@ header img {
 }
 
 /* Mobile responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .video {
         width: 90vw;
         gap: 3vw;
@@ -1257,7 +1257,7 @@ header img {
 }
 
 /* Mobile Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .teacher-distance {
         padding: 8vw 0;
         background-color: var(--white);
@@ -1455,7 +1455,7 @@ header img {
 
 
 /* Mobile Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .about-us {
         padding: 8vw 0;
     }
@@ -1639,7 +1639,7 @@ header img {
 }
 
 /* Mobile Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .message-president-header {
         margin-bottom: 12vw;
     }
@@ -1762,7 +1762,7 @@ header img {
 
 
 /* Mobile Responsive Design */
-@media (max-width: 768px){
+@media (max-width: 1025px){
     .faq{
         width: 90vw;
     }
@@ -1770,4 +1770,19 @@ header img {
     .faq-item{
         margin-bottom: 6vw;
     }
+}
+
+
+@media (max-width: 1025px) {
+  html {
+    background-color: #f5f5f5;
+    /* Light gray background for side spaces */
+  }
+
+  body {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
 }
