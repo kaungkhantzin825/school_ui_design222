@@ -1444,7 +1444,19 @@ display: block;
   .websie-22 {
    padding-top: 61px !important;
   }
+  .center-button {
+    margin: 20px auto 0;
+    width: 213px;
+    display: flex;
+    justify-content: center;
+  }
+  .center-button .web-button {
+    display: inline-block;
+    margin: 0;
+  }
 }
+
+
 
 @media (min-width: 390px)  {
   .card40 {
