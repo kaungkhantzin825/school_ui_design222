@@ -1365,7 +1365,24 @@ display: block;
 
 /* /////////////////// */
 
+/* Mobile only (1024px and below) */
+@media (max-width: 1024px) {
+    .websie-2 {
+        padding-top: 51px;
+    }
+}
 
+/* Desktop only (1025px and above) */
+@media (min-width: 1025px) {
+    .websie-2 {
+        padding-top: 73px;
+    }
+}
+
+
+.m-b-30 {
+    margin-bottom: 42px !important;
+}
 
 
 /* .padding-size-2{
