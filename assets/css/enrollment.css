@@ -1446,13 +1446,16 @@ display: block;
   }
   .center-button {
     margin: 20px auto 0;
-    width: 213px;
+    width: 242px; /* Increased from 213px */
     display: flex;
     justify-content: center;
   }
   .center-button .web-button {
     display: inline-block;
     margin: 0;
+    width: 100%; /* Make button take full width of container */
+    text-align: center;
+    padding: 12px 0; /* Add some vertical padding */
   }
 }
 
