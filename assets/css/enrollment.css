@@ -1439,6 +1439,21 @@ display: block;
 /* //////////////////////11,21,2025 */
 
 
+
+@media (min-width: 1024px)  {
+  .websie-22 {
+   padding-top: 61px !important;
+  }
+}
+
+@media (min-width: 390px)  {
+  .card40 {
+      margin-top: -44px !important;
+      width: 56% !important;
+      margin-left: 22px !important;
+  }
+}
+
 @media (max-width: 1025px) {
     .web-button {
         display: inline-block;
