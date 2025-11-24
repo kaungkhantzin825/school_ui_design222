@@ -483,7 +483,7 @@ body{
 /* selection  */
 
 .selection{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     padding: 30px 0;
@@ -603,25 +603,32 @@ body{
 }
 
 .selection .program-title .program-small-text-1{
-    font-size: clamp(6px,1vw,15px);
+    /* font-size: clamp(6px,1vw,15px); */
+    font-size: 15px;
 }
 
 .selection .program-title .program-small-text-2{
-    font-size: clamp(5px,.8vw,10px);
+    /* font-size: clamp(5px,.8vw,10px); */
+    font-size: 10px;
 }
 
 .selection .programs .program .program-btn{
-    height: clamp(18px,1.2vw,35px);
-    font-size: clamp(3px,.5vw,6px);
+    /* height: clamp(18px,1.2vw,35px);
+    font-size: clamp(3px,.5vw,6px); */
+    height: 35px;
+    font-size: 6px;
     text-decoration: none;
-    line-height: clamp(18px,1.2vw,35px);
+    /* line-height: clamp(18px,1.2vw,35px); */
+    line-height: 35px;
     /* padding: .6vw .8vw; */
-    padding: 0 .5vw;
+    /* padding: 0 .5vw; */
+    padding: 0 5px;
 }
 
 .selection .department-container{
     width: 96%;
-    padding: 1vw 1vw 0 1vw;
+    /* padding: 1vw 1vw 0 1vw; */
+    padding: 8px 8px 0 8px;
     background: var(--blue-gradient);
     display: flex;
     flex-direction: column;
@@ -729,7 +736,7 @@ body{
 
 
 .about{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -913,7 +920,7 @@ body{
 }
 
 .entrance-exam{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1069,7 +1076,7 @@ body{
 }
 
 .qualification{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1124,7 +1131,7 @@ body{
         width: 95%;
     }
     .qualification-title-divider{
-        width: 85vw;
+        width: 85%;
     }
     .qualification .qualification-quote .info-box{
         padding:2px  0;
@@ -1145,7 +1152,7 @@ body{
 
 
 .campus-life{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1176,7 +1183,7 @@ body{
 }
 
 .campus-life .campus-wrap{
-    width: 85vw;
+    width: 85%;
     gap: 20px;
 }
 
@@ -1294,7 +1301,7 @@ body{
 @media (max-width: 1025px) {
 
     .campus-life-quote{
-        width: 95vw;
+        width: 95%;
     }
 
     .campus-life-quote .info-box{
@@ -1331,7 +1338,7 @@ body{
 }
 
 .tuition{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1438,7 +1445,7 @@ body{
         width: 95%;
     }
     .tuition-title-divider{
-        width: 85vw;
+        width: 85%;
     }
     .tuition .tuition-quote .info-box{
         padding:2px  0;
@@ -1477,7 +1484,7 @@ body{
 
 
 .column{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1627,7 +1634,7 @@ body{
 
 
 .open-campus{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1717,7 +1724,7 @@ body{
         width: 95%;
     }
     .open-campus-title-divider{
-        width: 85vw;
+        width: 85%;
     }
     .open-campus .open-campus-quote .info-box{
         padding:2px  0;
