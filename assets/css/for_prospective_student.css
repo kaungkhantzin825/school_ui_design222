@@ -2357,6 +2357,11 @@ body{
 }
 
 #thu-fp-content .access-btn span:first-child {
+    text-decoration: none;
+    position: relative;
+}
+
+#thu-fp-content .access-btn:hover span:first-child {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -2365,6 +2370,6 @@ body{
     text-decoration: none;
 }
 
-.fonts9zse{
+#thu-fp-content .fonts9zse{
     visibility: hidden;
 }
