@@ -708,7 +708,7 @@ body{
 
 .navigation-guide-subtitle{
     color: var(--white);
-    font-size: 66px;
+    font-size: 63px;
     font-weight: bold;
 
 }
@@ -2256,7 +2256,7 @@ body{
 }
 
 .news .section-subtitle{
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 @media (max-width: 1025px) {
