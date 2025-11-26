@@ -1082,7 +1082,7 @@ body{
 
 
 .campus-life{
-    width: 97vw;
+    width: 97%;
     border-left: 1px solid #ccc;
     margin: 0 auto;
     max-width: none;
@@ -1733,4 +1733,14 @@ body{
 }
 .text-underline{
     text-decoration: underline;
+}
+
+
+@media (max-width: 1025px) {
+    #thu-f-content {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #ffffff;
+    }
 }

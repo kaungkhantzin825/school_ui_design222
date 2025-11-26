@@ -1020,7 +1020,7 @@ tion Styles */
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .mobile-hide {
     display: none !important;
   }
@@ -1033,7 +1033,7 @@ tion Styles */
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .mobile-view {
     display: block;
   }
@@ -1129,7 +1129,7 @@ tion Styles */
 
 
 /* Mobile container styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .container {
     width: 100% !important;
     max-width: 1200px;
@@ -1139,7 +1139,7 @@ tion Styles */
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .title {
     font-family: var(--japanese_font);
     font-weight: bold;
@@ -1152,13 +1152,13 @@ tion Styles */
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .section02 .left {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .main-title {
     text-align: center;
   }
@@ -1250,7 +1250,7 @@ tion Styles */
     display: block;
     text-align: center;
     color: var(--white);
-    width: 195px;
+    /* width: 195px; */
     font-size: 14px !important;
   }
 
@@ -1267,7 +1267,7 @@ tion Styles */
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .container-gif {
     width: 100% !important;
     max-width: 1200px;
@@ -1314,14 +1314,14 @@ tion Styles */
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .mobile-hide-3 {
     display: block;
   }
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .info-box {
     position: relative;
     background-color: #fef8e6;
@@ -1343,7 +1343,7 @@ tion Styles */
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .title {
     font-family: var(--japanese_font);
     font-weight: bold;
@@ -1367,7 +1367,7 @@ tion Styles */
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .title-30 {
     font-family: var(--japanese_font);
     font-weight: bold;
@@ -1444,7 +1444,7 @@ tion Styles */
 }
 
 /* Mobile responsive for housing card */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .housing-card {
     padding: 20px;
     margin: 15px 0;
@@ -1624,7 +1624,7 @@ Campus Facility Section */
 }
 
 /* Mobile responsive */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .campus-facility-section {
     margin: 20px 10px;
   }
@@ -1753,7 +1753,7 @@ ge styling */
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .gif-move-2 {
     position: absolute;
     top: 49%;
@@ -1789,7 +1789,7 @@ ge styling */
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .container-gif-2 {
       width: 100% !important;
       /* max-width: 1200px; */
