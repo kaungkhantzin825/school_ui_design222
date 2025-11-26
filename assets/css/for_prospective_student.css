@@ -934,7 +934,7 @@ body{
 
 .selection .program-title .program-small-text-1{
     /* font-size: clamp(6px,1vw,15px); */
-    font-size: 15px;
+    font-size: 9px;
 }
 
 @media (max-width: 1025px) {
@@ -945,8 +945,8 @@ body{
 
 .selection .program-title .program-small-text-2{
     /* font-size: clamp(5px,.8vw,10px); */
-    font-size: 11px;
-    line-height: 0.4;
+  font-size: 9px;
+    line-height: 1.4;
 }
 
 @media (max-width: 1025px) {
