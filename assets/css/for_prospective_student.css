@@ -8,6 +8,23 @@
 /* Japanese font - Tazugane Gothic HondaMKTA Med */
 @import url(https://db.onlinewebfonts.com/c/7c7b079cf59c70d55d0b33eae89f1f38?family=Tazugane+Gothic+HondaMKTA+Med);
 
+
+.text,
+.title,
+/* .section-subtitle, */
+.right-container-text,
+.btn-text,
+.card-content h2 span,
+.card-text,
+.tuition-right-text,
+.tuition-right-btn-container,
+.column-right-content-container-text {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
+        "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+        "メイリオ", Meiryo, sans-serif !important;
+}
+
+
 /* ==========================================================================
    ANIMATIONS
    ========================================================================== */
@@ -64,6 +81,10 @@
   animation: fadeInFromTop 1s ease-out forwards;
 }
 
+
+#thu-fp-content  .campus-img{
+    height: 345px;
+}
 /* ==========================================================================
    CSS CUSTOM PROPERTIES (VARIABLES)
    ========================================================================== */
@@ -1601,7 +1622,7 @@ body{
     top: 10%;
     left: 13%;
     width: 80%;
-    height: 95%;
+       height: 78%;
 
 }
 
