@@ -2171,7 +2171,8 @@ body{
 
 @media (max-width: 1025px) {
     .open-campus-content{
-        font-size: 24px;
+      font-size: 18px;
+        margin-top: 44px;
     }
 }
 
