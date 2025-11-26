@@ -1734,3 +1734,13 @@ body{
 .text-underline{
     text-decoration: underline;
 }
+
+
+@media (max-width: 1025px) {
+    #thu-f-content {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #ffffff;
+    }
+}
