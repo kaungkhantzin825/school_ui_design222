@@ -9,17 +9,17 @@
 @import url(https://db.onlinewebfonts.com/c/7c7b079cf59c70d55d0b33eae89f1f38?family=Tazugane+Gothic+HondaMKTA+Med);
 
 
-.text,
-.title,
+#thu-fp-content .text,
+#thu-fp-content  .title,
 /* .section-subtitle, */
-.right-container-text,
-.btn-text,
-.card-content h2 span,
-.card-text,
-.tuition-right-text,
-.tuition-right-btn-container,
-.campus-life-btn,
-.column-right-content-container-text {
+#thu-fp-content  .right-container-text,
+#thu-fp-content  .btn-text,
+#thu-fp-content  .card-content h2 span,
+#thu-fp-content  .card-text,
+#thu-fp-content  .tuition-right-text,
+#thu-fp-content  .tuition-right-btn-container,
+#thu-fp-content  .campus-life-btn,
+#thu-fp-content  .column-right-content-container-text {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
         "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
         "メイリオ", Meiryo, sans-serif !important;
