@@ -262,9 +262,9 @@
   color: var(--blue) !important;
 }
 
-/* .about-card .right .text span {
+.about-card .right .text span {
   text-decoration: underline;
-} */
+}
 
 .section03 .info-box,
 .section04 .info-box {
@@ -1616,7 +1616,7 @@ Campus Facility Section */
 
 .facility-link:hover {
   color: #1a2d5a;
-  /* text-decoration: underline; */
+  text-decoration: underline;
 }
 
 /* Mobile responsive */
@@ -2437,7 +2437,7 @@ ircles & Clubs Section - Matching Demo Image */
   color: white;
   text-decoration: none;
   font-weight: normal;
-  /* text-decoration: underline; */
+  text-decoration: underline;
   padding: 12px;
   display: block;
   text-align: center;
@@ -2635,7 +2635,7 @@ ircles & Clubs Section - Matching Demo Image */
   background: var(--teal);
   color: #fff;
   font-weight: 800;
-     padding: 12px 35px;
+  padding: 12px 18px;
   border-radius: 999px;
   text-decoration: none;
   box-shadow: 0 6px 16px rgba(44, 197, 198, .35);
@@ -2650,7 +2650,7 @@ ircles & Clubs Section - Matching Demo Image */
 
 /* Only underline the text part */
 .btn-text {
-  /* text-decoration: underline; */
+  text-decoration: underline;
 
 }
 
@@ -3993,7 +3993,7 @@ tion - Matching Demo Image */
   font-family: var(--japanese_font);
   margin: 0;
   line-height: 1.4;
-  /* text-decoration: underline; */
+  text-decoration: underline;
   text-decoration-color: #4ECDC4;
   text-underline-offset: 5px;
   text-decoration-thickness: 2px;
@@ -4888,56 +4888,6 @@ Event Slider Styles */
     font-size: 10px !important;
   }
 }
-
-/* =============================
-   Campus life buttons: underline
-   text only on hover
-   ============================= */
-
-/* Default: no underline anywhere */
-.btn,
-.event-btn,
-.cta-button,
-.btn-text,
-.button-text {
-  text-decoration: none;
-}
-
-/* Only text gets underline when hovered */
-
-/* Buttons whose text is inside span.btn-text / span.button-text */
-.btn:hover .btn-text,
-.btn:hover .button-text {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Event detail links: text is the link itself */
-.event-btn:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Standalone text spans used as buttons */
-.button-text:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* CTA button (full button, text only visually underlined) */
-.cta-button:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Make sure arrow 〉 inside .btn is never underlined */
-.btn > span:not(.btn-text):not(.button-text) {
-  text-decoration: none;
-}
-
-
-
-
 
 
 

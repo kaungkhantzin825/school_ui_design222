@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FONT IMPORTS
+   FONT IMPORTS (これらは@ルールのトップに置く必要があります)
    ========================================================================== */
 
 /* English font - Saira Condensed */
@@ -10,10 +10,10 @@
 
 
 /* ==========================================================================
-   CSS CUSTOM PROPERTIES (VARIABLES)
+   CSS CUSTOM PROPERTIES & BASE STYLES (Scoped to #thu-f-content)
    ========================================================================== */
 
-:root {
+#thu-f-content {
     /* Color palette */
     --white: #ffffff;
     --black: #000000;
@@ -31,6 +31,21 @@
     /* Typography */
     --font-japanese: 'Tazugane Gothic HondaMKTA Med', sans-serif;
     --font-english: 'Saira Condensed', sans-serif;
+
+    /* Base Body Styles applied to Wrapper */
+    font-family: var(--font-japanese);
+    color: var(--blue);
+    line-height: 1.6;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box; /* 安全のため追加 */
+}
+
+/* 全称セレクタでのボックスサイズ統一（崩れ防止） */
+#thu-f-content *,
+#thu-f-content *::before,
+#thu-f-content *::after {
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -38,52 +53,46 @@
    ========================================================================== */
 
 /* Background color utilities */
-.bg-light-steel-blue {
+#thu-f-content .bg-light-steel-blue {
     background-color: var(--light-steel-blue);
 }
 
-.bg-grey {
+#thu-f-content .bg-grey {
     background-color: var(--grey);
 }
 
-.bg-sky-blue {
+#thu-f-content .bg-sky-blue {
     background-color: var(--sky-blue);
 }
 
 /* Layout utilities */
-.container {
+#thu-f-content .container {
     width: 85vw;
     margin: 0 auto;
 }
 
 /* Button component */
-.btn {
+#thu-f-content .btn {
     color: var(--white);
     background: linear-gradient(var(--turquoise), var(--aqua));
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 1.6vw;
-    padding: 0.6vw 1.2vw;
+    padding: 1.6vw 1.2vw;
     border-radius: 2vw;
     display: inline-block;
     transition: transform 0.2s ease;
+    display: inline-flex;      
+    align-items: center;       
+    justify-content: center;   
+    line-height: 1;            
 }
 
-.btn:hover {
+#thu-f-content .btn:hover {
     transform: translateY(-1px);
 }
 
-.text-turquoise {
+#thu-f-content .text-turquoise {
     color: var(--turquoise);
-}
-
-/* ==========================================================================
-   BASE STYLES
-   ========================================================================== */
-
-body {
-    font-family: var(--font-japanese);
-    color: var(--blue);
-    line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -91,23 +100,23 @@ body {
    ========================================================================== */
 
 /* Title animation for scroll-triggered reveals */
-.ani-title {
+#thu-f-content .ani-title {
     opacity: 0;
     transform: translateX(-50px);
     transition: all 0.5s ease-in-out;
 }
 
-.ani-title.visible {
+#thu-f-content .ani-title.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
 /* Animation delay utility */
-.delay-2 {
+#thu-f-content .delay-2 {
     transition-delay: 0.2s;
 }
 
-/* Keyframe animations */
+/* Keyframe animations (Global scope is required for keyframes) */
 @keyframes marquee {
     from {
         transform: translateX(0%);
@@ -128,7 +137,7 @@ body {
     }
 }
 
-.bounce-on-view span {
+#thu-f-content .bounce-on-view span {
   display: inline-block;
   transform: translateY(0);
   animation-fill-mode: forwards;
@@ -155,23 +164,23 @@ body {
    HEADER SECTION
    ========================================================================== */
 
-header img {
+#thu-f-content header img {
     width: 100%;
     height: auto;
     display: block;
 }
 
 /* Responsive header images */
-.header-mobile-img {
+#thu-f-content .header-mobile-img {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .header-pc-img {
+@media (max-width: 1025px) {
+    #thu-f-content .header-pc-img {
         display: none;
     }
 
-    .header-mobile-img {
+    #thu-f-content .header-mobile-img {
         display: block;
     }
 }
@@ -181,7 +190,7 @@ header img {
    HERO SECTION
    ========================================================================== */
 
-.hero .hero-img{
+#thu-f-content .hero .hero-img{
     width: 100%;
     aspect-ratio: 4/1.9;
     object-fit: cover;
@@ -191,11 +200,11 @@ header img {
 /* ==========================================================================
    RECENT EVENT SECTION
    ========================================================================== */
-.recent-event{
+#thu-f-content .recent-event{
     padding: 2vw 0 10vw 0;
 }
 
-.recent-event-header{
+#thu-f-content .recent-event-header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,19 +214,19 @@ header img {
 
 
 
-.recent-event-title{
+#thu-f-content .recent-event-title{
     font-size: clamp(43px,4vw,56px);
     font-weight: bold;
 }
 
-.recent-event-slider{
+#thu-f-content .recent-event-slider{
     width: 100%;
 
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
 
-    gap: 60px;
+    gap: 38px;
 
     overflow-x: scroll;
     overflow-y: hidden;
@@ -226,11 +235,11 @@ header img {
 
 }
 
-.recent-event-slider::-webkit-scrollbar{
+#thu-f-content .recent-event-slider::-webkit-scrollbar{
   width: 10px;
 }
 
-.recent-event-slider::-webkit-scrollbar-track{
+#thu-f-content .recent-event-slider::-webkit-scrollbar-track{
     background-color: var(--blue);
 
     border-top: 7px solid transparent;
@@ -240,7 +249,7 @@ header img {
     background-clip: padding-box;
 }
 
-.recent-event-slider::-webkit-scrollbar-thumb {
+#thu-f-content .recent-event-slider::-webkit-scrollbar-thumb {
     background-color: var(--blue);
 
     border-left: 20vw solid transparent;
@@ -249,13 +258,13 @@ header img {
 }
 
 
-.recent-event-slide{
+#thu-f-content .recent-event-slide{
     position: relative;
 }
 
 
 
-.card{
+#thu-f-content .card{
     width: clamp(180px, 30vw, 250px);
     aspect-ratio: 1/1.1;
     border: 2px solid transparent;
@@ -273,7 +282,7 @@ header img {
     z-index: 100;
 }
 
-.card-style-box{
+#thu-f-content .card-style-box{
     width: clamp(180px, 30vw, 250px);;
     aspect-ratio: 1/1.1;
     background-color:#ccc;
@@ -288,7 +297,7 @@ header img {
     z-index: 1;
 }
 
-.card .date{
+#thu-f-content .card .date{
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -296,7 +305,7 @@ header img {
     margin-bottom: 20px;
 }
 
-.card .slack{
+#thu-f-content .card .slack{
     width: 3px;
     height: clamp(40px,5vw,60px);
     background-color: var(--blue);
@@ -305,27 +314,27 @@ header img {
     margin: 0 5px;
 }
 
-.card .month{
-    font-size: clamp(27px,3vw,43px);
+#thu-f-content .card .month{
+    font-size: clamp(27px,7vw,43px);
     line-height: 0.8;
     font-weight: 900;
     text-shadow: 3px 3px 0px #ccc;
 }
 
-.card .day{
+#thu-f-content .card .day{
     font-size: clamp(50px,6vw,80px);
     font-weight: 900;
     line-height: .8;
     text-shadow: 4px 4px 0px #ccc;
 }
 
-.card .day-name{
+#thu-f-content .card .day-name{
     font-size: clamp(14px,2vw,22px);
     font-weight: bold;
     line-height: .8;
 }
 
-.card .card-divider{
+#thu-f-content .card .card-divider{
     width: 98%;
     height: 6px;
     border: 3px solid transparent;
@@ -336,13 +345,13 @@ header img {
         var(--blue-gradient) border-box;
     margin-bottom: 10px;
 }
-.card .time{
+#thu-f-content .card .time{
     font-size: clamp(14px,2vw,22px);
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.card .card-footer{
+#thu-f-content .card .card-footer{
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -351,13 +360,21 @@ header img {
     position: relative;
 }
 
-.card .btn{
-    font-size: clamp(12px,1.5vw,18px);
+#thu-f-content .card .btn{
+    font-size: 19px;
     border-radius: clamp(px,1.5vw,15px);
-    padding: clamp(5px,0.5vw,10px) clamp(10px,1vw,20px);
+    padding:(0px,0px,0px);
 }
 
-.card-footer .dropdown{
+@media (max-width: 1025px) {
+#thu-f-content .card .btn{
+    font-size: 13px;
+    border-radius: clamp(px,1.5vw,15px);
+    padding:(0px,0px,0px);
+}
+}
+
+#thu-f-content .card-footer .dropdown{
     list-style: none;
     border: 2px solid transparent;
     background:
@@ -375,37 +392,37 @@ header img {
     transition: hight 2s ease-in-out ;
 }
 
-.card-footer .dropdown.active{
+#thu-f-content .card-footer .dropdown.active{
     opacity: 1;
 }
 
-.card-footer .dropdown-item{
+#thu-f-content .card-footer .dropdown-item{
     padding: 1px 10px;
 }
 
-.card-footer .dropdown-item:hover{
+#thu-f-content .card-footer .dropdown-item:hover{
     background-color: #f4f4f4;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
 
-    .recent-event-slider{
+    #thu-f-content .recent-event-slider{
         /* padding-bottom: 10vw; */
         margin-bottom: 3vw;
     }
 
-    .recent-event-slider::-webkit-scrollbar{
+    #thu-f-content .recent-event-slider::-webkit-scrollbar{
         height: 8px;
     }
 
-    .recent-event-slider::-webkit-scrollbar-track{
+    #thu-f-content .recent-event-slider::-webkit-scrollbar-track{
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
         border-left: 2vw solid transparent;
         border-right: 2vw solid transparent;
     }
 
-    .recent-event-slider::-webkit-scrollbar-thumb {
+    #thu-f-content .recent-event-slider::-webkit-scrollbar-thumb {
         border-left: 2vw solid transparent;
         border-right: 2vw solid transparent;
     }
@@ -416,7 +433,7 @@ header img {
     SCHEDULE SECTION
    ========================================================================== */
 
-.schedule{
+#thu-f-content .schedule{
     width: 100%;
     /* height: 100vh; */
     background: var(--blue-gradient);
@@ -424,7 +441,7 @@ header img {
     position: relative;
 }
 
-.schedule-top-bg{
+#thu-f-content .schedule-top-bg{
     width: 100%;
 
     position: absolute;
@@ -434,14 +451,14 @@ header img {
     z-index: 100;
 }
 
-.schedule-top-bg-img{
+#thu-f-content .schedule-top-bg-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     scale: 1.4;
 }
 
-.schedule-bg{
+#thu-f-content .schedule-bg{
     width: 100%;
     height: 100%;
     
@@ -455,12 +472,12 @@ header img {
 }
 
 
-.schedule-header{
+#thu-f-content .schedule-header{
     width: 80vw;
     margin: 0 auto;
 }
 
-.schedule-title{
+#thu-f-content .schedule-title{
     color: var(--white);
     font-size: clamp(55px, 7.4vw ,113px);
     font-weight: bold;
@@ -468,7 +485,7 @@ header img {
     line-height: 1;
 }
 
-.schedule-subtitle{
+#thu-f-content .schedule-subtitle{
     color: var(--white);
     font-size: clamp(16px, 2.8vw, 33px);
     font-weight: bold;
@@ -476,7 +493,7 @@ header img {
     text-underline-offset: 1.5vw;
 }
 
-.schedule-campus-btn{
+#thu-f-content .schedule-campus-btn{
     width: 80%;
     height: 100%;
     background-color: var(--white);
@@ -486,7 +503,7 @@ header img {
     margin: 2vw auto;
 }
 
-.schedule-campus-name{
+#thu-f-content .schedule-campus-name{
     color: var(--blue);
     font-size: clamp(27px, 2.5vw, 31px);
     font-weight: bold;
@@ -494,14 +511,14 @@ header img {
     padding-left: 2vw;
 }
 
-.schedule-date-container{
+#thu-f-content .schedule-date-container{
     width: 100%;
     display: flex;
     gap: 3vw;
     padding: 3vw 0;
 }
 
-.schedule-campus-img-box{
+#thu-f-content .schedule-campus-img-box{
     width: 40vw;
     display: flex;
     justify-content: end;
@@ -509,7 +526,7 @@ header img {
     position: relative;
 }
 
-.schedule-campus-img-box::before{
+#thu-f-content .schedule-campus-img-box::before{
     content: "";
     position: absolute;
     top: 4px;
@@ -524,7 +541,7 @@ header img {
     /* opacity: 0.2; */
 }
 
-.schedule-campus-img{
+#thu-f-content .schedule-campus-img{
     width: 75%;
     /* min-height: 250px; */
     /* aspect-ratio: 4/2.5; */
@@ -536,7 +553,7 @@ header img {
     z-index: 100;
 }
 
-.schedule-slider{
+#thu-f-content .schedule-slider{
     width: 60vw;
 
     display: flex;
@@ -554,11 +571,11 @@ header img {
 
 }
 
-.schedule-slider::-webkit-scrollbar{
+#thu-f-content .schedule-slider::-webkit-scrollbar{
   width: 10px;
 }
 
-.schedule-slider::-webkit-scrollbar-track{
+#thu-f-content .schedule-slider::-webkit-scrollbar-track{
     background-color: var(--white);
 
     border-top: 7px solid transparent;
@@ -568,7 +585,7 @@ header img {
     background-clip: padding-box;
 }
 
-.schedule-slider::-webkit-scrollbar-thumb {
+#thu-f-content .schedule-slider::-webkit-scrollbar-thumb {
     background-color: var(--white);
 
     border-left: 5vw solid transparent;
@@ -576,11 +593,11 @@ header img {
     background-clip: padding-box;
 }
 
-.schedule-slide{
+#thu-f-content .schedule-slide{
     position: relative;
 }
 
-.schedule-card .btn{
+#thu-f-content .schedule-card .btn{
     width: 100%;
     display: block;
     text-align: center;
@@ -588,30 +605,30 @@ header img {
     border-radius: 20px;
 }
 
-.schedule-tabs{
+#thu-f-content .schedule-tabs{
     width: 80vw;
     margin: 0 auto;
 }
 
 
-.tab-list{
+#thu-f-content .tab-list{
     width: 100%;
     display: flex;
     gap: 2vw;
 }
 
-.tab-btn{
+#thu-f-content .tab-btn{
     background-color: var(--white);
     font-size: clamp(14px,2vw,23px);
     font-weight: bold;
     cursor: pointer;
     display: flex;
     gap: 3vw;
-    padding: 0 0 0 2vw;
+    padding: 0 0 0 1vw;
     overflow: hidden;
 }
 
-.tab-btn svg{
+#thu-f-content .tab-btn svg{
     width: 40px;
     height: 40px;
     
@@ -622,37 +639,37 @@ header img {
 }
 
 
-.tab-btn.active svg{
+#thu-f-content .tab-btn.active svg{
     transform: rotate(90deg);
 }
 
-.schedule-tab-content{
+#thu-f-content .schedule-tab-content{
     width: 100%;
     background-color: var(--white);
     padding: 1vw 2vw;
 }
 
-.major-left-content,
-.major-right-content{
+#thu-f-content .major-left-content,
+#thu-f-content .major-right-content{
     width: 50%;
     margin-bottom: 2vw;
 }
 
-.tab-content{
+#thu-f-content .tab-content{
     width: 100%;
     justify-content: space-between;
     gap: 2vw;
 }
 
-.schedule-tab-content .tab-content{
+#thu-f-content .schedule-tab-content .tab-content{
     display: none;
 }
 
-.schedule-tab-content .tab-content.active{
+#thu-f-content .schedule-tab-content .tab-content.active{
     display: flex;
 }
 
-.content-box{
+#thu-f-content .content-box{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -661,11 +678,11 @@ header img {
     position: relative;
 }
 
-.major-content-box{
+#thu-f-content .major-content-box{
     margin-bottom: 2vw;
 }
 
-.content-box .content-box-label{
+#thu-f-content .content-box .content-box-label{
     font-size: clamp(15px,2vw,18px);
     font-weight: bold;
     color: var(--blue);
@@ -674,19 +691,19 @@ header img {
 }
 
 
-.content-box-container{
+#thu-f-content .content-box-container{
     display: flex;
     justify-content: space-between;
     gap: 2vw;
 }
 
-.content-box-header{
+#thu-f-content .content-box-header{
     width: 35%;
 
     position: relative;
 }
 
-.content-box-img{
+#thu-f-content .content-box-img{
     width: 100%;
     aspect-ratio: 4/2.5;
     object-fit: cover;
@@ -696,7 +713,7 @@ header img {
     z-index: 10;
 }
 
-.content-img-style-box{
+#thu-f-content .content-img-style-box{
     width: 100%;
     aspect-ratio: 4/2.5;
     background: var(--blue-gradient);
@@ -708,39 +725,43 @@ header img {
     /* z-index: -1; */
 }
 
-.content-box-body{
+#thu-f-content .content-box-body{
     width: 65%;
+display: flex;
+    flex-direction: column;
 }
 
-.content-box-title{
+#thu-f-content .content-box-title{
     font-size: clamp(10px, 1.2vw, 16px);
     font-weight: bold;
 }
 
-.content-box-title .large-letter{
+#thu-f-content .content-box-title .large-letter{
     font-size: clamp(16px, 2vw, 22px);
 }
 
-.content-box-text{
+#thu-f-content .content-box-text{
     color: var(--black);
-    font-size: clamp(8px, 1vw, 14px);
+    font-size: 13px;
     margin-bottom: 3vw;
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif !important;
+flex-grow: 1;
 }
 
-.content-box-btn-container{
+#thu-f-content .content-box-btn-container{
     display: flex;
     justify-content: start;
 }
 
-.major-right-content .content-box-btn-container{
+#thu-f-content .major-right-content .content-box-btn-container{
     justify-content: end;
 }
 
-.content-box-btn{
-    font-size: clamp(10px, 1.2vw, 13px);
+#thu-f-content .content-box-btn{
+    font-size: clamp(10px, 1.2vw, 16px);
 }
 
-.program-container{
+#thu-f-content .program-container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -748,24 +769,24 @@ header img {
     padding: 4vw 2vw 2vw 2vw;
 }
 
-.program-box{
+#thu-f-content .program-box{
     display: flex;
     gap: 3vw;
 }
 
-.program-box-img-container{
+#thu-f-content .program-box-img-container{
     width: 30%;
     overflow: hidden;
 }
 
-.program-box-img{
+#thu-f-content .program-box-img{
     width: 100%;
     height: 100%;
     aspect-ratio: 4/2.5;
     object-fit: cover;
 }
 
-.program-content{
+#thu-f-content .program-content{
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -774,7 +795,7 @@ header img {
     position: relative;
 }
 
-.program-icon{
+#thu-f-content .program-icon{
     width: 2.5vw;
     /* height: 3vw; */
     position: absolute;
@@ -783,20 +804,20 @@ header img {
     transform: rotate(10deg);
 }
 
-.program-icon.two{
+#thu-f-content .program-icon.two{
     top: 10px;
     transform: rotate(-5deg);
 }
 
-.program-icon.three{
+#thu-f-content .program-icon.three{
     top: 10px;
 }
 
-.program-icon.four{
+#thu-f-content .program-icon.four{
     top: 10px;
 }
 
-.program-content-subtitle{
+#thu-f-content .program-content-subtitle{
     color: var(--white);
     font-size: clamp(14px, 2.1vw, 29px);
     background-color: var(--aqua);
@@ -805,7 +826,7 @@ header img {
     padding:5px 0 5px 5vw;
 }
 
-.program-content-title{
+#thu-f-content .program-content-title{
     color: var(--blue);
     font-size: clamp(31px, 4vw, 51px);
     font-weight: bold;
@@ -813,30 +834,30 @@ header img {
     letter-spacing: 1px;
 }
 
-.program-box-divider{
+#thu-f-content .program-box-divider{
     width: 100%;
     height: 1px;
     background-color: var(--blue);
     margin: 2vw 0;
 }
 
-.program-btn-container{
+#thu-f-content .program-btn-container{
     display: flex;
     justify-content: center;
 }
 
-.program-btn{
+#thu-f-content .program-btn{
     font-size: 23px;
     padding: .5vw 4vw;
     border-radius: 14px;
     margin: 2vw 0;
 }
 
-.chiba-content{
+#thu-f-content .chiba-content{
     margin-bottom: 4vw;
 }
 
-.schedule-info{
+#thu-f-content .schedule-info{
     width: 80vw;
     margin: 0 auto;
     background-color: var(--white);
@@ -845,13 +866,13 @@ header img {
     margin-bottom: 4vw;
 }
 
-.schedule-info-header{
+#thu-f-content .schedule-info-header{
     width: 100%;
     display: block;
     padding: clamp(3px,.7vw,8px) 0;
 }
 
-.schedule-info-title{
+#thu-f-content .schedule-info-title{
     color: var(--blue);
     font-size: clamp(22px, 2.5vw, 35px);
     font-weight: bold;
@@ -860,59 +881,59 @@ header img {
     line-height: 1;
 }
 
-.schedule-info .schedule-date-container{
+#thu-f-content .schedule-info .schedule-date-container{
     padding: 1vw 0 3vw 0;
 }
 
-.schedule-info .schedule-campus-img-box::before{
+#thu-f-content .schedule-info .schedule-campus-img-box::before{
     width: 100%;
     background-color: var(--blue);
 }
 
-.schedule-info .schedule-campus-img{
+#thu-f-content .schedule-info .schedule-campus-img{
     width: 100%;
 }
 
-.schedule-info .schedule-slider::-webkit-scrollbar-track{
+#thu-f-content .schedule-info .schedule-slider::-webkit-scrollbar-track{
     background-color: var(--blue);
     border-left: 3vw solid transparent;
     border-right: 3vw solid transparent;
 }
 
-.schedule-info .schedule-slider::-webkit-scrollbar-thumb{
+#thu-f-content .schedule-info .schedule-slider::-webkit-scrollbar-thumb{
     background-color: var(--blue);
     border-left: 3vw solid transparent;
     border-right: 3vw solid transparent;
 }
 
-.schedule-info .tabs{
+#thu-f-content .schedule-info .tabs{
     margin-top: -5vw;
     position: relative;
 }
 
-.schedule-info .schedule-tab-content{
+#thu-f-content .schedule-info .schedule-tab-content{
     width: 92%;
     margin-top: -1px;
     
 }
 
-.schedule-info .tab-btn, .schedule-info .schedule-tab-content{
+#thu-f-content .schedule-info .tab-btn, #thu-f-content .schedule-info .schedule-tab-content{
     border: 1px solid var(--blue);
     
 }
 
-.schedule-info .tab-content.active{
+#thu-f-content .schedule-info .tab-content.active{
     display: block;
 }
 
 
-.schedule-info .tab-content-text{
-    font-size: clamp(15px, 1.8vw, 20px);
+#thu-f-content .schedule-info .tab-content-text{
+    font-size: 17px;
     color: var(--blue);
     margin-bottom: 2vw;
 }
 
-.overview-tab-btn-container{
+#thu-f-content .overview-tab-btn-container{
     width: 72vw;
     display: flex;
     justify-content: end;
@@ -920,17 +941,23 @@ header img {
     bottom: 8%;
 }
 
-.overview-tab-btn{
-    font-size: clamp(12px, 1.5vw, 14px);
+#thu-f-content .overview-tab-btn{
+    font-size: 15px;
 }
 
-.web .schedule-info-img-box{
+@media (max-width: 1025px) {
+#thu-f-content .overview-tab-btn{
+    font-size: 18px;
+}
+}
+
+#thu-f-content .web .schedule-info-img-box{
     width: 100%;
     position: relative;
     margin: 2vw 0 3vw 0;
 }
 
-.web .schedule-info-img{
+#thu-f-content .web .schedule-info-img{
     width: 100%;
     aspect-ratio: 4/1.6;
     object-fit: cover;
@@ -943,7 +970,7 @@ header img {
     z-index: 200;
 }
 
-.web  .schedule-info-img-box::before{
+#thu-f-content .web  .schedule-info-img-box::before{
     content: "";
     width: 100%;
     aspect-ratio: 4/1.6;
@@ -959,28 +986,28 @@ header img {
     z-index: 100;
 }
 
-.web .schedule-info-text{
+#thu-f-content .web .schedule-info-text{
     margin-bottom: 1vw;
 }
 
-.web .schedule-info-text p{
+#thu-f-content .web .schedule-info-text p{
     font-size: clamp(11px, 1.2vw, 18px);
 }
 
-.web .schedule-info-btn-container{
+#thu-f-content .web .schedule-info-btn-container{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.web .schedule-info-btn{
+#thu-f-content .web .schedule-info-btn{
     display: inline-block;
     border-radius: 1vw;
     padding: .5vw 3vw;
 }
 
-.faq{
+#thu-f-content .faq{
     width: 100%;
     background-image: url(../img/open_campus/faq-bg.png);
     background-position: center;
@@ -992,7 +1019,7 @@ header img {
     z-index: 100;
 }
 
-.faq .faq-style-text{
+#thu-f-content .faq .faq-style-text{
     color: var(--turquoise);
     font-size: 92px;
     font-weight: bold;
@@ -1005,23 +1032,23 @@ header img {
     z-index: 2;
 }
 
-.faq-header{
+#thu-f-content .faq-header{
     display: flex;
     justify-content: center;
 }
 
-.faq-header-title, .faq-header-subtitle{
+#thu-f-content .faq-header-title, #thu-f-content .faq-header-subtitle{
     color: var(--white);
     font-size:  clamp(22px, 2.5vw, 35px);
     font-weight: bold;
 }
 
-.faq-header-subtitle small{
+#thu-f-content .faq-header-subtitle small{
     font-size: 18px;
 }
 
 
-.faq-divider{
+#thu-f-content .faq-divider{
     width: 60vw;
     height: 2px;
     background-color: var(--blue);
@@ -1029,7 +1056,7 @@ header img {
     margin-bottom: 2vw;
 }
 
-.faq-body{
+#thu-f-content .faq-body{
     width: 65vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1039,78 +1066,89 @@ header img {
     margin: 0 auto;
 }
 
-.faq-card{
+#thu-f-content .faq-card{
     width: 100%;
     background-color: var(--white);
     padding: 1.5vw 2vw;
 }
 
-.faq-card-header{
+#thu-f-content .faq-card-header{
     display: flex;
     gap: 1vw;
     margin-bottom: 1vw;
 }
 
-.faq-card-header .question-number{
+#thu-f-content .faq-card-header .question-number{
     color: var(--white);
     width: clamp(30px, 3vw, 40px);
-    height: clamp(20px, 2vw, 30px);
+    height: clamp(23px, 2vw, 30px);
+    font-size: clamp(16px , 1.6vw, 20px);
+    background-color: var(--blue);
+    /* line-height: 1; */
+    padding: 0 0.5vw;
+}
+@media (max-width: 1025px) {
+#thu-f-content .faq-card-header .question-number{
+    color: var(--white);
+    width: clamp(32px, 3vw, 40px);
+    height: clamp(25px, 2vw, 30px);
     font-size: clamp(16px , 1.6vw, 20px);
     background-color: var(--blue);
     line-height: 1;
     padding: 0 0.5vw;
 }
+}
 
-.faq-card-header .question{
+#thu-f-content .faq-card-header .question{
     font-size: 15px;
     font-weight: bold;
 }
 
-.faq-card-body{
+#thu-f-content .faq-card-body{
     display: flex;
     gap: 2vw;
 }
 
-.faq-card-icon{
+#thu-f-content .faq-card-icon{
     width: 100px;
 }
 
-.faq-icon{
+#thu-f-content .faq-icon{
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-.faq-card-content{
+#thu-f-content .faq-card-content{
     width: 80%;
 }
 
-.nav-links{
+#thu-f-content .nav-links{
     width: 100%;
     padding: 8vw 0;
 }
 
 
-.nav-links-img{
+#thu-f-content .nav-links-img{
     width: 80%;
     margin: 0 auto;
 }
 
-.nav-links-mobile-img{
+#thu-f-content .nav-links-mobile-img{
     width: 80%;
     margin: 0 auto;
     display: none;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
 
-    .schedule-date-container{
+    #thu-f-content .schedule-date-container{
         flex-direction: column;
         align-items: center;
     }
 
-    .campus-data-content .schedule-campus-img-box{
+    #thu-f-content .campus-data-content .schedule-campus-img-box{
         width: 80vw;
         aspect-ratio: 16/9;
         margin: 0 auto;
@@ -1120,20 +1158,20 @@ header img {
         margin-bottom: 2vw;
     }
 
-    .campus-data-content .schedule-campus-img-box::before{
+    #thu-f-content .campus-data-content .schedule-campus-img-box::before{
         width: 100%;
         aspect-ratio: 16/9;
         border-radius: 0;
     }
 
-    .campus-data-content .schedule-campus-img{
+    #thu-f-content .campus-data-content .schedule-campus-img{
         width: 100%;
         aspect-ratio: 16/9;
         object-fit: cover;
         border-radius: 0;
     }
 
-    .schedule-slider{
+    #thu-f-content .schedule-slider{
         width: 100%;
         padding-bottom: 5vw;
         margin-bottom: 2vw;
@@ -1141,156 +1179,156 @@ header img {
         position: relative;
     }
 
-    .schedule-slider::-webkit-scrollbar{
+    #thu-f-content .schedule-slider::-webkit-scrollbar{
         height: 8px;
     }
-    .schedule-slider::-webkit-scrollbar-track{
+    #thu-f-content .schedule-slider::-webkit-scrollbar-track{
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
         border-left: 2vw solid transparent;
         border-right: 2vw solid transparent;
     }
 
-    .schedule-slider::-webkit-scrollbar-thumb {
+    #thu-f-content .schedule-slider::-webkit-scrollbar-thumb {
         border-left: 2vw solid transparent;
         border-right: 2vw solid transparent;
     }
 
-    .schedule-tabs{
+    #thu-f-content .schedule-tabs{
         width: 95%;
     }
 
-    .tab-btn svg{
+    #thu-f-content .tab-btn svg{
         width: 30px;
         height: 30px;
         padding: 2px;
     }
     
-    .tab-content{
+    #thu-f-content .tab-content{
         flex-direction: column;
     }
 
-    .major-left-content,
-    .major-right-content{
+    #thu-f-content .major-left-content,
+    #thu-f-content .major-right-content{
         width: 100%;
     }
 
-    .content-box{
+    #thu-f-content .content-box{
         flex-direction: column;
     }
 
-    .content-box .content-box-label{
+    #thu-f-content .content-box .content-box-label{
         font-size: clamp(10px, 1.2vw, 16px);
         writing-mode: horizontal-tb; 
         text-orientation: mixed;
         margin-bottom: 1vw;
     }
 
-    .content-box-container{
+    #thu-f-content .content-box-container{
         flex-direction: column;
         align-items: center;
     }
 
-    .content-box-header{
+    #thu-f-content .content-box-header{
         width: 100%;
         margin-bottom: 1vw;
     }
 
-    .content-box-img{
+    #thu-f-content .content-box-img{
         aspect-ratio: 4/1.8;
     }
 
-    .content-img-style-box{
+    #thu-f-content .content-img-style-box{
         aspect-ratio: 4/1.8;
     }
 
-    .content-box-title{
+    #thu-f-content .content-box-title{
         font-size: 22px;
     }
 
-    .content-box-title .large-letter{
+    #thu-f-content .content-box-title .large-letter{
         font-size: 28px;
     }
 
-    .content-box-text{
+    #thu-f-content .content-box-text{
         font-size: 16px;
     }
 
-    .content-box-btn-container{
+    #thu-f-content .content-box-btn-container{
         justify-content: center;
     }
 
-    .content-box-btn{
+    #thu-f-content .content-box-btn{
         font-size: 16px;
         padding: 0.5vw 1.5vw;
         border-radius: 10px;
     }
 
-    .program-box{
+    #thu-f-content .program-box{
         flex-direction: column-reverse;
     }
 
-    .program-box-img-container{
+    #thu-f-content .program-box-img-container{
         width: 100%;
     }
 
-    .program-content{
+    #thu-f-content .program-content{
         width: 100%;
         padding: 1.6vw 0;
     }
 
-    .program-content-subtitle{
+    #thu-f-content .program-content-subtitle{
         padding-left: 7vw;
     }
 
-    .program-icon{
+    #thu-f-content .program-icon{
         width: 5vw;
     }
 
-    .program-icon.two, .program-icon.three, .program-icon.four{
+    #thu-f-content .program-icon.two, #thu-f-content .program-icon.three, #thu-f-content .program-icon.four{
         width: 5.5vw;
         top: 0;
     }
 
-    .program-box-divider{
+    #thu-f-content .program-box-divider{
         width: 80%;
         margin: 2vw auto;
     }
 
-    .program-btn{
+    #thu-f-content .program-btn{
         display: none;
     }
 
-    .schedule-info{
+    #thu-f-content .schedule-info{
         width: 95%;
         padding: 2vw 3vw 8vw 3vw;
         background-color: transparent;
         
     }
 
-    .schedule-info-title{
+    #thu-f-content .schedule-info-title{
         color: var(--white);
         border-left-color: var(--white);
     }
 
-    .schedule-info .schedule-date-container{
+    #thu-f-content .schedule-info .schedule-date-container{
         padding: 1vw 0 3vw 0;
         margin-bottom: 4vw;
     }
 
-    .schedule-campus-img-box{
+    #thu-f-content .schedule-campus-img-box{
         width: 100%;
         aspect-ratio: 4/3;
     }
 
-    .schedule-info .schedule-campus-img-box::before{
+    #thu-f-content .schedule-info .schedule-campus-img-box::before{
         width: 100%;
         height: auto;
         aspect-ratio: 4/3;
         border-radius: 15px;
     }
 
-    .schedule-info .schedule-campus-img{
+    #thu-f-content .schedule-info .schedule-campus-img{
         width: 100%;
         height: auto;
         aspect-ratio: 4/3;
@@ -1298,78 +1336,78 @@ header img {
         border-radius: 15px;
     }
 
-    .schedule-info .schedule-slider{
+    #thu-f-content .schedule-info .schedule-slider{
         padding-bottom: 5vw;
     }
 
-    .schedule-info .schedule-slider::-webkit-scrollbar-track{
+    #thu-f-content .schedule-info .schedule-slider::-webkit-scrollbar-track{
         background-color: var(--white);
     }
 
-    .schedule-info .schedule-slider::-webkit-scrollbar-thumb {
+    #thu-f-content .schedule-info .schedule-slider::-webkit-scrollbar-thumb {
         background-color: var(--white);
     }
 
-    .schedule-info .schedule-card{
+    #thu-f-content .schedule-info .schedule-card{
         width: 150px;
         border-radius: 0;
         border: none;
     }
 
-    .schedule-info .schedule-card .date{
+    #thu-f-content .schedule-info .schedule-card .date{
         gap: 0;
     }
 
-    .schedule-info .schedule-card .btn{
+    #thu-f-content .schedule-info .schedule-card .btn{
         width: 100%;
         padding: 1vw 2vw;
         border-radius: 5px;
-        font-size: clamp(10px, 1.2vw, 16px);
+        font-size: 16px;
     }
 
-    .schedule-info .tabs{
+    #thu-f-content .schedule-info .tabs{
         margin-top: 0;
         width: 100%;
     }
 
-    .schedule-info .schedule-tab-content{
+    #thu-f-content .schedule-info .schedule-tab-content{
         width: 100%;
     }
 
-    .overview-tab-btn-container{
+    #thu-f-content .overview-tab-btn-container{
         margin-top: 2vw;
         position: static;
         width: 100%;
         justify-content: center;
     }
-    .overview-tab-btn{
-        padding: 0.5vw 6vw;
+    #thu-f-content .overview-tab-btn{
+        padding: 1.5vw 3vw;
     }
 
-    .web.schedule-info{
+    #thu-f-content .web.schedule-info{
         width: 90vw;
         background-color: #ede7de;
 
     }
 
-    .web .schedule-info-title{
+    #thu-f-content .web .schedule-info-title{
         color: var(--blue);
         border-left-color: var(--blue);
     }
 
-    .web .schedule-info-img-box::before{
+    #thu-f-content .web .schedule-info-img-box::before{
         aspect-ratio: 4/2;
         top: 4px;
         left: 4px;
         border-radius: 3vw;
     }
 
-    .web .schedule-info-img{
+    #thu-f-content .web .schedule-info-img{
         aspect-ratio: 4/2;
         border-radius: 3vw;
     }
 
-    .web .schedule-info-btn{
+    #thu-f-content .web .schedule-info-btn{
         font-size: 13px;
         color: var(--blue);
         border: 2px solid transparent;
@@ -1380,72 +1418,72 @@ header img {
         border-radius: 15px;
     }
 
-    .faq{
+    #thu-f-content .faq{
         padding-top: 18vw;
 
         background-color: var(--white);
         z-index: 200;
     }
 
-    .faq .faq-style-text{
+    #thu-f-content .faq .faq-style-text{
         font-size: 70px;
         right: 2%;
         top: 6%;
         z-index: -1;
     }
 
-    .faq-header{
+    #thu-f-content .faq-header{
         flex-direction: column;
         align-items: center;
     }
 
-    .faq-header-subtitle{
+    #thu-f-content .faq-header-subtitle{
         color: var(--blue);
         font-size: 29px;
     }
 
-    .faq-header-title{
+    #thu-f-content .faq-header-title{
         color: var(--blue);
         font-size: 47px;
     }
 
-    .faq-header-subtitle small{
+    #thu-f-content .faq-header-subtitle small{
         font-size: 18px;
     }
 
-    .faq-body{
+    #thu-f-content .faq-body{
         width: 90vw;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
         margin: 0 auto;
     }
 
-    .faq-card{
+    #thu-f-content .faq-card{
         padding: 3vw 4vw;
     }
 
-    .faq-card-header .question-number{
+    #thu-f-content .faq-card-header .question-number{
         font-size: 18px;
         padding: 0.5vw;
     }
 
-    .faq-card-body{
+    #thu-f-content .faq-card-body{
         padding: 2vw 3vw 0 0;
     }
 
-    .faq-icon{
+    #thu-f-content .faq-icon{
         width: 90%;
     }
 
-    .nav-links{
+    #thu-f-content .nav-links{
         background-color: var(--white);
     }
 
-    .nav-links-img{
+    #thu-f-content .nav-links-img{
         display: none;
     }
 
-    .nav-links-mobile-img{
+    #thu-f-content .nav-links-mobile-img{
         width: 90%;
         display: block;
     }
@@ -1453,3 +1491,5 @@ header img {
     
 }
 
+
+}
