@@ -155,7 +155,7 @@ body{
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: 5px;
   width: 100%;
   height: 1px;
   background-color: currentColor;
@@ -2373,3 +2373,20 @@ body{
 #thu-fp-content .fonts9zse{
     visibility: hidden;
 }
+
+#thu-fp-content .acb-container.button .card-btn span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Add space below text for the underline */
+}
+
+#thu-fp-content .acb-container.button .card-btn:hover span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px !important; /* Align with the bottom of the text */
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+}
+
