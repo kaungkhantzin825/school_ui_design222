@@ -1405,7 +1405,10 @@ body{
 }
 
 .entrance-exam-btn-container.mobile-view{
-    display: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 .entrance-exam-btn{
