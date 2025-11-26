@@ -1340,7 +1340,7 @@
                 image: 'image/for_parents/nakano.png',
                 title: '中野キャンパス',
                 subtitleHTML: '学びと街が近い、<br />中野キャンパス',
-                body: '幅広い分野の学びと企業・地域連携の機会が豊富な都市型キャンパス。最新設備の実習室を備え、実践的な学修環境が整っています。',
+                body: '幅広い分野の学びと企業・地域連携の機会が豊富な都市型キャンパス。最新設備の実習室を備え、実践的な学修環境が整っています。<div class="fonts9zse"> 救急車内処置実習室など20を超える実習室を完備し、実践的な教育を展開しています。</div>',
                 linkText: '中野キャンパスの詳細ページを見る',
                 linkHref: 'https://www.thu.ac.jp/campuslife/campusmap/map_ikebukuro'
             },
@@ -1348,7 +1348,7 @@
                 image: 'image/for_parents/chiba.png',
                 title: '千葉キャンパス',
                 subtitleHTML: '豊かな環境で学ぶ、<br />千葉キャンパス',
-                body: '自然と都市が調和した環境で、学びに集中できるキャンパス。教育・研究に必要な施設を備え、充実した学生生活をサポートします。',
+                body: '自然と都市が調和した環境で、学びに集中できるキャンパス。教育・研究に必要な施設を備え、充実した学生生活をサポートします。<div class="fonts9zse">救急車内処置実習室など20を超える実習室を完備し、実践的な教育を展開しています。 </div>',
                 linkText: '千葉キャンパスの詳細ページを見る',
                 linkHref: 'https://www.thu.ac.jp/campuslife/campusmap/map_ikebukuro'
             }
@@ -1361,7 +1361,7 @@
             if (imgEl) imgEl.src = s.image;
             if (titleEl) titleEl.textContent = s.title;
             if (subtitleEl) subtitleEl.innerHTML = s.subtitleHTML;
-            if (bodyEl) bodyEl.textContent = s.body;
+            if (bodyEl) bodyEl.innerHTML = s.body;
             if (accessTextSpan) accessTextSpan.textContent = s.linkText;
             if (accessLink) accessLink.href = s.linkHref || '#';
         }
