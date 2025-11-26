@@ -8,6 +8,61 @@
 /* Japanese font - Tazugane Gothic HondaMKTA Med */
 @import url(https://db.onlinewebfonts.com/c/7c7b079cf59c70d55d0b33eae89f1f38?family=Tazugane+Gothic+HondaMKTA+Med);
 
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes burstIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+#thu-fp-content .animate-burst {
+  animation: burstIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+#thu-fp-content .animate-slide {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+#thu-fp-content .left {
+  animation: fadeInFromTop 1s ease-out forwards;
+}
 
 /* ==========================================================================
    CSS CUSTOM PROPERTIES (VARIABLES)
@@ -53,8 +108,43 @@ body{
     transform: translateY(-1px);
 }
 
+/* Additional styles for #thu-fp-content */
+#thu-fp-content .title {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
 
+#thu-fp-content .hero-title {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
 
+#thu-fp-content .section-title {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
+
+#thu-fp-content .info-box {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
+
+#thu-fp-content .btn {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
+
+#thu-fp-content h1,
+#thu-fp-content h2,
+#thu-fp-content h3,
+#thu-fp-content h4,
+#thu-fp-content h5,
+#thu-fp-content h6 {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
+
+#thu-fp-content p {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
+
+#thu-fp-content a {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
+}
 
 .mobile-sns{
     width: 100%;
@@ -1566,6 +1656,7 @@ body{
 
 .column-right-content-container-text{
     font-size: 21px;
+
 }
 
 .column-btn-container{
