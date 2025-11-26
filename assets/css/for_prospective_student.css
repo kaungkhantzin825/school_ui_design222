@@ -24,7 +24,16 @@
         "メイリオ", Meiryo, sans-serif !important;
 }
 
+.mobile-view{
+    display: none !important;
+}
 
+/* Show mobile view on mobile devices */
+@media (max-width: 1025px) {
+    .mobile-view {
+        display: block !important;
+    }
+}
 /* ==========================================================================
    ANIMATIONS
    ========================================================================== */
