@@ -30,8 +30,50 @@ $(document).ready(function () {
                 lastWindowWidth = window.innerWidth;
                 reinitializeAllOnResize();
             }
+            // Special handling for 1024px resolution
+            if (window.innerWidth === 1024 || screen.width === 1024) {
+                setTimeout(function() {
+                    reinitializeAllOnResize();
+                }, 50);
+            }
         }, 150);
     });
+
+    // Initial check for 1024px resolution
+    if (window.innerWidth === 1024 || screen.width === 1024) {
+        setTimeout(function() {
+            reinitializeAllOnResize();
+        }, 100);
+    }
+    
+    // Additional fix for practical cards slider at 1024px
+    if (window.innerWidth === 1024) {
+        setTimeout(function() {
+            if ($('.pratical-cards').hasClass('slick-initialized')) {
+                $('.pratical-cards').slick('unslick');
+            }
+            $('.pratical-cards').slick({
+                centerMode: true,
+                centerPadding: '30px',
+                dots: true,
+                arrows: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 2,
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '20px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }, 300);
+    }
 });
 /**
  * Fully re-initialize all sliders and scroll-based animations on resize
@@ -64,7 +106,7 @@ function reinitializeAllOnResize() {
     if ($('.campus-intro-body .slider').length && $('.campus-intro-body .slider').hasClass('slick-initialized')) {
         $('.campus-intro-body .slider').slick('unslick');
     }
-    // initializeCampusIntroSlider(); // Uncomment if you use this slider
+    initializeCampusInroSlider();
 
     // Re-run scroll-triggered animations
     $('.ani-title').removeClass('visible');
@@ -85,6 +127,41 @@ function reinitializeAllOnResize() {
     }
     if (typeof updateSliderIndicator === 'function') {
         setTimeout(updateSliderIndicator, 100);
+    }
+
+    // Force reflow to prevent white space issues
+    document.body.style.overflow = 'hidden';
+    document.body.offsetHeight; // Trigger reflow
+    document.body.style.overflow = '';
+
+    // Special handling for 1024px resolution
+    if (window.innerWidth === 1024) {
+        setTimeout(function() {
+            // Re-init practical cards slider with specific settings for 1024px
+            if ($('.pratical-cards').hasClass('slick-initialized')) {
+                $('.pratical-cards').slick('unslick');
+            }
+            $('.pratical-cards').slick({
+                centerMode: true,
+                centerPadding: '30px',
+                dots: true,
+                arrows: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 2,
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '20px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }, 200);
     }
 }
 
@@ -115,8 +192,8 @@ function initializeHeroSlider() {
                 settings: "unslick" // Disable slider on desktop
             },
             {
-                breakpoint: 767,
-                settings: 'slick' // Enable slider on mobile
+                breakpoint: 1025,
+                settings: 'slick' // Enable slider on tablet and mobile
             }
         ]
     });
@@ -153,12 +230,30 @@ function initializePracticalSection() {
                 settings: "unslick" 
             },
             {
-                breakpoint: 768,
+                breakpoint: 1025,
                 settings: {
                     arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '30px',
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
                 }
             },
             {
@@ -264,6 +359,35 @@ function initializeCampusInroSlider(){
         const targetLeft = $target[0].offsetLeft - paddingLeft;
         const centerOffset = ($slider.width() - $target.outerWidth(true)) / 2;
         $slider.scrollLeft(targetLeft - centerOffset);
+        
+        // Add slick slider for better tablet/mobile experience
+        if (window.innerWidth <= 1025 || screen.width === 1024) {
+            $slider.slick({
+                centerMode: true,
+                centerPadding: '40px',
+                dots: true,
+                arrows: false,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '35px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '30px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
     }
 }
 
