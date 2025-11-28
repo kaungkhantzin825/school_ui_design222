@@ -2145,9 +2145,12 @@ header img {
     }
 
     .teacher-distance-body {
-        width: 405px; /* 90vw at 450px */
-        gap: 18px; /* 4vw at 450px */
+       width: 405px;
+        gap: 18px;
         flex-direction: column-reverse;
+        font-size: 9px !important;
+        padding: 2px 15px !important;
+        border-radius: 15px !important;
     }
 
     .teacher-distance-description {
@@ -2157,6 +2160,8 @@ header img {
 
     .teacher-distance-feature-img {
         height: 225px; /* 50vw at 450px */
+        
+        
     }
 
     .teacher-distance-btn {
@@ -2368,7 +2373,12 @@ header img {
     }
 
     .about-us-header {
-        width: 405px; /* 90vw at 450px */
+      width: 405px;
+        gap: 18px;
+        flex-direction: column-reverse;
+        font-size: 9px !important;
+        padding: 2px 15px !important;
+        border-radius: 15px !important;
     }
 
     .about-us-body {
@@ -2558,7 +2568,9 @@ header img {
     .name-romaji {
         font-size: 17px; /* clamp min */
     }
-
+    /* .slick-track{
+          margin-top: 74px;
+    } */
     .message-president-body {
         width: 360px; /* 80vw at 450px */
         margin: 0 auto 9px; /* 0 auto 2vw at 450px */
