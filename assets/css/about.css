@@ -140,7 +140,7 @@
 .btn {
     color: var(--white);
     background: linear-gradient(var(--turquoise), var(--aqua));
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 19.2px; /* 1.6vw at 1200px */
     padding: 7.2px 14.4px; /* 0.6vw 1.2vw at 1200px */
     border-radius: 24px; /* 2vw at 1200px */
@@ -168,7 +168,7 @@
 #thu-about-content .btn {
     color: var(--white);
     background: linear-gradient(var(--turquoise), var(--aqua));
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 15px;
     padding: 10px 52px;
     border-radius: 30px;
@@ -179,7 +179,7 @@
 #thu-about-content .btn-2 {
        color: var(--white);
     background: linear-gradient(var(--turquoise), var(--aqua));
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 15px;
     padding: 10px 34px;
     border-radius: 30px;
@@ -193,10 +193,16 @@
     text-decoration: none !important;
 }
 
+#thu-about-content .btn-3::after {
+    content: '\3000\3009';
+    display: inline-block;
+    text-decoration: none !important;
+}
+
 #thu-about-content .btn-3 {
      color: var(--white);
     background: linear-gradient(var(--turquoise), var(--aqua));
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 15px;
     padding: 10px 68px;
     border-radius: 30px;
@@ -244,13 +250,13 @@
     }
 }
 
-#thu-about-content .btn:hover {
+#thu-about-content .btn:hover,
+#thu-about-content .btn-2:hover,
+#thu-about-content .btn-3:hover,
+#thu-about-content .card-btn:hover {
     transform: translateY(-1px);
-}
-
-#thu-about-content .btn:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
     text-decoration-thickness: 1px;
 }
 
@@ -258,6 +264,23 @@
 #thu-about-content .btn::after {
     content: '\3000\3009';
     display: inline-block;
+    text-decoration: none !important;
+}
+
+/* Add hover effect for all buttons */
+#thu-about-content .btn:hover,
+#thu-about-content .btn-2:hover,
+#thu-about-content .btn-3:hover,
+#thu-about-content .card-btn:hover {
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
+/* Ensure arrow doesn't get underlined */
+#thu-about-content .btn:hover::after,
+#thu-about-content .btn-2:hover::after,
+#thu-about-content .btn-3:hover::after {
     text-decoration: none !important;
 }
 
@@ -272,7 +295,7 @@
 }
 
 #thu-about-content .access-btn:hover span:first-child {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     text-underline-offset: 3px;
 }
 
@@ -2334,7 +2357,7 @@ header img {
 }
 
 .about-us-card .text-underline {
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 
@@ -2552,7 +2575,7 @@ header img {
 }
 
 .message {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     text-underline-offset: 4px;
     text-decoration-color: #9aaad2;
     margin-bottom: 1.5em;
