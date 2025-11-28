@@ -238,7 +238,7 @@
 
 @media (max-width: 1025px) {
     #thu-about-content .btn {
-        font-size: 15px !important;
+        font-size: 9px !important;
         padding: 2px 15px !important;
         border-radius: 15px !important;
     }
@@ -878,7 +878,11 @@ header img {
 }
 
 .pratical-content-section {
+    /* width: 100%; */
     width: 100%;
+    /* padding: 28px;
+    margin-left: -11px;
+    margin-top: -20px; */
 }
 
 /* Cards section */
@@ -916,6 +920,15 @@ header img {
         width: 382.5px; /* 85vw at 450px */
         gap: 9px; /* 2vw at 450px */
     }
+
+
+    .pratical-content-section {
+    /* width: 100%; */
+
+    padding: 28px;
+    margin-left: -11px;
+    margin-top: -20px;
+}
 
     .pratical-card {
         height: 90px !important; /* 20vw at 450px */
@@ -974,7 +987,11 @@ header img {
     }
 
     .pratical-image-section{
-        width: 100%;
+        /* width: 100%; */
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -1163,8 +1180,13 @@ header img {
     }
 
     .career-support-body .slide .slider-img {
-        border: 10px solid transparent; /* clamp min */
-        margin-bottom: 9px; /* 2vw at 450px */
+               border: 10px solid transparent;
+        margin-bottom: 9px;
+        margin-left: 8px;
+        width: 92%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .career-support-body .slide .slide-content {
@@ -1189,7 +1211,7 @@ header img {
     .career-support-header {
         width: 405px; /* 90vw at 450px */
         flex-direction: row;
-        margin: 0 auto -27px; /* 0 auto -6vw at 450px */
+        margin: 0 auto -16px; /* 0 auto -6vw at 450px */
         position: relative;
         z-index: 200;
     }
@@ -1208,7 +1230,10 @@ header img {
     }
 
     .career-support-body .slide .slide-content {
-        flex-direction: column-reverse;
+               flex-direction: column-reverse;
+        padding: 28px;
+        margin-left: -19px;
+        margin-top: -20px;
     }
 
     .career-support-body .slide .btn {
