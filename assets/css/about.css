@@ -64,6 +64,59 @@
         "メイリオ", Meiryo, sans-serif !important;
 }
 
+/* Additional keyframe animations for #thu-about-content */
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes burstIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes for #thu-about-content */
+#thu-about-content .animate-burst {
+  animation: burstIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+#thu-about-content .animate-slide {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+#thu-about-content .left {
+  animation: fadeInFromTop 1s ease-out forwards;
+}
+
 #thu-about-content .title {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
 }
@@ -172,7 +225,7 @@
     color: var(--white);
     background: linear-gradient(var(--turquoise), var(--aqua));
     /* text-decoration: underline; */
-    font-size: 15px;
+    font-size: 13px;
     padding: 10px 52px;
     border-radius: 30px;
     display: inline-block;
@@ -690,10 +743,11 @@ header img {
 /* Hero responsive design */
 @media (max-width: 1025px) {
 
-    .hero{
+   .hero {
         background-position: -36rem -10rem;
-        background-size: 78rem;
+        background-size: 82rem;
     }
+
     .hero-student-img {
         display: none;
     }
@@ -2452,13 +2506,24 @@ header img {
     margin-bottom: 12px; /* 1vw at 1200px */
 }
 
+
+@media (max-width: 1025px) {
+    .hero-body .slider .slide {
+        /* width: 60vw; */
+        display: none;
+    }
+    .pratical-card-img{
+        width: 355px;
+    }
+}
+
 @media (max-width: 1025px) {
     .message-president-header {
         margin-bottom: 22.5px; /* 5vw at 450px */
     }
 
     .message-president-title {
-               font-size: 35px;
+               font-size: 30px;
         line-height: 37.5px;
         margin-bottom: 4.5px;
     }
@@ -2821,4 +2886,65 @@ header img {
     margin: 0 auto !important;
     background-color: #ffffff;
   }
+}
+
+/* Campus Life Button Styles */
+#thu-about-content .campus-life-btn {
+    text-decoration: none;
+}
+
+#thu-about-content .campus-life-btn span {
+    position: relative;
+    display: inline-block;
+}
+
+#thu-about-content .campus-life-btn:hover span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+}
+
+/* Access Button Styles */
+#thu-about-content .access-btn {
+    text-decoration: none;
+}
+
+#thu-about-content .access-btn span:first-child {
+    text-decoration: none;
+    position: relative;
+}
+
+#thu-about-content .access-btn:hover span:first-child {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#thu-about-content .access-btn span:last-child {
+    text-decoration: none;
+}
+
+/* Hidden Elements */
+#thu-about-content .fonts9zse{
+    visibility: hidden;
+}
+
+/* Card Button Styles */
+#thu-about-content .acb-container.button .card-btn span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Add space below text for the underline */
+}
+
+#thu-about-content .acb-container.button .card-btn:hover span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px !important; /* Align with the bottom of the text */
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
 }
