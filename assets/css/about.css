@@ -2864,12 +2864,13 @@ header img {
     }
 
     .faq-title {
-        font-size: 17px; /* clamp min */
+        font-size: 16px; /* clamp min */
     }
 
     .faq-toggle {
         font-size: 17px; /* clamp min */
         margin-left: 4.5px; /* 1vw at 450px */
+        margin-right: 17px;
     }
 
     .faq-answer {
