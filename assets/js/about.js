@@ -12,7 +12,7 @@ $(document).ready(function () {
     initializeHeroSlider();
     initializePracticalSection();
     initializeCareerSupportSlider();
-    initializeCampusInroSlider();
+    // initializeCampusInroSlider();
 
     addVideoStyles();
     initializeVideoSection();
@@ -30,8 +30,8 @@ $(document).ready(function () {
                 lastWindowWidth = window.innerWidth;
                 reinitializeAllOnResize();
             }
-            // Special handling for 1024px resolution
-            if (window.innerWidth === 1024 || screen.width === 1024) {
+            // Special handling for 1025px resolution
+            if (window.innerWidth === 1025 || screen.width === 1025) {
                 setTimeout(function() {
                     reinitializeAllOnResize();
                 }, 50);
@@ -39,15 +39,15 @@ $(document).ready(function () {
         }, 150);
     });
 
-    // Initial check for 1024px resolution
-    if (window.innerWidth === 1024 || screen.width === 1024) {
+    // Initial check for 1025px resolution
+    if (window.innerWidth === 1025 || screen.width === 1025) {
         setTimeout(function() {
             reinitializeAllOnResize();
         }, 100);
     }
     
-    // Additional fix for practical cards slider at 1024px
-    if (window.innerWidth === 1024) {
+    // Additional fix for practical cards slider at 1025px
+    if (window.innerWidth === 1025) {
         setTimeout(function() {
             if ($('.pratical-cards').hasClass('slick-initialized')) {
                 $('.pratical-cards').slick('unslick');
@@ -63,7 +63,7 @@ $(document).ready(function () {
                 slidesToShow: 2,
                 responsive: [
                     {
-                        breakpoint: 480,
+                        breakpoint: 1025,
                         settings: {
                             centerMode: true,
                             centerPadding: '20px',
@@ -106,7 +106,7 @@ function reinitializeAllOnResize() {
     if ($('.campus-intro-body .slider').length && $('.campus-intro-body .slider').hasClass('slick-initialized')) {
         $('.campus-intro-body .slider').slick('unslick');
     }
-    initializeCampusInroSlider();
+    // initializeCampusInroSlider();
 
     // Re-run scroll-triggered animations
     $('.ani-title').removeClass('visible');
@@ -134,10 +134,10 @@ function reinitializeAllOnResize() {
     document.body.offsetHeight; // Trigger reflow
     document.body.style.overflow = '';
 
-    // Special handling for 1024px resolution
-    if (window.innerWidth === 1024) {
+    // Special handling for 1025px resolution
+    if (window.innerWidth === 1025) {
         setTimeout(function() {
-            // Re-init practical cards slider with specific settings for 1024px
+            // Re-init practical cards slider with specific settings for 1025px
             if ($('.pratical-cards').hasClass('slick-initialized')) {
                 $('.pratical-cards').slick('unslick');
             }
@@ -152,7 +152,7 @@ function reinitializeAllOnResize() {
                 slidesToShow: 2,
                 responsive: [
                     {
-                        breakpoint: 480,
+                        breakpoint: 1025,
                         settings: {
                             centerMode: true,
                             centerPadding: '20px',
@@ -224,6 +224,7 @@ function initializePracticalSection() {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 2000,
+
         responsive: [
             {
                 breakpoint: 5000,
@@ -231,33 +232,6 @@ function initializePracticalSection() {
             },
             {
                 breakpoint: 1025,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '30px',
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 480,
                 settings: {
                     arrows: false,
                     centerMode: true,
@@ -361,7 +335,7 @@ function initializeCampusInroSlider(){
         $slider.scrollLeft(targetLeft - centerOffset);
         
         // Add slick slider for better tablet/mobile experience
-        if (window.innerWidth <= 1025 || screen.width === 1024) {
+        if (window.innerWidth <= 1025 || screen.width === 1025) {
             $slider.slick({
                 centerMode: true,
                 centerPadding: '40px',
@@ -370,18 +344,10 @@ function initializeCampusInroSlider(){
                 infinite: true,
                 responsive: [
                     {
-                        breakpoint: 1024,
+                        breakpoint: 1025,
                         settings: {
                             centerMode: true,
                             centerPadding: '35px',
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            centerMode: true,
-                            centerPadding: '30px',
                             slidesToShow: 1
                         }
                     }

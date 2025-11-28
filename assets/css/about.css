@@ -1047,6 +1047,7 @@ header img {
 
     /* Slick carousel styles for mobile */
     .pratical-cards .slick-list {
+        padding-bottom: 35px !important;
         margin: 0 -10px;
         /* Negative margin to cancel outer padding */
     }
@@ -1327,7 +1328,7 @@ header img {
 }
 
 .campus-intro-body {
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow-x: hidden;
 }
@@ -1346,7 +1347,7 @@ header img {
     .campus-intro-body .slider {
         gap: 36px; /* 8vw at 450px */
         margin-bottom: 9px; /* 2vw at 450px */
-        padding: 9px 45px; /* 2vw 10vw at 450px */
+        /* padding: 9px 45px; 2vw 10vw at 450px */
     }
 }
 
@@ -1568,8 +1569,8 @@ header img {
 }
 
 
-/* Specific fix for 1024px resolution */
-@media (width: 1024px) {
+/* Specific fix for 1025px resolution */
+@media (width: 1025px) {
     .campus-intro-body .slider .slick-slide:not(.slick-center) .slider-card {
         width: 480px;
     }
@@ -1582,7 +1583,7 @@ header img {
         width: 980px;
     }
     
-    /* Fix for practical cards slider at 1024px */
+    /* Fix for practical cards slider at 1025px */
     .pratical-cards {
         width: 980px;
     }
@@ -1601,10 +1602,11 @@ header img {
     }
 }
 
-/* Specific fix for exactly 1024px resolution */
-@media (width: 1024px) {
+/* Specific fix for exactly 1025px resolution */
+@media (width: 1025px) {
     /* Ensure slider displays properly */
     .pratical-cards .slick-list {
+        padding-bottom: 35px !important;
         overflow: visible !important;
     }
     
@@ -1638,7 +1640,7 @@ header img {
     }
 }
 
-/* Tablet responsive design (1024px and below) */
+/* Tablet responsive design (1025px and below) */
 @media (max-width: 1025px) and (min-width: 769px) {
 
     /* Reset absolute positioning for tablet */
@@ -1694,7 +1696,7 @@ header img {
         right: -2%;
     }
 
-    /* Ensure proper width handling at 1024px */
+    /* Ensure proper width handling at 1025px */
     .container {
         max-width: 100%;
         padding: 0 20px;
