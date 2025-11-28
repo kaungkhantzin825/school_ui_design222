@@ -2529,7 +2529,7 @@ header img {
 }
 
 .name-romaji {
-    font-size: 24px; /* 2vw at 1200px */
+    font-size: 20px; /* 2vw at 1200px */
     margin: 0;
 }
 
