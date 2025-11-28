@@ -84,6 +84,9 @@
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif;
 }
 
+#thu-about-content .fontbold {
+    font-weight: bold;
+}
 #thu-about-content h1,
 #thu-about-content h2,
 #thu-about-content h3,
@@ -1221,7 +1224,7 @@ header img {
     }
 
     .career-support-footer {
-        width: 405px; /* 90vw at 450px */
+        width: 420px; /* 90vw at 450px */
     }
 
     .career-support-footer .btn-box {
@@ -2453,9 +2456,9 @@ header img {
     }
 
     .message-president-title {
-        font-size: 35px; /* clamp min */
-        line-height: 22.5px; /* 5vw at 450px */
-        margin-bottom: 4.5px; /* 1vw at 450px */
+               font-size: 35px;
+        line-height: 37.5px;
+        margin-bottom: 4.5px;
     }
 }
 
