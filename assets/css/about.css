@@ -707,6 +707,7 @@ header img {
 
     .hero-body .slider .slide {
         border: 14px solid var(--white); /* clamp min */
+        display: block; /* Ensure slides are displayed on tablet */
     }
 }
 
@@ -1654,6 +1655,15 @@ header img {
     .pratical-card-img {
         margin-bottom: 15px;
     }
+    
+    /* Hero slider fixes for 1025px */
+    .hero-body .slider {
+        display: block !important;
+    }
+    
+    .hero-body .slider .slide {
+        display: block !important;
+    }
 }
 
 /* Specific fix for exactly 1025px resolution */
@@ -1691,6 +1701,23 @@ header img {
     
     .pratical-cards .slick-dots li button:before {
         font-size: 8px !important;
+    }
+    
+    /* Hero slider specific fixes for 1025px */
+    .hero .slider {
+        display: block !important;
+    }
+    
+    .hero .slider .slide {
+        display: block !important;
+    }
+    
+    .hero .slider .slide:not(.slick-slide) {
+        display: none;
+    }
+    
+    .hero .slider .slide.slick-slide {
+        display: block;
     }
 }
 
@@ -2510,12 +2537,24 @@ header img {
 @media (max-width: 1025px) {
     .hero-body .slider .slide {
         /* width: 60vw; */
-        display: none;
+        display: block;
     }
-    .pratical-card-img{
-        width: 355px;
-    }
+    
 }
+
+@media (width: 1025px) {
+    .pratical-card-img {
+               width: 355px;
+        height: 124px;
+    }
+    .btn-22 {
+        margin-left: -68px;
+    }
+    
+}
+
+
+/* Fixed invalid content */
 
 @media (max-width: 1025px) {
     .message-president-header {

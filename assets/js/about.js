@@ -46,6 +46,23 @@ $(document).ready(function () {
         }, 100);
     }
     
+    // Additional fix for hero slider at exactly 1025px
+    if (window.innerWidth === 1025) {
+        setTimeout(function() {
+            if ($('.hero .slider').hasClass('slick-initialized')) {
+                $('.hero .slider').slick('unslick');
+            }
+            $('.hero .slider').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+        }, 300);
+    }
+    
     // Additional fix for practical cards slider at 1025px
     if (window.innerWidth === 1025) {
         setTimeout(function() {
@@ -180,7 +197,6 @@ function initializeScrollAnimations() {
 function initializeHeroSlider() {
     $('.hero .slider').slick({
         dots: true,
-        width: '280px',
         arrows: false,
         infinite: true,
         speed: 500,
@@ -188,12 +204,19 @@ function initializeHeroSlider() {
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 5000,
-                settings: "unslick" // Disable slider on desktop
+                breakpoint: 1026,
+                settings: "unslick" // Disable slider on desktop (screen width > 1025px)
             },
             {
                 breakpoint: 1025,
-                settings: 'slick' // Enable slider on tablet and mobile
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear'
+                } // Enable slider on tablet and mobile (screen width <= 1025px)
             }
         ]
     });
